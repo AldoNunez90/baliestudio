@@ -1,0 +1,254 @@
+
+/* background video */
+
+.videoContainer{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+  }
+
+/* Pictures Home */
+
+.homePictureContainer {
+    display: flex;
+    flex-direction: row;    
+}
+
+.textPictureHome, .pictureHome{
+    display: flex;
+}
+
+/* NavBar */
+
+.navBarHomeHero {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 90px;
+  }
+  
+  .navBarContainer {
+    width: 210px;
+  }
+  
+  .navBarLogo{
+    margin: 0 30px;
+  }
+  
+  .navList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .socialNav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+    width: 210px;
+  }
+  
+  .socialImg {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin: 0px 4px 0px 10px;
+  }
+
+  .liNav{
+    margin: 5px;
+  }
+
+  .selected {
+    color: gray; /* Cambia esto al color que prefieras */
+  }
+
+  a:active{
+    color: inherit;
+  }
+    
+
+/* Marquee */
+
+
+.marqueeContainer{
+    color: white;
+    background-color: black;
+    width: 100%;
+}
+.textMarquee{
+    margin: 10px 100px;
+}
+
+.miniCam{
+    background-color: white;
+}
+
+/* Section */
+
+.pictureContainer {
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    top: 0;
+  }
+  
+  .estudios {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .baliEstudioPictures {
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+  
+  #baliEstudioImg1 {
+    position: relative !important;
+  }
+  
+  .baliEstudioText{
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+  }
+  
+  .baliEstudioTitle{
+    font-weight: 700;
+    margin-right: 115px;
+    transform: translateY(110px);
+  }
+  
+  .theFirts{
+    transform: translatey(120px);
+  }
+  
+  .theSecond{
+  transform: translateY(200px);
+  }
+  
+  .theThird{
+    transform: translateY(230px);
+    
+  }
+  
+  .baliEstudioTitle2{
+    font-weight: 700;
+    margin-right: 160px;
+    transform: translateY(120px);
+  }
+  .baliEstudioTitle3{
+    font-weight: 700;
+    margin-right: 250px;
+    transform: translateY(200px);
+  
+  }
+  
+  /* FAQ */
+  
+  .faqContainer{
+    display: flex;
+    min-height: 500px;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+  }
+  
+  .questions, .answers{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+  }
+  
+  .questions{
+    min-height: 500px;
+    justify-content: center;
+  }
+  
+  .answers{
+    color: white;
+    background-color: black;
+    min-height: 500px;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    font-weight: 100;
+  }
+  
+  .answerOption{
+    font-size: x-large;
+    font-weight: 100;
+  }
+  
+  .questionList{
+    width: fit-content;
+    align-self: center;
+  }
+  
+  h3{
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 5px;
+  }
+  
+  .faqAnswer.selected{
+    color: gray ;
+  }
+  
+  /* Footer */
+  
+  .footerContainer{
+    background-color: black;
+    display: flex;
+  }
+  
+  .footerLogo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .footerItems{
+    display: flex;
+    flex-grow: 1; 
+    flex-basis: 0;
+    align-items: center;
+  }
+  
+  .footerLinks{
+    color: white;
+  }
+  
+  .footerListItem{
+    margin-bottom: 5px;
+  }
+  
+  .footerListLine{
+    margin-bottom: 5px;
+    color: white;
+    background-color: white;
+    width: 50%;
+    height: 1px;
+  }
+  
+  .footerSocialMedia{
+    display: flex;
+    display: flex;
+    align-content: flex-end;
+    flex-direction: row;
+    justify-content: center;
+    align-self: flex-end;
+    margin-bottom: 30px;
+  }
+  
+  .footerText{
+    flex-grow: 1; 
+    flex-basis: 0;
+  }
+  

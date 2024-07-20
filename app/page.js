@@ -1,95 +1,156 @@
+"use client";
+import { useEffect, useState } from "react";
+import Faqs from "./components/Faqs";
+import MarqueeHome from "./components/marquee";
+import { Video } from "./components/Video";
 import Image from "next/image";
-import styles from "./page.module.css";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+//   const [loading, setLoading] = useState(true)
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+//   useEffect(()=>{
+//     setTimeout(()=>{
+//       setLoading(false)
+
+//       }, 2000)
+      
+//   }, [])
+
+//   if (loading) {
+//     return <Image src={"/BALIgrande.png"} alt="Logo"  width={500} height={500} />
+// }
+
+  return (
+    <div>
+      <div className="videoContainer">
+        <Video url="estudio.mp4" />
+      </div>
+      <div className="marqueeContainer">
+        <MarqueeHome textMarquee={"LA CREATIVIDAD SE\nENCUENTRA EN BALI"} />
+      </div>
+      <section className="estudios">
+        {/* Studio section
+        Renders a section showcasing the studio, featuring an image and text
+       */}
+        <div className="pictureContainer">
+          <div className="baliEstudioPictures baliEstudioText ">
+            <h2 className="baliEstudioTitle">BALI ESTUDIO</h2>
+            <p className="theFirts">
+              {`BALI Estudio se erige no sólo como\nun espacio de sesiones fotográficas\no fílmicas, sino como un ecosistema\ndiseñado para la creatividad y la\ninnovación. Cada rincón ha sido\npensado para ofrecer versatilidad\nadaptabilidad, calidad y una\ninigualable experiencia creativa`}
+            </p>
+          </div>
+          <div className="baliEstudioPictures baliEstudioImg">
+            <Image
+              src={`/espejo.webp`}
+              alt="Nuestro Estudio"
+              fill
+              id="baliEstudioImg1"
+            />
+          </div>
+        </div>
+        {/* second */}
+
+        <div className="pictureContainer">
+          <div className="baliEstudioPictures baliEstudioText ">
+            <p className="theSecond">
+              {`Nuestros espacios son pura inspiración con\nuna iluminación natural deslumbrante, equipos\nde primera, fondos versátiles y hasta un rincón\nacogedor para tus modelos y equipo de\ntrabajo. Si quieres ser parte de esta experiencia\nfotográfica sin igual o tienes alguna pregunta,\nno dudes en contactarnos.`}
+            </p>
+          </div>
+          <div className="baliEstudioPictures baliEstudioImg">
+            <Image
+              src={`/BALIgrande.png`}
+              alt="Nuestro Estudio"
+              fill
+              id="baliEstudioImg1"
+            />
+          </div>
+        </div>
+
+        {/* third */}
+        <div className="pictureContainer">
+          <div className="baliEstudioPictures baliEstudioText">
+            <p className="theThird">
+              {`Ubicado en el corazón\nde la vibrante ciudad de Buenos Aires`}
+            </p>
+          </div>
+          <div className="baliEstudioPictures baliEstudioImg">
+            <Image
+              src={`/edificio1080.webp`}
+              alt="Nuestro Estudio"
+              fill
+              id="baliEstudioImg1"
+            />
+          </div>
+        </div>
+      </section>
+      <div className="marqueeContainer">
+        <MarqueeHome
+          textMarquee={"NUESTROS              \nSERVICIOS              "}
         />
       </div>
+      <section>
+        <div className="pictureContainer">
+          <div className="baliEstudioPictures baliEstudioImg">
+            <Image
+              src={`/espejo.webp`}
+              alt="Nuestro Estudio"
+              fill
+              id="baliEstudioImg1"
+            />
+          </div>
+          <div className="baliEstudioPictures baliEstudioText ">
+            <p className="baliEstudioTitle2"> {`SESIONES\n FOTOGRÁFICAS`} </p>
+            <p className="theFirts">
+              {`BALI Estudio se erige no sólo como\nun espacio de sesiones fotográficas\no fílmicas, sino como un ecosistema\ndiseñado para la creatividad y la\ninnovación. Cada rincón ha sido\npensado para ofrecer versatilidad\nadaptabilidad, calidad y una\ninigualable experiencia creativa`}
+            </p>
+          </div>
+        </div>
+        {/* -------------------------------------- */}
+        <div className="pictureContainer">
+          <div className="baliEstudioPictures baliEstudioImg">
+            <Image
+              src={`/BALIgrande.png`}
+              alt="Nuestro Estudio"
+              fill
+              id="baliEstudioImg1"
+            />
+          </div>
+          <div className="baliEstudioPictures baliEstudioText ">
+              <p className="baliEstudioTitle3">
+                {`PRODUCCIONES\nAUDIOVISUALES`}
+              </p>
+            <p className="theSecond">
+              {`Nuestros espacios son pura inspiración con\nuna iluminación natural deslumbrante, equipos\nde primera, fondos versátiles y hasta un rincón\nacogedor para tus modelos y equipo de\ntrabajo. Si quieres ser parte de esta experiencia\nfotográfica sin igual o tienes alguna pregunta,\nno dudes en contactarnos.`}
+            </p>
+          </div>
+        </div>
+        {/* -------------------------------------- */}
+        <div className="pictureContainer">
+        <div className="baliEstudioPictures baliEstudioImg">
+            <Image
+              src={`/edificio1080.webp`}
+              alt="Nuestro Estudio"
+              fill
+              id="baliEstudioImg1"
+            />
+          </div>
+          <div className="baliEstudioPictures baliEstudioText">
+            <p className="theThird">
+              {`Ubicado en el corazón\nde la vibrante ciudad de Buenos Aires`}
+            </p>
+          </div>
+          
+        </div>
+        {/* --------------------------------- */}
+      </section>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="marqueeContainer">
+        <MarqueeHome
+          textMarquee={"FAQ              "}
+          textMarquee2={"PREGUNTAS \nFRECUENTES "}
+        />
       </div>
-    </main>
+      <Faqs />
+    </div>
   );
 }
