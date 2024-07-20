@@ -19,8 +19,10 @@ export default function Conoce() {
         </div>
     </section>
     <section className="conoceBaliSecond">
-            <div></div>
-            <Image src={`https://picsum.photos/200/300.jpg`} alt="img" width={200} height={300} />
+            <div className="secondDetailsBali">Holaaa</div>
+            <div className="secondDetailsBali">
+              <img src={`https://picsum.photos/200/300.jpg`} alt="img" width={200} height={300}  />
+              </div>
     </section>
 
 
