@@ -1,8 +1,12 @@
+import BookingSetPalace from "../components/reservaSetPalace";
 
 
 export default function Reservas () {
 
     return  (
-        <p>Reserva aqui</p>
+        <div>   
+        <p>Reservas</p>
+        <BookingSetPalace />
+        </div>
     )
 }
