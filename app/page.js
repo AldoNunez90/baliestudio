@@ -1,5 +1,4 @@
 "use client";
-import { useEffect, useState } from "react";
 import Faqs from "./components/Faqs";
 import MarqueeHome from "./components/marquee";
 import { Video } from "./components/Video";

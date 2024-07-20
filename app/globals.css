@@ -11,6 +11,6 @@ p{
 }
 
 .link {
-  text-decoration: none; /* Quita el subrayado */
-  outline: none; /* Quita el contorno al hacer clic */
+  text-decoration: none;
+  outline: none; 
 }

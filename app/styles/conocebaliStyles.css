@@ -1,0 +1,20 @@
+
+.textConoceBali{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imgConoceBali{
+    display: flex;
+    justify-self: center;
+}
+
+.conoceBaliParagraph{
+    margin: 30px;
+}
+
+.conoceBaliSecond{
+    background-color: black;
+    color: white;
+}
