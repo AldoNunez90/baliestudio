@@ -11,12 +11,12 @@ export default function NavBarHome() {
   // const params = router.query  
   // console.log(router);
   const [selected, setSelected] = useState("")
-  const [size, setSize] = useState("")
-  const handleResize = () => {
-    setSize(window.innerWidth);
-  };
+  // const [size, setSize] = useState("")
+  // const handleResize = () => {
+  //   setSize(window.innerWidth);
+  // };
 
-  window.addEventListener('resize', handleResize);
+  // window.addEventListener('resize', handleResize);
 
   const handleSelect = (option) => {
     setSelected(option);
