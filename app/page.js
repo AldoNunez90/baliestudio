@@ -33,8 +33,8 @@ export default function Home() {
        */}
         <div className="pictureContainer">
           <div className="baliEstudioPictures baliEstudioText ">
-            <h2 className="baliEstudioTitle">BALI ESTUDIO</h2>
             <p className="theFirts">
+            <h2 >BALI ESTUDIO</h2>
               {`BALI Estudio se erige no sólo como\nun espacio de sesiones fotográficas\no fílmicas, sino como un ecosistema\ndiseñado para la creatividad y la\ninnovación. Cada rincón ha sido\npensado para ofrecer versatilidad\nadaptabilidad, calidad y una\ninigualable experiencia creativa`}
             </p>
           </div>

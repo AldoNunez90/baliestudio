@@ -4,9 +4,7 @@ import BookingSetPalace from "../components/reservaSetPalace";
 export default function Reservas () {
 
     return  (
-        <div> 
-              Reservas:
-              
+        <div>           
         <BookingSetPalace />
         </div>
     )

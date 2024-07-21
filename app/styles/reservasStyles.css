@@ -9,6 +9,16 @@
     flex-direction: column;
 }
 
+.setPalaceDetails, .bookingCalendarContainer {
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.setPalaceDetails{
+  background-color: black;
+  color: white;
+}
+
 .setPalaceTitle{
     font-weight: 700;
 }
@@ -69,3 +79,88 @@
   .react-calendar__tile:active{
     background-color: black !important;
   }
+  
+  .selectHoursContainer{
+    display: flex;
+    align-content: flex-start;
+    height: -webkit-fill-available;
+    flex-wrap: wrap !important;
+    background-color: black; 
+    width: -webkit-fill-available;
+    justify-content: center;
+  }
+
+  .selectHours{
+    margin: 30px;
+    color: white;
+  }
+
+  #hours-select{
+    border: none;
+    border-radius: 50px;
+    width: 10vw;
+    height: 2.5vw;
+    display: flex;
+    text-align: center;
+ }
+
+  /* option{
+    background-color: gray;
+    color: white;
+    font-weight: 600;
+    display: flex !important;
+    text-align: center !important;
+    font-size: larger;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .option {
+    width: -webkit-fill-available;
+    text-align: center;
+  }
+
+  option:checked {
+    background-color: black;
+  } */
+
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    margin: 30px;
+  }
+  
+  .selectedOption {
+    background-color: white ;
+    color: black;
+    border-radius: 50px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    position: relative;
+  }
+  
+  .options {
+    position: absolute;
+    background-color: gray;
+    z-index: 99;
+    border-radius: 10px;
+    width: 100%;
+    top: 20px;
+  }
+  
+  .option {
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .option:hover {
+    background-color: black;
+  }
+  

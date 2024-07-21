@@ -11,12 +11,12 @@ export default function NavBarHome() {
   // const params = router.query  
   // console.log(router);
   const [selected, setSelected] = useState("")
-  // const [size, setSize] = useState("")
-  // const handleResize = () => {
-  //   setSize(window.innerWidth);
-  // };
+  const [size, setSize] = useState("")
+  const handleResize = () => {
+    setSize(window.innerWidth);
+  };
 
-  // window.addEventListener('resize', handleResize);
+  window.addEventListener('resize', handleResize);
 
   const handleSelect = (option) => {
     setSelected(option);
@@ -30,7 +30,7 @@ export default function NavBarHome() {
       </div>
 
       <ul className="navList">
-        {/* <li> {size } </li> */}
+        <li> {size } </li>
         <li className="liNav" onClick={() => handleSelect('home')}><Link className={selected === 'home' ? 'selected' : ''} href={"/"}>Home</Link> </li>
         <li className="liNav" onClick={() => handleSelect('conocebali')}><Link className={selected === 'conocebali' ? 'selected' : ''} href={"/conocebali"}>Conoce Bali</Link> </li>
         <li className="liNav" onClick={() => handleSelect('estudio')}><Link className={selected === 'estudio' ? 'selected' : ''}  href={"/estudio"}>Estudio</Link> </li>
