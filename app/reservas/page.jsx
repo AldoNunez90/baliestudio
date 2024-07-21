@@ -5,7 +5,6 @@ export default function Reservas () {
 
     return  (
         <div>   
-        <p>Reservas</p>
         <BookingSetPalace />
         </div>
     )

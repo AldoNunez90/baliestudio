@@ -1,10 +1,71 @@
 
-
 .bookingSetPalaceContainer{
     display: flex;
-
+    
 }
 
-.setPalaceDetails{
+.setPalaceDetailsContent{
     display: flex;
+    flex-direction: column;
 }
+
+.setPalaceTitle{
+    font-weight: 700;
+}
+.setPalaceImg{
+    margin-left: 4vw;
+}
+
+.setPalaceText{
+    justify-content: space-around;
+    padding: 1.5vw;
+}
+.startBookingBtn{
+    padding: 5px;
+    width: 8vw;
+    border-radius: 30px;
+    color: white;
+    background-color: black;
+    font-size: small;
+}
+
+.cancelBookingBtn{
+    padding: 5px;
+    width: 8vw;
+    border-radius: 30px;
+    color: black;
+    background-color: white;
+    font-size: small;
+}
+
+.setPalaceBtns{
+   display: flex,
+}
+
+.setPalaceSmall{
+    font-size: 0.8vw;
+}
+
+.bookingCalendarContainer{
+    justify-content: center;
+    width: -webkit-fill-available;
+    align-items: center;
+}
+
+.react-calendar{
+    border: none !important;
+}
+
+.react-calendar__tile--disabled {
+    background-color: white !important;
+    color: gray !important;
+  }
+
+  .custom-day {
+    background-color: white !important; /* Color amarillo */
+    color: blue !important; /* Texto negro */
+  }
+
+  .react-calendar__tile:active{
+    background-color: black !important;
+  }
