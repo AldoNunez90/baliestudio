@@ -11,7 +11,7 @@ export default function NavBarHome() {
   // const params = router.query  
   // console.log(router);
   const [selected, setSelected] = useState("")
-  // const [size, setSize] = useState("")
+  // const [size, setSize] = useState(window.innerWidth)
   // const handleResize = () => {
   //   setSize(window.innerWidth);
   // };

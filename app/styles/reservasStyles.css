@@ -1,6 +1,7 @@
 
 .bookingSetPalaceContainer{
     display: flex;
+    min-height: 400px;
     
 }
 
@@ -17,6 +18,8 @@
 .setPalaceDetails{
   background-color: black;
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .setPalaceTitle{
@@ -79,19 +82,25 @@
   .react-calendar__tile:active{
     background-color: black !important;
   }
+
+  .selectHoursHero{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    justify-content: space-around;
+  }
   
   .selectHoursContainer{
     display: flex;
     align-content: flex-start;
-    height: -webkit-fill-available;
     flex-wrap: wrap !important;
-    background-color: black; 
-    width: -webkit-fill-available;
     justify-content: center;
   }
 
   .selectHours{
-    margin: 30px;
+    margin-right: 15px;
     color: white;
   }
 
@@ -104,31 +113,11 @@
     text-align: center;
  }
 
-  /* option{
-    background-color: gray;
-    color: white;
-    font-weight: 600;
-    display: flex !important;
-    text-align: center !important;
-    font-size: larger;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-
-  .option {
-    width: -webkit-fill-available;
-    text-align: center;
-  }
-
-  option:checked {
-    background-color: black;
-  } */
-
-
-  .dropdown {
+ .dropdown {
     position: relative;
     display: inline-block;
     width: 200px;
-    margin: 30px;
+    margin-left: 15px;
   }
   
   .selectedOption {
@@ -163,4 +152,40 @@
   .option:hover {
     background-color: black;
   }
+
+  .hoursBoxHero{
+    color: white;
+  }
+
+  .hoursBoxContainer{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hoursBoxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 720px;
+  }
+
+  .hourBoxBtn{
+    width: 100px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    margin: 15px;
+    padding: 6px;
+    text-align: center;
+  }
   
+  .hourBoxesText{
+    margin-left: 20px;
+  }
+
+  .hourBoxBtn.selected {
+    background-color: #ccc;
+    color: #fff;
+  }

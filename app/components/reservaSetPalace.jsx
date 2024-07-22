@@ -7,27 +7,30 @@ import "react-calendar/dist/Calendar.css";
 import { format, set } from 'date-fns'
 import { es } from 'date-fns/locale';
 import Dropdown from "./Dropdown";
+import HoursBox from "./HoursBox";
 
 export default function BookingSetPalace() {
   const [booking, setBooking] = useState(false);
   const [date, setDate] = useState(null);
   const [screenDate, setScreenDate] = useState(null)
-  const [hours, setHours] = useState(0)
-  console.log(date);
-  console.log(hours)
+  const [hours, setHours] = useState(null)
+  const [screenStartTime, setScreenStartTime] = useState(null)
+  const [screenEndTime, setScreenEndTime] = useState(null)
+ // console.log("día: ", date);
+ //console.log("hora: ", hours)
+  //console.log("screenStartTime: ", screenStartTime)
+  //console.log("screenEndTime: ", screenEndTime)
     
   const formatToDate = (e)=>{
     const formattedDate = format(e, 'yyyy-MM-dd')
     const dateToScreen = format(e, 'PPP', { locale: es } )
       setDate(formattedDate)
       setScreenDate(dateToScreen)
-      console.log(date);
-    }
+   }
     
-  const hoursSelected = (e)=>{
-    console.log(e);
-    // setHours(Number(e.target.value))
-  }
+    const hoursSelected = (value) => {
+      setHours(value);
+    };
 
   const tileDisabled = ({ date, view }) => {
     // Este bloquea
@@ -57,6 +60,15 @@ export default function BookingSetPalace() {
   return 'custom-day';
 }
 
+const handleTimeSelection = (time) => {
+  if (!screenStartTime || (screenStartTime && screenEndTime)) {
+    setScreenStartTime(time);
+    setScreenEndTime(null);
+  } else {
+    setScreenEndTime(time);
+  }
+};
+
   const Reserva = ()=>{
     if(booking === true && date=== null){
       return <Calendar
@@ -68,23 +80,14 @@ export default function BookingSetPalace() {
     />
     } else if (date != null){
      return (
-     <div className="selectHoursContainer">
+     <div className="selectHoursHero">
+      <div className="selectHoursContainer">
       <p className="selectHours">{`¿Cuánto tiempo te llevará\nobtener el resultado que\ndeseas?`}</p>
-      <Dropdown setHours={()=>hoursSelected}/>
-      {/* <select onChange={hoursSelected} name="hours" id="hours-select" value={hours} className="selectHours" >
-        <option value="">Elije una opción</option>
-        <option value={2}>2</option>
-        <option className="option" value={3}>3</option>
-        <option className="option" value={4}>4</option>
-        <option className="option" value={5}>5</option>
-        <option className="option" value={6}>6</option>
-        <option value={7}>7</option>
-        <option value={8}>8</option>
-        <option value={9}>9</option>
-        <option value={10}>10</option>
-        <option value={11}>11</option>
-        <option value={12}>12</option>
-      </select> */}
+      <Dropdown onSelectChange={hoursSelected} />
+      </div>
+      <div>
+      { hours && <HoursBox onClick={handleTimeSelection} /> }
+      </div>
      </div>
     )}
   }
@@ -131,8 +134,10 @@ export default function BookingSetPalace() {
               </div>
     :
     <div className="setPalaceDetails">
-      <p>SET PALACE</p>
-      <p>{screenDate && screenDate}</p>
+      <p className="summaryTitle">SET PALACE</p>
+      <p className="summaryDate">{screenDate && screenDate}</p>
+      <p className="summaryDate">{screenStartTime && screenStartTime}</p>
+      <p className="summaryDate">{screenEndTime && screenEndTime}</p>
     </div>
     
   }
