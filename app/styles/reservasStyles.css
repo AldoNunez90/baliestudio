@@ -179,13 +179,16 @@
     margin: 15px;
     padding: 6px;
     text-align: center;
+     }
+  .hourBoxBtn.isSelected{
+    background-color: lightgray;
   }
   
   .hourBoxesText{
     margin-left: 20px;
   }
 
-  .hourBoxBtn.selected {
-    background-color: #ccc;
+  :disabled {
+    background-color: gray;
     color: #fff;
   }
