@@ -192,3 +192,18 @@
     background-color: gray;
     color: #fff;
   }
+
+  
+ 
+  
+  .completely-free {
+    background-color: blue !important;
+  }
+  .partially-occupied {
+    background-color: yellow !important;
+  }
+  
+  
+  .completely-occupied {
+    background-color: red !important;
+  }
