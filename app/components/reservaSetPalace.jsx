@@ -119,7 +119,7 @@ const handleSelect = (option)=>{
       tileDisabled={tileDisabled}
       tileClassName={tileClassName}
     />
-    } else if (date != null){
+    } else if (date != null && eventContent === false){
      return (
      <div className="selectHoursHero">
       <div className="selectHoursContainer">
@@ -161,72 +161,72 @@ const handleSelect = (option)=>{
           {hour}:00
         </button>
       ))}
-      <button  style={{display: end === null && "none"} } >Siguiente</button>
+      <button onClick={()=>setEventContent(true)}  style={{display: end === null && "none"}}   >Siguiente</button>
     </div> }
       </div>
      </div>
     )} else if (eventContent) {
       console.log("Reserva");
-    //   <div className="booking-form">
-    //   <h2>SET PALACE</h2>
-    //   <h3>31 DE JULIO 2024</h3>
-    //   <h3>14:00 - 16:00</h3>
-    //   <form onSubmit={handleSubmit}>
-    //     <div className="form-group">
-    //       <label htmlFor="name">NOMBRE Y APELLIDO:</label>
-    //       <input
-    //         type="text"
-    //         id="name"
-    //         name="name"
-    //         value={formData.name}
-    //         onChange={handleChange}
-    //         required
-    //       />
-    //     </div>
-    //     <div className="form-group">
-    //       <label htmlFor="email">MAIL:</label>
-    //       <input
-    //         type="email"
-    //         id="email"
-    //         name="email"
-    //         value={formData.email}
-    //         onChange={handleChange}
-    //         required
-    //       />
-    //     </div>
-    //     <div className="form-group">
-    //       <label htmlFor="phone">TELEFONO:</label>
-    //       <input
-    //         type="tel"
-    //         id="phone"
-    //         name="phone"
-    //         value={formData.phone}
-    //         onChange={handleChange}
-    //         required
-    //       />
-    //     </div>
-    //     <div className="form-group">
-    //       <label htmlFor="eventType">
-    //         Qué tipo de contenido quieres generar en nuestros espacios?:
-    //       </label>
-    //       <select
-    //         id="eventType"
-    //         name="eventType"
-    //         value={formData.eventType}
-    //         onChange={handleChange}
-    //         required
-    //       >
-    //         <option value="">Seleccionar...</option>
-    //         <option value="photo-session">Photo session</option>
-    //         <option value="video-shoot">Video Shoot</option>
-    //         <option value="workshop">Workshop</option>
-    //         <option value="event">Event</option>
-    //         <option value="other">Other</option>
-    //       </select>
-    //     </div>
-    //     <button type="submit">CONFIRMAR RESERVA</button>
-    //   </form>
-    // </div>
+      <div className="booking-form">
+      <h2>SET PALACE</h2>
+      <h3>31 DE JULIO 2024</h3>
+      <h3>14:00 - 16:00</h3>
+      <form >
+        <div className="form-group">
+          <label htmlFor="name">NOMBRE Y APELLIDO:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            // value={formData.name}
+            // onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">MAIL:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            // value={formData.email}
+            // onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="phone">TELEFONO:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            // value={formData.phone}
+            // onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="eventType">
+            Qué tipo de contenido quieres generar en nuestros espacios?:
+          </label>
+          <select
+            id="eventType"
+            name="eventType"
+            // value={formData.eventType}
+            // onChange={handleChange}
+            required
+          >
+            <option value="">Seleccionar...</option>
+            <option value="photo-session">Photo session</option>
+            <option value="video-shoot">Video Shoot</option>
+            <option value="workshop">Workshop</option>
+            <option value="event">Event</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <button type="submit">CONFIRMAR RESERVA</button>
+      </form>
+    </div>
     }
   }
   

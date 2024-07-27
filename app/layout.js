@@ -3,6 +3,7 @@ import "./globals.css";
 import "./styles/homeStyles.css"
 import "./styles/conocebaliStyles.css"
 import "./styles/reservasStyles.css"
+import "./styles/estudioStyles.css"
 import NavBarHome from "./components/navbarHome";
 import Footer from "./components/Footer";
 
