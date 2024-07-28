@@ -1,39 +1,39 @@
-"use client";
-import Image from "next/image";
-import { useState , useEffect} from "react";
-import Link from "next/link";
-import Calendar from "react-calendar";
-import "react-calendar/dist/Calendar.css";
-import { format, set } from 'date-fns'
-import { es } from 'date-fns/locale';
+// "use client";
+// import Image from "next/image";
+// import { useState , useEffect} from "react";
+// import Link from "next/link";
+// import Calendar from "react-calendar";
+// import "react-calendar/dist/Calendar.css";
+// import { format, set } from 'date-fns'
+// import { es } from 'date-fns/locale';
 
 export default function BookingSetPalace() {
-  const [booking, setBooking] = useState(false);
-  const [date, setDate] = useState(null);
-  const [screenDate, setScreenDate] = useState(null)
-  const [hours, setHours] = useState(null)
-  const [blockedTimes, setBlockedTimes] = useState([]);
-  const [start, setStart] = useState(null);
-  const [end, setEnd] = useState(null);
-  const [value, setValue] = useState('Seleccionar opción');
-  const [isOpen, setIsOpen] = useState(false);
-  const [eventContent, setEventContent] = useState(false)
+  // const [booking, setBooking] = useState(false);
+  // const [date, setDate] = useState(null);
+  // const [screenDate, setScreenDate] = useState(null)
+  // const [hours, setHours] = useState(null)
+  // const [blockedTimes, setBlockedTimes] = useState([]);
+  // const [start, setStart] = useState(null);
+  // const [end, setEnd] = useState(null);
+  // const [value, setValue] = useState('Seleccionar opción');
+  // const [isOpen, setIsOpen] = useState(false);
+  // const [eventContent, setEventContent] = useState(false)
 
-  useEffect(() => {
-    const getBlockedTimes = async () => {
-      try {
-        const response = await fetch('/blockedTimes.json'); // Ruta relativa al archivo en la carpeta public
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        setBlockedTimes(data.blockedTimes); // Asumiendo que el JSON tiene una estructura { "blockedTimes": [10, 11, 14] }
-    } catch (error) {
-        console.error("Error fetching blocked times:", error);
-    }
-};
-getBlockedTimes();
-}, []);
+//   useEffect(() => {
+//     const getBlockedTimes = async () => {
+//       try {
+//         const response = await fetch('/blockedTimes.json'); // Ruta relativa al archivo en la carpeta public
+//         if (!response.ok) {
+//           throw new Error('Network response was not ok');
+//         }
+//         const data = await response.json();
+//         setBlockedTimes(data.blockedTimes); // Asumiendo que el JSON tiene una estructura { "blockedTimes": [10, 11, 14] }
+//     } catch (error) {
+//         console.error("Error fetching blocked times:", error);
+//     }
+// };
+// getBlockedTimes();
+// }, []);
 
 const time = Array.from({ length: 15 }, (_, i) => 8 + i);
   

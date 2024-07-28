@@ -6,7 +6,7 @@ export default function Reservas () {
 
     return  (
         <div>           
-        <BookingSetPalace />
+        {/* <BookingSetPalace /> */}
         <SetPalaceReserve/>
         </div>
     )

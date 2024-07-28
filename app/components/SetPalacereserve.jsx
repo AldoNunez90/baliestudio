@@ -12,6 +12,7 @@ function SetPalaceReserve() {
     const [booking, setBooking] = useState(false);
     const [screenDate, setScreenDate] = useState(null)
     const [start, setStart] = useState(null);
+    const [date, setDate] = useState(null);
     const [end, setEnd] = useState(null);
     const [value, setValue] = useState('Seleccionar opción');
     const [hours, setHours] = useState(null)
@@ -22,7 +23,7 @@ function SetPalaceReserve() {
 
   useEffect(() => {
     // Solicitar eventos al servidor
-    axios.get('http://localhost:3001/api/getEvents')
+    axios.get('https://back-bali-aldos-projects-f6edb5af.vercel.app/api/getEvents')
         .then(response => {
         setEvents(response.data);
         processEvents(response.data);
