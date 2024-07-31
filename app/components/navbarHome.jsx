@@ -2,21 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-// import { useRouter } from "next/navigation";
 import { useState } from "react";
+import classNames from 'classnames';
+
 
 
 export default function NavBarHome() {
-  // const router = useRouter()
-  // const params = router.query  
-  // console.log(router);
   const [selected, setSelected] = useState("")
-  // const [size, setSize] = useState(window.innerWidth)
-  // const handleResize = () => {
-  //   setSize(window.innerWidth);
-  // };
-
-  // window.addEventListener('resize', handleResize);
 
   const handleSelect = (option) => {
     setSelected(option);
@@ -25,23 +17,29 @@ export default function NavBarHome() {
     <nav className="navBarHomeHero">
       <div className="navBarContainer">
         <Link onClick={()=>handleSelect('home')}  href={"/"}>
-        <Image src="baliLogo.svg" alt="logo Bali" width={150} height={100} className="navBarLogo" />
+        <Image src="/baliLogo.png" alt="logo Bali" width={150} height={42.5} className="navBarLogo" />
         </Link>
       </div>
 
       <ul className="navList">
-        {/* <li> {size } </li> */}
-        <li className="liNav" onClick={() => handleSelect('home')}><Link className={selected === 'home' ? 'selected' : ''} href={"/"}>Home</Link> </li>
-        <li className="liNav" onClick={() => handleSelect('conocebali')}><Link className={selected === 'conocebali' ? 'selected' : ''} href={"/conocebali"}>Conoce Bali</Link> </li>
-        <li className="liNav" onClick={() => handleSelect('estudio')}><Link className={selected === 'estudio' ? 'selected' : ''}  href={"/estudio"}>Estudio</Link> </li>
-        <li className="liNav" onClick={() => handleSelect('reservas')}><Link className={selected === 'reservas' ? 'selected' : ''}  href={"/reservas"}>Reservas</Link></li>
-        <li className="liNav" onClick={() => handleSelect('produccion')}><Link className={selected === 'produccion' ? 'selected' : ''} href={"/produccion"}>Producción</Link></li>
-        <li className="liNav" onClick={() => handleSelect('contacto')}><Link className={selected === 'contacto' ? 'selected' : ''} href={"contacto"}>Contacto</Link></li>
+        <li className="liNav" onClick={() => handleSelect('home')}><Link className={classNames('navRoute', { 'selected': selected === 'home' })}  href={"/"}>Home</Link> </li>
+        <li className="liNav" onClick={() => handleSelect('conocebali')}><Link className={classNames('navRoute', {'selected': selected === 'conocebali' ? 'selected' : ''})} href={"/conocebali"}>Conoce Bali</Link> </li>
+        <li className="liNav" onClick={() => handleSelect('estudio')}><Link className={classNames('navRoute', {'selected': selected === 'estudio' ? 'selected' : ''})}  href={"/estudio"}>Estudio</Link> </li>
+        <li className="liNav" onClick={() => handleSelect('reservas')}><Link className={classNames('navRoute', {'selected': selected === 'reservas' ? 'selected' : ''})}  href={"/reservas"}>Reservas</Link></li>
+        <li className="liNav" onClick={() => handleSelect('produccion')}><Link className={classNames('navRoute', {'selected': selected === 'produccion' ? 'selected' : ''})} href={"/produccion"}>Producción</Link></li>
+        <li className="liNav" onClick={() => handleSelect('contacto')}><Link className={classNames('navRoute', {'selected': selected === 'contacto' ? 'selected' : ''})} href={"contacto"}>Contacto</Link></li>
       </ul>
 
       <div className="socialNav">
-        <Image src="/facebook.png" alt="facebook" width={30} height={30} className="socialImg"/>
-        <Image src="/instagram.png" alt="instagram" width={30} height={30} className="socialImg"/>
+      <a href="https://www.instagram.com/baliestudio/" target="_blank">
+        <Image src="/instagram_icon.png" alt="instagram" width={30} height={30} className="socialImg"/>
+        </a>  
+      <a href="https://wa.me/+5491154171668?text=Hola! Tengo una consulta sobre el estudio" target="_blank">
+        <Image src="/whatsapp_icon.png" alt="wp" width={30} height={30} className="socialImg"/>
+        </a>  
+      <a href="https://www.linkedin.com/company/bali-estudio/" target="_blank">
+      <Image src="/linkln_icon.png" alt="linkedin" width={30} height={30} className="socialImg"/>
+        </a>  
       </div>
     </nav>
   );

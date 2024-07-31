@@ -16,41 +16,41 @@ export default function MarqueeHome({ textMarquee, textMarquee2 }) {
       <img
         src="/minicam.png"
         alt="minicam"
-        width={20}
+        width={14}
         height={20}
         className="miniCam"
       />
       {textMarquee2 && <p className="textMarquee">{textMarquee2}</p>}
-      {textMarquee2 && <img src="/minicam.png" alt="minicam" width={20} height={20} className="miniCam"/>}
+      {textMarquee2 && <img src="/minicam.png" alt="minicam" width={14} height={20} className="miniCam"/>}
       
       {/* P2 - IMG2 */}
       <p className="textMarquee">{textMarquee}</p>
       <img
         src="/minicam.png"
         alt="minicam"
-        width={20}
+        width={14}
         height={20}
         className="miniCam"
       />
       {textMarquee2 && <p className="textMarquee">{textMarquee2}</p>}
-      {textMarquee2 && <img src="/minicam.png" alt="minicam" width={20} height={20} className="miniCam"/>}
+      {textMarquee2 && <img src="/minicam.png" alt="minicam" width={14} height={20} className="miniCam"/>}
       {/* P3 - IMG3 */}
       <p className="textMarquee">{textMarquee}</p>
       <img
         src="/minicam.png"
         alt="minicam"
-        width={20}
+        width={14}
         height={20}
         className="miniCam"
       />
       {textMarquee2 && <p className="textMarquee">{textMarquee2}</p>}
-      {textMarquee2 && <img src="/minicam.png" alt="minicam" width={20} height={20} className="miniCam"/>}
+      {textMarquee2 && <img src="/minicam.png" alt="minicam" width={14} height={20} className="miniCam"/>}
       {/* P4 IMG4 */}
       <p className="textMarquee">{textMarquee}</p>
       <img
         src="/minicam.png"
         alt="minicam"
-        width={20}
+        width={14}
         height={20}
         className="miniCam"
       />
@@ -61,12 +61,34 @@ export default function MarqueeHome({ textMarquee, textMarquee2 }) {
       <img
         src="/minicam.png"
         alt="minicam"
-        width={20}
+        width={14}
         height={20}
         className="miniCam"
       />
       {textMarquee2 && <p className="textMarquee">{textMarquee2}</p>}
-      {textMarquee2 && <img src="/minicam.png" alt="minicam" width={20} height={20} className="miniCam"/>}
+      {textMarquee2 && <img src="/minicam.png" alt="minicam" width={14} height={20} className="miniCam"/>}
+      {/* P5 IMG 6 */}
+      <p className="textMarquee">{textMarquee}</p>
+      <img
+        src="/minicam.png"
+        alt="minicam"
+        width={14}
+        height={20}
+        className="miniCam"
+      />
+      {textMarquee2 && <p className="textMarquee">{textMarquee2}</p>}
+      {textMarquee2 && <img src="/minicam.png" alt="minicam" width={14} height={20} className="miniCam"/>}
+      {/* P5 IMG 7 */}
+      <p className="textMarquee">{textMarquee}</p>
+      <img
+        src="/minicam.png"
+        alt="minicam"
+        width={14}
+        height={20}
+        className="miniCam"
+      />
+      {textMarquee2 && <p className="textMarquee">{textMarquee2}</p>}
+      {textMarquee2 && <img src="/minicam.png" alt="minicam" width={14} height={20} className="miniCam"/>}
     </Marquee>
   );
 }

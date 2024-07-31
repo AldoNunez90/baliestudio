@@ -20,6 +20,10 @@
 
 /* NavBar */
 
+.navRoute{
+  color: black;
+}
+
 .navBarHomeHero {
     display: flex;
     justify-content: space-between;
@@ -29,6 +33,9 @@
   
   .navBarContainer {
     width: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .navBarLogo{
@@ -45,7 +52,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-right: 10px;
+    margin-right: 20px;
     width: 210px;
   }
   
@@ -58,32 +65,38 @@
 
   .liNav{
     margin: 5px;
+    font-weight: 500;
   }
 
   .selected {
-    color: gray; /* Cambia esto al color que prefieras */
+    color: #808080; /* Cambia esto al color que prefieras */
   }
+
+  /* a {
+    color: black;
+
+  } */
 
   a:active{
     color: inherit;
   }
     
 
+
 /* Marquee */
 
 
 .marqueeContainer{
     color: white;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.801);
     width: 100%;
 }
 .textMarquee{
-    margin: 10px 100px;
+    margin: 10px 50px;
+    font-weight: 500;
 }
 
-.miniCam{
-    background-color: white;
-}
+
 
 /* Section */
 
@@ -94,20 +107,18 @@
     top: 0;
   }
   
-  .estudios {
-    display: flex;
-    flex-direction: column;
-    position: relative;
+  .estudios, .servicios {
+   display: grid;
+   grid-template-columns: 50% 50%;
   }
   
   .baliEstudioPictures {
-    display: flex;
-    flex-grow: 1;
-    flex-basis: 0;
+    position: sticky;
+    top: 0;
   }
   
-  #baliEstudioImg1 {
-    position: relative !important;
+  .baliEstudioImg1 {
+    position: sticky !important;
   }
   
   .baliEstudioText{
@@ -122,34 +133,67 @@
   .baliEstudioTitle{
     font-weight: 700;
     margin-right: 115px;
-    transform: translateY(110px);
   }
   
-  .theFirts{
-    transform: translatey(120px);
+ 
+  .homeTitles{
+    font-weight: 750;
+  }
+
+  .baliEstudioTitle2, .baliEstudioTitle3{
+    font-weight: 750;
+    font-size: 1.5em;
   }
   
-  .theSecond{
-  transform: translateY(200px);
-  }
+  .produccionesContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;  }
   
-  .theThird{
-    transform: translateY(230px);
-    
+  .baliLogoWhiteContainer{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 700px;
   }
-  
-  .baliEstudioTitle2{
-    font-weight: 700;
-    margin-right: 160px;
-    transform: translateY(120px);
+
+  .baliTxt{
+    margin: 1vw 0px;
+    line-height: 1.2;
+    font-weight: 500;
   }
-  .baliEstudioTitle3{
-    font-weight: 700;
-    margin-right: 250px;
-    transform: translateY(200px);
-  
+
+  .conocemasBtn{
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    padding: 5px 30px;
   }
-  
+
+  .theFirts, .theSecond, .theThird{
+    position: sticky;
+    top: 0;
+  }
+
+  .theSecondTxt{
+    position: sticky;
+    top: 200px;
+    background-color: white;
+  }
+  .baliEspaciosTxt{
+    min-height: 800px;
+    background-color: black;
+    color: white;
+    font-weight: 700 !important;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   /* FAQ */
   
   .faqContainer{
@@ -212,6 +256,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding: 5vw 0;
   }
   
   .footerItems{
@@ -221,13 +266,13 @@
     align-items: center;
   }
   
-  .footerLinks{
+  .footerRoutes{
     color: white;
   }
   
   .footerListItem{
     margin-bottom: 5px;
-  }
+    }
   
   .footerListLine{
     margin-bottom: 5px;
@@ -252,3 +297,6 @@
     flex-basis: 0;
   }
   
+  .footerTxtFirma{
+    color: white;
+  }

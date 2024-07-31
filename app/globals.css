@@ -2,8 +2,12 @@
   text-decoration: none;
   list-style: none;
   font-family: system-ui, -apple-system, Roboto;
-  font-weight: 500;
+  /* font-weight: 400; */
   margin: 0;
+}
+
+body {
+  max-width: 1920px;
 }
 
 p{

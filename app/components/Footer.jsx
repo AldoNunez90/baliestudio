@@ -1,33 +1,32 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
     <div className="footerContainer">
       <div className="footerLogo footerItems">
         <Image
-          src="/BALIgrande.png"
+          src="/baliLogoWhite.png"
           alt="logo"
           className="footerLogoImg"
-          width={400}
-          height={400}
+          width={503}
+          height={142}
         />
       </div>
       <div className="footerLinks footerItems">
         <ul className="footerList footerText" >
-            <li className="footerListItem">Conoce Bali</li>
+            <li className="footerListItem"><Link href={"/conocebali"} className="footerRoutes" >Conoce Bali</Link></li>
             <div className="footerListLine"></div>
-            <li className="footerListItem">Estudio</li>
+            <li className="footerListItem"><Link href={"/estudio"} className="footerRoutes">Estudio</Link></li>
             <div className="footerListLine"></div>
-            <li className="footerListItem">Reservas</li>
+            <li className="footerListItem"><Link href={"/reservas"} className="footerRoutes">Reservas</Link></li>
             <div className="footerListLine"></div>
-            <li className="footerListItem">Contacto</li>
+            <li className="footerListItem"><Link href={"/contacto"} className="footerRoutes">Contacto</Link></li>
             <div className="footerListLine"></div>
         </ul>
         <div className="footerSocialMedia footerText">
-                <Image src={"/social-media-logo-facebook.avif"} alt="Facebook" width={30} height={30} />
-                <Image src={"/social-media-logo-facebook.avif"} alt="Linkedin" width={30} height={30} />
-                <Image src={"/social-media-logo-facebook.avif"} alt="Instagram" width={30} height={30} />
+          <p className="footerTxtFirma">Página diseñada y desarrollada por <Image src={"/logoKranding.png"} alt="Kranding" width={78} height={12} /></p>
             </div>
       </div>
     </div>
