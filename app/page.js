@@ -55,7 +55,7 @@ export default function Home() {
         {/* third */}
           <div className="baliEstudioText">
             <p className="theThird baliTxt">
-              {`Ubicado en el corazón\nde la vibrante ciudad de Buenos Aires`}
+              {`Situado en el corazón de Buenos Aires,\nen la icónica intersección de la Avenida Santa Fe y 9 de Julio,\nse erige como un símbolo de glamour y elegancia.`}
             </p>
           </div>
           <div className="baliEstudioPictures baliEstudioImg">
@@ -99,11 +99,11 @@ export default function Home() {
           <div className="baliEstudioText produccionesContainer ">
             <div className="theSecond">
               <p className="baliEstudioTitle3 baliTxt">{`PRODUCCIONES\nAUDIOVISUALES`}</p>
-            <p >{`GRABACIÓN DE VIDEOS\nFASHION FILMS\nCONTENIDO PARA REDES SOCIALES\nREELS`}</p>
+            <p className="baliTxt">{`GRABACIÓN DE VIDEOS\nFASHION FILMS\nCONTENIDO PARA REDES SOCIALES\nREELS`}</p>
             </div>
             <div className="theSecondTxt">
               <p className="baliEstudioTitle3 baliTxt">{`EVENTOS`}</p>
-            <p >{`MASTER CLASS\nSHOW ROOM\nWORKSHOP\nEVENTOS EMPRESARIALES                \nFASHION SHOW\nCASTING`}</p>
+            <p className="baliTxt" >{`MASTER CLASS\nSHOW ROOM\nWORKSHOP\nEVENTOS EMPRESARIALES                \nFASHION SHOW\nCASTING`}</p>
             </div>
         </div>
         {/* -------------------------------------- */}

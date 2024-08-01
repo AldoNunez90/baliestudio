@@ -4,7 +4,7 @@ import "./styles/homeStyles.css"
 import "./styles/conocebaliStyles.css"
 import "./styles/reservasStyles.css"
 import "./styles/estudioStyles.css"
-import NavBarHome from "./components/navbarHome";
+import NavBar from "./components/navbarHome";
 import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body className={inter.className}>
-        <NavBarHome />
+        <NavBar />
         {children}
         <Footer />
         </body>

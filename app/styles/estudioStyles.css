@@ -1,4 +1,9 @@
-
+.setsContainer{
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    margin: 10vw 0;
+}
 
 .handleClickSetEstudioContainer{
     display: flex;
@@ -18,24 +23,61 @@
     align-items: center;
     font-size: 2.5vw;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .cameraImg{
     padding: 15px;
 }
 
-.iluminacionTxtContainer, .iluminacionVideoContainer{
+.iluminacionTxtContainer, .iluminacionVideoContainer , .fondosTxtContainer{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     flex-basis: 0;
+    justify-content: center;
+    align-items: center;
 }
 
-.iluminacionContainer{
-    display: flex;
-    flex-direction: row;
-}
 
 .iluminacionVideo{
     width: 50vw;
+}
+
+.imgContainer{
+    background-color: black;
+}
+
+.estudioImg{
+    position: relative !important;
+}
+
+.equipoTitle{
+    font-size: xx-large;
+    font-weight: 700;
+    margin: 40px 0;
+}
+.downloadBtn{
+    background-color: black;
+    border-radius: 50px;
+    padding: 10px;
+    border: none;
+    color: white;
+    margin: 20px 0 ;
+}
+.modificadoresContainer, .fondosContainer, .iluminacionContainer, .complementariosContainer, .utileriaContainer{
+    display: flex;
+    margin-top: 10vw;
+}
+
+.utileriaContainer{
+    margin-bottom: 10vw;
+}
+
+.modificadoresTxtContainer , .complementariosTxtContainer, .utileriaTxtContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }

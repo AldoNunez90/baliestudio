@@ -3,7 +3,6 @@
 import { useState } from "react"
 import Sets from "../components/Sets"
 import Equipos from "../components/Equipos"
-import { Video } from "../components/Video"
 import Image from "next/image"
 
 
@@ -12,8 +11,8 @@ export default function Estudio () {
     
     return (
         <div>
-        <div className="videoContainer">
-        <Video url="estudio.mp4" />
+        <div className="imgContainer">
+        <Image src={"/estudioImg.jpg"} alt="Estudio" fill className="estudioImg"/>
       </div>
       <div className="handleClickSetEstudioContainer">
         <button onClick={()=>setDisplayStudio('set')} className="setEstudioBtn" style={displayEstudio === 'set' ? {backgroundColor: "black", color: "white"} : {backgroundColor: 'white', color: "black"}}>SET</button>

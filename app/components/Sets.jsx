@@ -3,6 +3,9 @@
 export default function Sets() {
 
     return (
-        <div className="container"> Sets</div>
+        <div className="setsContainer">
+            <p> {`ACA IRÍAN LOS SETS\nSI TUVIERA LA MAQUETA`}
+            </p>
+        </div>
         );
 }
