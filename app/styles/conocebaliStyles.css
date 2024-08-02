@@ -8,20 +8,67 @@
 .imgConoceBali{
     display: flex;
     justify-self: center;
+    position: relative !important;
+    width: inherit;
+}
+
+.conoceBaliImgContainer{
+    width: 40vw;
 }
 
 .conoceBaliParagraph{
-    margin: 30px;
+    margin: 4vw 0;
+    width: 40vw;
+    font-size: 1.05vw;
 }
 
-.conoceBaliSecond{
-    display: flex;
+.conoceBaliParagraph2{
+    margin: 9vw 7vw;
+    font-size: 1.05vw;
+}
+
+.studio2Container{
+    margin: 7vw 5vw;
+}
+
+.ademasContainer{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 100%;
+}
+
+.conocePhotosContainer{
+    min-height: 700px;
     background-color: black;
-    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
-.secondDetailsBali{
+/* .conocePhoto2Container{
+    position: relative !important;
+    display: block;
+    width: 15% !important;
+    height: auto !important;
+    margin-right: 25vw;
+    margin-left: auto;
+} */
+
+.conocePhoto2{
+    position: relative !important;
+    display: block;
+    width: 15% !important;
+    height: auto !important;
+    margin-right: 25vw;
+    margin-left: auto;
+        
+}
+
+.creditsPhoto{
+    color: aquamarine;
+    margin-right: 26vw;
+    margin-left: auto;
     display: flex;
-    flex-grow: 1;
-    flex-basis: 0;
+    width: fit-content;
+    font-size: 0.5vw;
 }

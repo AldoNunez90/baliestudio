@@ -1,12 +1,8 @@
-.setsContainer{
-    font-size: 100px;
-    display: flex;
-    justify-content: center;
-    margin: 10vw 0;
-}
+
 
 .handleClickSetEstudioContainer{
-    display: flex;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 .equiposContainer{
@@ -14,16 +10,44 @@
     flex-direction: column;
 }
 
+.switchBtnEstudios{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.studioPalaceTxt{
+    width: fit-content;
+    font-size: 2vw;
+    margin: auto;
+    font-style: italic;
+}
 .setEstudioBtn {
-    display: flex;
-    flex-basis: 0;
-    flex-grow: 1;
     border: none;
-    justify-content: center;
     align-items: center;
     font-size: 2.5vw;
     font-weight: 500;
     cursor: pointer;
+    display: flex;
+}
+.studioPalaceContainer{
+align-content: center;}
+
+.setDuoTxt{
+    position: relative !important;
+    display: block;
+}
+
+.mapContainer{
+    background-color: black;
+    display: flex;
+}
+
+.studioPlan{
+    height: 80% !important;
+    width: 80% !important;
+    padding: 4vw;
+    position: relative !important;
+    margin: auto;
 }
 
 .cameraImg{
@@ -50,6 +74,7 @@
 
 .estudioImg{
     position: relative !important;
+    display: block;
 }
 
 .equipoTitle{
@@ -80,4 +105,20 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+
+.setsContainer{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    font-size: 100px;
+  
+}
+
+
+.setPalaceImgLong{
+    position: relative !important;
+}
+
+.miniCamSetContainer{
+    display: flex;
 }
