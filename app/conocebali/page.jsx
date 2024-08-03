@@ -1,20 +1,10 @@
 'use client'
 import { Video } from "../components/Video";
 import Image from "next/image";
-import { useEffect, useRef  } from "react";
 
 
 export default function Conoce() {
-  const videoRef = useRef(null);
 
-  useEffect(() => {
-    const video = videoRef.current;
-    if (video) {
-      video.play().catch((error) => {
-        console.error("Error attempting to play video:", error);
-      });
-    }
-  }, []);
 
   return (
     <div>
@@ -37,13 +27,19 @@ export default function Conoce() {
           <div className="conocePhoto2Container" >
             <div className="video-background">
               {/* <video url={"/conocebali/conoceVideo.mp4"} id="background-video"/> */}
-              <video id="background-video" autoPlay loop>
+              <video id="background-video" autoPlay loop muted>
               <source src="/conocebali/conoceVideo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
         </video>
             </div>
+            <div>
             <Image src={"/conocebali/conoceBaliImg3.jpg"} alt="photo" fill className="conocePhoto2"/>
-            {/* <p className="creditsPhoto">{`CHEERY BOMB @bfstoreok Modelo: @barbieeferrari\n\nMake up & Peinado: @soficosta.makeup / @emmabarrioshair\n\nFotografos: @magenciamkt /@marbellendier / @maratkinson_`}</p> */}
+            <div>
+              <p className="conocePhotoTxt">CHEERY BOMB <a href="https://www.instagram.com/bfstoreok/" target="_blanck">@bfstoreok</a> - Modelo: <a href="https://www.instagram.com/barbieeferrari/" target="_blanck" >@barbieeferrari</a></p>
+              <p className="conocePhotoTxt">Make up & Peinado: <a href="https://www.instagram.com/soficosta.makeup/" target="_blanck">@soficosta.makeup</a> / <a href="https://www.instagram.com/emmabarrioshair/" target="_blanck" >@emmabarrioshair</a></p>
+              <p className="conocePhotoTxt">Fotografos: <a href="https://www.instagram.com/magencia.mkt/" target="_blanck">@magenciamkt</a> / <a href="https://www.instagram.com/marbellendier/" target="_blanck">@marbellendier</a> / <a href="https://www.instagram.com/maratkinson_/" target="_blanck">@maratkinson_</a></p>
+            </div>
+            </div>
           </div>
         </div>
 
