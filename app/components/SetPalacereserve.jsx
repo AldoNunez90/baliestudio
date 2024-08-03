@@ -5,7 +5,7 @@ import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 import "react-calendar/dist/Calendar.css";
-import { format, set } from "date-fns";
+import { format } from "date-fns";
 import { es } from "date-fns/locale";
 
 function SetPalaceReserve() {

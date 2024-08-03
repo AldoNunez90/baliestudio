@@ -74,13 +74,13 @@
     color: gray !important;
   }
 
-  .custom-day {
-    background-color: white !important; /* Color amarillo */
-    color: blue !important; /* Texto negro */
-  }
+  /* .custom-day {
+    background-color: white !important;
+    color: blue !important; 
+  } */
 
   .react-calendar__tile:active{
-    background-color: black !important;
+    transform: scale(0.2);
   }
 
   .selectHoursHero{

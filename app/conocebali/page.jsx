@@ -1,4 +1,5 @@
 'use client'
+import MouseGif from "../components/MouseGif";
 import { Video } from "../components/Video";
 import Image from "next/image";
 
@@ -10,6 +11,7 @@ export default function Conoce() {
     <div>
       <div className="videoContainer">
         <Video url="estudio.mp4" />
+        <MouseGif />
       </div>
     <section className="textConoceBali">
         <div > <p className="conoceBaliParagraph">
@@ -32,12 +34,12 @@ export default function Conoce() {
         Your browser does not support the video tag.
         </video>
             </div>
-            <div>
+            <div className="imgContainerModel">
             <Image src={"/conocebali/conoceBaliImg3.jpg"} alt="photo" fill className="conocePhoto2"/>
-            <div>
-              <p className="conocePhotoTxt">CHEERY BOMB <a href="https://www.instagram.com/bfstoreok/" target="_blanck">@bfstoreok</a> - Modelo: <a href="https://www.instagram.com/barbieeferrari/" target="_blanck" >@barbieeferrari</a></p>
-              <p className="conocePhotoTxt">Make up & Peinado: <a href="https://www.instagram.com/soficosta.makeup/" target="_blanck">@soficosta.makeup</a> / <a href="https://www.instagram.com/emmabarrioshair/" target="_blanck" >@emmabarrioshair</a></p>
-              <p className="conocePhotoTxt">Fotografos: <a href="https://www.instagram.com/magencia.mkt/" target="_blanck">@magenciamkt</a> / <a href="https://www.instagram.com/marbellendier/" target="_blanck">@marbellendier</a> / <a href="https://www.instagram.com/maratkinson_/" target="_blanck">@maratkinson_</a></p>
+            <div className="overlay">
+              <p className="conocePhotoTxt">CHEERY BOMB <a href="https://www.instagram.com/bfstoreok/" target="_blanck" className="creditsPhoto">@bfstoreok</a> - Modelo: <a href="https://www.instagram.com/barbieeferrari/" target="_blanck" className="creditsPhoto" >@barbieeferrari</a></p>
+              <p className="conocePhotoTxt">Make up & Peinado: <a href="https://www.instagram.com/soficosta.makeup/" target="_blanck" className="creditsPhoto">@soficosta.makeup</a> / <a href="https://www.instagram.com/emmabarrioshair/" target="_blanck"  className="creditsPhoto">@emmabarrioshair</a></p>
+              <p className="conocePhotoTxt">Fotografos: <a href="https://www.instagram.com/magencia.mkt/" target="_blanck" className="creditsPhoto">@magenciamkt</a> / <a href="https://www.instagram.com/marbellendier/" target="_blanck" className="creditsPhoto">@marbellendier</a> / <a href="https://www.instagram.com/maratkinson_/" target="_blanck" className="creditsPhoto">@maratkinson_</a></p>
             </div>
             </div>
           </div>
