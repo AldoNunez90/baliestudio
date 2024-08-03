@@ -1,8 +1,11 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'); */
+
 *{
   text-decoration: none;
   list-style: none;
-  font-family: system-ui, -apple-system, Roboto;
-  /* font-weight: 400; */
+  /* font-family: 'Raleway';
+  font-weight: 400; */
   margin: 0;
 }
 

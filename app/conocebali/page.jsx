@@ -1,7 +1,21 @@
+'use client'
 import { Video } from "../components/Video";
 import Image from "next/image";
+import { useEffect, useRef  } from "react";
+
 
 export default function Conoce() {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.play().catch((error) => {
+        console.error("Error attempting to play video:", error);
+      });
+    }
+  }, []);
+
   return (
     <div>
       <div className="videoContainer">
@@ -21,8 +35,15 @@ export default function Conoce() {
         <div className="conocePhotosContainer">
 
           <div className="conocePhoto2Container" >
+            <div className="video-background">
+              {/* <video url={"/conocebali/conoceVideo.mp4"} id="background-video"/> */}
+              <video id="background-video" autoPlay loop>
+              <source src="/conocebali/conoceVideo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+        </video>
+            </div>
             <Image src={"/conocebali/conoceBaliImg3.jpg"} alt="photo" fill className="conocePhoto2"/>
-            <p className="creditsPhoto">{`CHEERY BOMB @bfstoreok Modelo: @barbieeferrari\n\nMake up & Peinado: @soficosta.makeup / @emmabarrioshair\n\nFotografos: @magenciamkt /@marbellendier / @maratkinson_`}</p>
+            {/* <p className="creditsPhoto">{`CHEERY BOMB @bfstoreok Modelo: @barbieeferrari\n\nMake up & Peinado: @soficosta.makeup / @emmabarrioshair\n\nFotografos: @magenciamkt /@marbellendier / @maratkinson_`}</p> */}
           </div>
         </div>
 

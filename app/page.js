@@ -1,20 +1,21 @@
 "use client";
 import Faqs from "./components/Faqs";
 import MarqueeHome from "./components/marquee";
+import MouseGif from "./components/MouseGif";
 import { Video } from "./components/Video";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
 
+
+export default function Home() {
+  
   return (
     <div>
       <div className="videoContainer">
         <Video url="estudio.mp4" />
       </div>
-      {/* <div>
-        <Video url={"/mousseEffect.mp4"}/>
-      </div> */}
+      <MouseGif />
       <div className="marqueeContainer">
         <MarqueeHome textMarquee={"ENFOCA.  CAPTURA.  INSPIRA"} />
       </div>
@@ -25,8 +26,8 @@ export default function Home() {
           <div className="baliEstudioText ">
             <div className="theFirts">
             <h2 className="homeTitles">BALI ESTUDIO</h2>
-             <p className="baliTxt">            
-              {`BALI Estudio se erige no sólo como\nun espacio de sesiones fotográficas\no fílmicas, sino como un ecosistema\ndiseñado para la creatividad y la\ninnovación. Cada rincón ha sido\npensado para ofrecer versatilidad,\nadaptabilidad, calidad y una\ninigualable experiencia creativa.`}
+             <p className="baliTxtFirst">            
+              {`Un Espacio sofisticado para proyectos\nextraordinarios.\n\nSu arquitectura europea confiere al\nespacio una atmósfera sofisticada,\nideal para clientes que buscan un\nentorno distinguido para sus\nproyectos.`}
               </p> 
               <Link href={"/conocebali"}>
                 <div className="conocemasBtn">Conoce más</div>
@@ -35,7 +36,7 @@ export default function Home() {
           </div>
           <div className="baliEstudioPictures baliEstudioImg">
             <Image
-              src={`/DSC04850.jpg`}
+              src={`/imgHome1.jpg`}
               alt="Nuestro Estudio"
               fill
               className="baliEstudioImg1"
@@ -44,8 +45,8 @@ export default function Home() {
         {/* second */}
 
           <div className="baliEstudioText ">
-            <p className="theSecond baliTxt">
-              {`Nuestros espacios son pura inspiración con\nuna iluminación natural deslumbrante, equipos\nde primera, fondos versátiles y hasta un rincón\nacogedor para tus modelos y equipo de\ntrabajo. Si quieres ser parte de esta experiencia\nfotográfica sin igual o tienes alguna pregunta,\nno dudes en contactarnos.`}
+            <p className="theSecond baliTxtFirst">
+              {`Hemos diseñado nuestro espacio no\nsolo para ser visualmente impactante,\nsino  también para ser altamente funcional\ny adaptable a las necesidades específicas\nde cada cliente.\n\nLa combinación de elegancia, versatilidad\ny tecnología hacen de Bali Estudio el lugar\nideal.`}
             </p>
           </div>
           <div className="baliEstudioPictures baliEstudioImg baliLogoWhiteContainer">
@@ -54,13 +55,16 @@ export default function Home() {
 
         {/* third */}
           <div className="baliEstudioText">
-            <p className="theThird baliTxt">
-              {`Situado en el corazón de Buenos Aires,\nen la icónica intersección de la Avenida Santa Fe y 9 de Julio,\nse erige como un símbolo de glamour y elegancia.`}
+            <div>
+            <p className="theThird baliTxtFirst">
+              {`Con gran vocación de servicio,\nnuestro equipo está siempre dispuesto\na asistir a nuestros clientes en cada\netapa de su proyecto, brindando soporte\ny soluciones personalizadas.\n`}
             </p>
+            <p className="theThird baliTxtThird">¡Vení a Conocernos y tener una Baliexperience!</p>
+            </div>
           </div>
           <div className="baliEstudioPictures baliEstudioImg">
             <Image
-              src={`/DSC04606.JPG`}
+              src={`/imgHome2.JPG`}
               alt="Nuestro Estudio"
               fill
               className="baliEstudioImg1"
@@ -75,7 +79,7 @@ export default function Home() {
       <section className="servicios">
           <div className="baliEstudioPictures baliEstudioImg">
             <Image
-              src={`/espejo.webp`}
+              src={`/imgHome3.jpg`}
               alt="Nuestro Estudio"
               fill
               className="baliEstudioImg1"
@@ -93,23 +97,23 @@ export default function Home() {
         {/* -------------------------------------- */}
           <div className="baliEstudioPictures baliEspaciosTxt">
             <p>
-              {`ALQUILA\nNUESTROS\nESPACIOS\nPARA`}
+              {`EN\nNUESTROS\nESPACIOS\nPODRAS\nHACER`}
             </p>
           </div>
           <div className="baliEstudioText produccionesContainer ">
             <div className="theSecond">
               <p className="baliEstudioTitle3 baliTxt">{`PRODUCCIONES\nAUDIOVISUALES`}</p>
-            <p className="baliTxt">{`GRABACIÓN DE VIDEOS\nFASHION FILMS\nCONTENIDO PARA REDES SOCIALES\nREELS`}</p>
+            <p className="baliTxt">{`REELS\nSOCIALES\nFASHION FILMS\nGRABACIÓN DE VIDEOS\nCONTENIDO PARA REDES SOCIALES`}</p>
             </div>
             <div className="theSecondTxt">
               <p className="baliEstudioTitle3 baliTxt">{`EVENTOS`}</p>
-            <p className="baliTxt" >{`MASTER CLASS\nSHOW ROOM\nWORKSHOP\nEVENTOS EMPRESARIALES                \nFASHION SHOW\nCASTING`}</p>
+            <p className="baliTxt" >{`CASTING\nWORKSHOP\nSHOW ROOM\nFASHION SHOW\nMASTER CLASS\nEVENTOS EMPRESARIALES`}</p>
             </div>
         </div>
         {/* -------------------------------------- */}
         <div className="baliEstudioPictures baliEstudioImg">
             <Image
-              src={`/edificio1080.webp`}
+              src={`/imgHome4.jpg`}
               alt="Nuestro Estudio"
               fill
               className="baliEstudioImg1"
@@ -117,8 +121,8 @@ export default function Home() {
           </div>
           <div className="baliEstudioText">
             <div  className="theThird">
-          <p className="baliEstudioTitle3 baliTxt">{`EVENTOS`}</p>
-            <p className="baliTxt">{`ESTILISMO\nPRODUCCIÓN DE MODA Y EVENTOS       `}
+          <p className="baliEstudioTitle3 baliTxt">{`AMAMOS LA MODA`}</p>
+            <p className="baliTxt">{`ESTILISMO\nPRODUCCIÓN DE MODA Y EVENTOS`}
             </p>
             </div>
           </div>
