@@ -24,47 +24,30 @@ export default function Estudio() {
           className="setEstudioBtn"
           style={
             displayEstudio === "set"
-              ? { backgroundColor: "#232021", color: "white" }
-              : { backgroundColor: "white", color: "black" }
+              ? { backgroundColor: "white", color: "black" }
+              : { backgroundColor: "#232021", color: "white" }
           }
         >
           <p className="switchBtnEstudios">SET</p>
+        </div>
           <div className="miniCamSet">
-            <Image
+          <Image
               src={"/minicam.png"}
               alt="camera"
               className="cameraImg"
               width={30}
-              height={43.5}
-              style={
-                displayEstudio === "set"
-                  ? { display: "block" }
-                  : { display: "none" }
-              }
+              height={43.5} 
             />
           </div>
-        </div>
         <div
           onClick={() => setDisplayStudio("equipos")}
           className="setEstudioBtn"
           style={
             displayEstudio === "equipos"
-              ? { backgroundColor: "#232021", color: "white" }
-              : { backgroundColor: "white", color: "black" }
+              ? { backgroundColor: "white", color: "black" }
+              : { backgroundColor: "#232021", color: "white" }
           }
         >
-          <Image
-            src={"/minicam.png"}
-            alt="camera"
-            width={30}
-            height={43.5}
-            className="cameraImg"
-            style={
-              displayEstudio === "equipos"
-                ? { display: "block" }
-                : { display: "none" }
-            }
-          />
           <p className="switchBtnEstudios">EQUIPOS</p>
         </div>
       </div>

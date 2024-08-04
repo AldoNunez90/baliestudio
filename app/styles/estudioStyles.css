@@ -1,8 +1,7 @@
 
 
 .handleClickSetEstudioContainer{
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
 }
 
 .equiposContainer{
@@ -28,6 +27,8 @@
     font-weight: 500;
     cursor: pointer;
     display: flex;
+    flex-grow: 1;
+    flex-basis: 0;
 }
 .studioPalaceContainer{
 align-content: center;}
@@ -119,6 +120,6 @@ align-content: center;}
     position: relative !important;
 }
 
-.miniCamSetContainer{
-    display: flex;
+.miniCamSet{
+    background-color: white;
 }

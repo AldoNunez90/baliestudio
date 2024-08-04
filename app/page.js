@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div>
       <div className="videoContainer">
-        <Video url="estudio.mp4" />
+        <Video url="https://res.cloudinary.com/dsdzvhfhh/video/upload/v1722747174/estudio_cw6x13.mp4" />
       </div>
       <MouseGif />
       <div className="marqueeContainer">
@@ -36,7 +36,7 @@ export default function Home() {
           </div>
           <div className="baliEstudioPictures baliEstudioImg">
             <Image
-              src={`/imgHome1.jpg`}
+              src={"https://res.cloudinary.com/dsdzvhfhh/image/upload/v1722747160/imgHome1_pph93j.jpg"}
               alt="Nuestro Estudio"
               fill
               className="baliEstudioImg1"
@@ -64,7 +64,7 @@ export default function Home() {
           </div>
           <div className="baliEstudioPictures baliEstudioImg">
             <Image
-              src={`/imgHome2.JPG`}
+              src={`https://res.cloudinary.com/dsdzvhfhh/image/upload/v1722747163/imgHome2_sl0y3r.jpg`}
               alt="Nuestro Estudio"
               fill
               className="baliEstudioImg1"
@@ -79,7 +79,7 @@ export default function Home() {
       <section className="servicios">
           <div className="baliEstudioPictures baliEstudioImg">
             <Image
-              src={`/imgHome3.jpg`}
+              src={`https://res.cloudinary.com/dsdzvhfhh/image/upload/v1722747162/imgHome3_rjdyfg.jpg`}
               alt="Nuestro Estudio"
               fill
               className="baliEstudioImg1"
@@ -113,7 +113,7 @@ export default function Home() {
         {/* -------------------------------------- */}
         <div className="baliEstudioPictures baliEstudioImg">
             <Image
-              src={`/imgHome4.jpg`}
+              src={`https://res.cloudinary.com/dsdzvhfhh/image/upload/v1722747161/imgHome4_k956dj.jpg`}
               alt="Nuestro Estudio"
               fill
               className="baliEstudioImg1"

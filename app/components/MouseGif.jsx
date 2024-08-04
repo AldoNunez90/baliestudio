@@ -7,7 +7,6 @@ import Image from "next/image";
 export default function MouseGif() {
 
     const [hidden, setHidden] = useState(false);
-console.log(hidden);
 
   useEffect(() => {
     const handleScroll = () => {

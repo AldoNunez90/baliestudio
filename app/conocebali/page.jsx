@@ -10,7 +10,7 @@ export default function Conoce() {
   return (
     <div>
       <div className="videoContainer">
-        <Video url="estudio.mp4" />
+        <Video url="https://res.cloudinary.com/dsdzvhfhh/video/upload/v1722747174/estudio_cw6x13.mp4" />
         <MouseGif />
       </div>
     <section className="textConoceBali">
@@ -28,9 +28,8 @@ export default function Conoce() {
 
           <div className="conocePhoto2Container" >
             <div className="video-background">
-              {/* <video url={"/conocebali/conoceVideo.mp4"} id="background-video"/> */}
               <video id="background-video" autoPlay loop muted>
-              <source src="/conocebali/conoceVideo.mp4" type="video/mp4" />
+              <source src="https://res.cloudinary.com/dsdzvhfhh/video/upload/v1722747158/conoceVideo_spqqzf.mp4" type="video/mp4" />
         Your browser does not support the video tag.
         </video>
             </div>
