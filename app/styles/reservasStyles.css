@@ -2,7 +2,33 @@
 .bookingSetPalaceContainer{
     display: flex;
     min-height: 400px;
-    
+    padding: 2vw;
+}
+.reservasIntroContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2vw 0;
+}
+
+.reservasIntroTitle{
+  text-align: center;
+  font-weight: 600;
+}
+
+.reservasIntroTitleBold{
+  font-weight: 700;
+}
+
+.reservasIntroTxt{
+  text-align: center;
+  margin: 2vw;
+  font-weight: 500;
+}
+
+.reservasIntroSmall{
+  font-size: x-small;
+  font-weight: 600;
 }
 
 .setPalaceDetailsContent{
@@ -20,6 +46,16 @@
   color: white;
   display: flex;
   flex-direction: column;
+  padding: 2vw;
+}
+
+.summaryTitle{
+  font-size: 3vw;
+  font-weight: 700;
+}
+
+.summaryDate{
+  margin-top: 1vw;
 }
 
 .setPalaceTitle{
@@ -29,17 +65,27 @@
     margin-left: 4vw;
 }
 
+.setPalaceAzulImg{
+  position: relative !important;
+  width: 20vw !important;
+  
+}
 .setPalaceText{
-    justify-content: space-around;
+    justify-content: center;
     padding: 1.5vw;
 }
+
+.setPalaceAzulTxt{
+  margin-bottom: 1vw;
+}
 .startBookingBtn{
-    padding: 5px;
+    padding: 6px;
     width: 8vw;
     border-radius: 30px;
     color: white;
     background-color: black;
     font-size: small;
+    border: none;
 }
 
 .cancelBookingBtn{
@@ -49,6 +95,7 @@
     color: black;
     background-color: white;
     font-size: small;
+    margin-top: 1vw;
 }
 
 .setPalaceBtns{
@@ -67,20 +114,14 @@
 
 .react-calendar{
     border: none !important;
+    font-weight: 600;
+    font: inherit;
+    font-family: inherit;
 }
 
-.react-calendar__tile--disabled {
-    background-color: white !important;
-    color: gray !important;
-  }
 
-  /* .custom-day {
-    background-color: white !important;
-    color: blue !important; 
-  } */
-
-  .react-calendar__tile:active{
-    transform: scale(0.2);
+  .react-calendar__month-view__weekdays{
+    font-family: inherit;
   }
 
   .selectHoursHero{
@@ -133,13 +174,38 @@
     position: relative;
   }
   
+  .hourBoxBtn.selected {
+    background-color: #4caf50; /* Color para las horas seleccionadas */
+    color: #fff;
+  }
+  
+  .hourBoxBtn.intermediate {
+    background-color: #8bc34a; /* Color para las horas intermedias */
+    color: #fff;
+  }
+  
+  .nextBookingBtn{
+    padding: 5px;
+    width: 8vw;
+    border-radius: 30px;
+    color: black;
+    background-color: white;
+    font-size: small;
+    align-self: center;
+    border: none;
+  }
+  
+  .hoursBtnContainer{
+    display: flex;  
+    flex-direction: column;
+  }
   .options {
     position: absolute;
     background-color: gray;
     z-index: 99;
     border-radius: 10px;
     width: 100%;
-    top: 20px;
+    top: 39px;
   }
   
   .option {
@@ -194,16 +260,47 @@
   }
 
   
- 
+ .past-day{
+  color: gray !important;
+  
+ }
   
   .completely-free {
-    background-color: blue !important;
+    color: blue !important;
   }
   .partially-occupied {
-    background-color: yellow !important;
+    color: rgb(221, 147, 9) !important;
   }
   
-  
   .completely-occupied {
-    background-color: red !important;
+    color: gray !important;
+  }
+  
+  .react-calendar__tile:disabled{
+    background-color: unset !important;
+  }
+
+  .react-calendar__tile:hover{
+    background-color: lightgrey;
+    border-radius: 100px;
+  }
+
+  .booking-form{
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    background-color: black;
+    color: white;
+  }
+
+  .form-group{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inputForm{
+    border: none;
+    border-radius: 50px;
+    width: 20vw;
+    height: 1.5vw;
+    margin: 0.5vw;
   }

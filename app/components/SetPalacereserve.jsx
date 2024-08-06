@@ -9,31 +9,33 @@ import { format } from "date-fns";
 import { es } from "date-fns/locale";
 
 function SetPalaceReserve() {
-  const [booking, setBooking] = useState(false); //Habilita el calendario
-  const [screenDate, setScreenDate] = useState(null); //Fecha que se muestra en pantalla
-  const [start, setStart] = useState(null);  //horas que se muestran en pantalla
-  const [date, setDate] = useState(null); //Nivel de ocupación de un día
-  const [end, setEnd] = useState(null); //horas que se muestran en pantalla
-  const [value, setValue] = useState("Seleccionar opción"); // Menu desplegable
-  const [hours, setHours] = useState(null); //Cantidad de horas necesarias en el proyecto
-  const [isOpen, setIsOpen] = useState(false); //Estado para el menu desplegable
-  const [eventContent, setEventContent] = useState(false); //Detalles del evento en horas
-  const [events, setEvents] = useState([]); //Lista de eventos que vienen del back
-  const [dateInfo, setDateInfo] = useState({}); //Día seleccionado
-  const [selectedDate, setSelectedDate] = useState(null); //Día seleccionado
-  const [occupiedHours, setOccupiedHours] = useState([]); //Horas ocupadas del día
+  const [booking, setBooking] = useState(false);
+  const [screenDate, setScreenDate] = useState(null);
+  const [start, setStart] = useState(null);
+  const [end, setEnd] = useState(null);
+  const [value, setValue] = useState("Seleccionar opción");
+  const [hours, setHours] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [eventContent, setEventContent] = useState(false);
+  const [events, setEvents] = useState([]);
+  const [dateInfo, setDateInfo] = useState({});
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [occupiedHours, setOccupiedHours] = useState([]);
+  const [date, setDate] = useState(null)
+  const [hoveredHour, setHoveredHour] = useState(null);
+
 
   useEffect(() => {
     axios
-      .get("https://back-bali-aldos-projects-f6edb5af.vercel.app/api/getEvents")
+      .get("http://localhost:3001/")
       .then((response) => {
         setEvents(response.data);
-        processEvents(response.data);})
-        .catch(error => {
-          console.error('Error fetching events:', error.message);
+        processEvents(response.data);
+      })
+      .catch((error) => {
+        console.error('Error fetching events:', error.message);
       });
   }, []);
-  console.log(events);
 
   function processEvents(events) {
     const dateInfo = {};
@@ -52,7 +54,6 @@ function SetPalaceReserve() {
       const startHour = new Date(event.start.dateTime).getHours();
       const endHour = new Date(event.end.dateTime).getHours();
 
-      // Marcar las horas ocupadas por este evento
       for (let hour = startHour; hour < endHour; hour++) {
         dateInfo[date].occupiedHours.add(hour);
       }
@@ -60,15 +61,10 @@ function SetPalaceReserve() {
       dateInfo[date].totalEvents++;
     });
 
-    // Determinar si el día está completamente ocupado
     Object.keys(dateInfo).forEach((date) => {
       const occupiedHours = dateInfo[date].occupiedHours;
-      const requiredHours = new Set(
-        [...Array(22 - 8).keys()].map((h) => h + 8)
-      );
-      dateInfo[date].fullyOccupied = [...requiredHours].every((hour) =>
-        occupiedHours.has(hour)
-      );
+      const requiredHours = new Set([...Array(22 - 8).keys()].map((h) => h + 8));
+      dateInfo[date].fullyOccupied = [...requiredHours].every((hour) => occupiedHours.has(hour));
     });
 
     setDateInfo(dateInfo);
@@ -77,14 +73,16 @@ function SetPalaceReserve() {
   function tileClassName({ date, view }) {
     if (view === "month") {
       const dateString = date.toISOString().split("T")[0];
+      const today = new Date().toISOString().split('T')[0];
+
+      if (dateString < today) {
+        return 'past-day';
+      }
 
       if (dateInfo[dateString]) {
         if (dateInfo[dateString].fullyOccupied) {
           return "completely-occupied";
-        } else if (
-          dateInfo[dateString].totalEvents > 0 &&
-          dateInfo[dateString].fullyOccupied === false
-        ) {
+        } else if (dateInfo[dateString].totalEvents > 0) {
           return "partially-occupied";
         }
       }
@@ -93,33 +91,41 @@ function SetPalaceReserve() {
     return "completely-free";
   }
 
-
-  const handleDateClick = date => {
-    setSelectedDate(date);
-    setOccupiedHours(Array.from(dateInfo[date].occupiedHours || []));
-
+  const tileDisabled = ({ date }) => {
+    const dateString = date.toISOString().split('T')[0];
+    const today = new Date().toISOString().split('T')[0];
+    
+    // Deshabilita los días ocupados y los días anteriores a hoy
+    return dateInfo[dateString]?.fullyOccupied || dateString < today;
   };
 
-console.log(occupiedHours);
-
+  const handleDateClick = (date) => {
+    const dateString = format(date, "yyyy-MM-dd");
+    setSelectedDate(date);
+    setOccupiedHours(Array.from(dateInfo[dateString]?.occupiedHours || []));
+    setDate(dateString);
+  };
 
   const renderTimeButtons = () => {
     const buttons = [];
     for (let hour = 8; hour < 22; hour++) {
       buttons.push(
         <button 
-        key={hour} 
+        key={hour}
         disabled={occupiedHours.includes(hour)}
         onClick={() => handleClick(hour)}
-        className="hourBoxBtn"
-        >
-          {hour}:00
-        </button>
+        className={`hourBoxBtn ${start !== null && end !== null && hour >= start && hour <= end ? 'selected' : ''} ${hour >= start && hour <= end ? 'intermediate' : ''}`}
+        style={{ 
+          backgroundColor: occupiedHours.includes(hour) ? '#d3d3d3' : '',
+          color: start !== null && end !== null && hour >= start && hour <= end ? '#fff' : ''
+        }}
+      >
+        {hour}:00
+      </button>
       );
     }
     return buttons;
   };
-
 
   const formatToDate = (e) => {
     const formattedDate = format(e, "yyyy-MM-dd");
@@ -136,9 +142,19 @@ console.log(occupiedHours);
     setValue(option);
   };
 
-  const handleClick = (hour) => {
-    // if (isBlocked(hour)) return;
+  const validateSelection = (start, end, allowedHours) => {
+    if (start === null || end === null) return;
+  
+    const duration = end - start;
+    setEnd(start + allowedHours)
+    // Si la duración excede el límite de horas permitidas, ajusta la selección
+    if (duration > allowedHours) {
+      // Ajusta el `end` para que esté dentro del rango permitido
+      setEnd(start + allowedHours);
+    }
+  };
 
+  const handleClick = (hour) => {
     if (start === null || (start !== null && end !== null)) {
       setStart(hour);
       setEnd(null);
@@ -149,30 +165,39 @@ console.log(occupiedHours);
       setStart(hour);
     } else if (isValidSelection(start, hour)) {
       setEnd(hour);
+      validateSelection(start, hour, parseInt(hours));
     }
+
+     // Colorea los botones inmediatamente
+  if (start !== null && end === null) {
+    // Colorea todos los botones entre `start` y el botón clicado
+    setHoveredHour(hour);
+  } else {
+    setHoveredHour(null);
+  }
   };
 
   const isValidSelection = (start, end) => {
     if (start === null || end === null) return true;
     for (let i = start + 1; i < end; i++) {
-      // if (isBlocked(i)) return false;
+      if (occupiedHours.includes(i)) return false;
     }
     return true;
   };
 
   const Reserva = () => {
-    if (booking === true && date === null) {
+    if (booking === true && selectedDate === null) {
       return (
         <Calendar
           locale="es"
-          onChange={(e) => formatToDate(e)}
-          onClickDay={(date)=>handleDateClick(date)}
-          value={date}
-          // tileDisabled={tileDisabled}
+          onChange={formatToDate}
+          onClickDay={handleDateClick}
+          value={selectedDate}
+          tileDisabled={tileDisabled}
           tileClassName={tileClassName}
         />
       );
-    } else if (date != null && eventContent === false) {
+    } else if (selectedDate != null && eventContent === false) {
       return (
         <div className="selectHoursHero">
           <div className="selectHoursContainer">
@@ -186,7 +211,6 @@ console.log(occupiedHours);
               </div>
               {isOpen && (
                 <div className="options">
-                  <div className="option"></div>
                   {options.map((option, index) => (
                     <div
                       key={index}
@@ -202,134 +226,112 @@ console.log(occupiedHours);
           </div>
           <div>
             {hours && (
-              <div>{hours && (
-                <div>
-                  <h2>Time Slots for {selectedDate}</h2>
-                  {renderTimeButtons()}
+              <div className="hoursBtnContainer">
+              <div>
+                {renderTimeButtons()}
                 </div>
-              )}
-                <div>
-    </div>
                 <button
                   onClick={() => setEventContent(true)}
                   style={{ display: end === null && "none" }}
-                >
+                  className="nextBookingBtn"
+                  >
                   Siguiente
                 </button>
-              </div>
+                  </div>
             )}
           </div>
         </div>
       );
     } else if (eventContent) {
-      console.log("Reserva");
-      <div className="booking-form">
-        <h2>SET PALACE</h2>
-        <h3>31 DE JULIO 2024</h3>
-        <h3>14:00 - 16:00</h3>
-        <form>
-          <div className="form-group">
-            <label htmlFor="name">NOMBRE Y APELLIDO:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              // value={formData.name}
-              // onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="email">MAIL:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              // value={formData.email}
-              // onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="phone">TELEFONO:</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              // value={formData.phone}
-              // onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="eventType">
-              Qué tipo de contenido quieres generar en nuestros espacios?:
-            </label>
-            <select
-              id="eventType"
-              name="eventType"
-              // value={formData.eventType}
-              // onChange={handleChange}
-              required
-            >
-              <option value="">Seleccionar...</option>
-              <option value="photo-session">Photo session</option>
-              <option value="video-shoot">Video Shoot</option>
-              <option value="workshop">Workshop</option>
-              <option value="event">Event</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <button type="submit">CONFIRMAR RESERVA</button>
-        </form>
-      </div>;
+      return (
+        <div className="booking-form">
+          <form>
+            <div className="form-group">
+              <label htmlFor="name">NOMBRE Y APELLIDO:</label>
+              <input type="text" id="name" name="name" required  className="inputForm"/>
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">MAIL:</label>
+              <input type="email" id="email" name="email" required  className="inputForm"/>
+            </div>
+            <div className="form-group">
+              <label htmlFor="phone">TELEFONO:</label>
+              <input type="tel" id="phone" name="phone" required  className="inputForm"/>
+            </div>
+            <div className="form-group">
+              <label htmlFor="eventType">
+                ¿Qué tipo de contenido quieres generar en nuestros espacios?
+              </label>
+              <select id="eventType" name="eventType" required className="inputForm">
+                <option value="">Seleccionar...</option>
+                <option value="Prosuccion audiovisual">Producción audiovisual</option>
+                <option value="Sesión de fotos">Sesión de fotos</option>
+                <option value="Master Class">Master Class</option>
+                <option value="Encuentros">Encuentros</option>
+                <option value="Seminarios">Seminarios</option>
+                <option value="Eventos empresariales">Eventos empresariales</option>
+              </select>
+            </div>
+            <button type="submit">CONFIRMAR RESERVA</button>
+          </form>
+        </div>
+      );
     }
   };
 
   const clearBooking = () => {
     setBooking(false);
-    setDate(null);
+    setSelectedDate(null);
     setHours("");
     setStart(null);
     setEnd(null);
     setValue("Seleccionar opción");
+    setEventContent(false);
   };
 
   return (
+    <div>
+      <div className="reservasIntroContainer">
+        <p className="reservasIntroTitle">{`La familia\nBali Estudio`}</p>
+        <p className="reservasIntroTitleBold">{`te espera!`}</p>
+        <p className="reservasIntroTxt">{`Bienvenidos a nuestro programador de sesiones automático.\nAquí podrás reservar el tiempo que necesites para realizar tus\nproyectos en nuestros espacios.`}</p>
+        <p className="reservasIntroSmall">{`Letra chica de la reserva: Lorem ipsum dolor sit amet consectetur adipisicing elit.\nQuam veritatis praesentium labore? Magni alias veniam pariatur ullam minus placeat voluptates officiis,\nmolestias harum dolores porro vel fugit libero fugiat facere.\nLorem ipsum dolor sit amet consectetur adipisicing elit.\nQuam veritatis praesentium labore? Magni alias veniam pariatur ullam minus placeat voluptates officiis,\nmolestias harum dolores porro vel fugit libero fugiat facere.\nLorem ipsum dolor sit amet consectetur adipisicing elit.\nQuam veritatis praesentium labore? Magni alias veniam pariatur ullam minus placeat voluptates officiis,\nmolestias harum dolores porro vel fugit libero fugiat facere.`}  </p>
+      </div>
+
     <div className="bookingSetPalaceContainer">
-      {date === null ? (
+      {selectedDate === null ? (
         <div className="bookingSetPalaceContainer">
           <div className="setPalaceDetailsContent setPalaceImg">
             <Image
-              src={"/estudio1.png"}
+              src={"https://res.cloudinary.com/dsdzvhfhh/image/upload/v1722902346/setPalaceAzul_upli64.png"}
               alt="setPalace"
-              width={300}
-              height={300}
-            />
+              fill
+              className="setPalaceAzulImg"
+              />
           </div>
           <div className="setPalaceDetailsContent setPalaceText">
-            <h4 className="setPalaceTitle">
+            <h4 className="setPalaceTitle setPalaceAzulTxt">
               Ideal para fotos | entrevistas | videos | podcasts
             </h4>
-            <p>{`El valor del alquiler incluye:`}</p>
-            <p>{`• Bajada de infinito color blanco, verde o gris.\n• Uso del espacio especificado en la reserva\n• 3 flashes con accesorios`}</p>
-            <p className="setPalaceSmall">
+            <p className="setPalaceAzulTxt">{`El valor del alquiler incluye:`}</p>
+            <p className="setPalaceAzulTxt">{`• Bajada de infinito color blanco, verde o gris.\n• Uso del espacio especificado en la reserva\n• 3 flashes con accesorios`}</p>
+            <p className="setPalaceSmall setPalaceAzulTxt">
               Otros accesorios/espacios pueden tener costo adicional, por favor{" "}
               <Link href={"/contacto"}>consúltenos</Link>
             </p>
-            <p>Tiempo mínimo de reserva: 2HS</p>
+            <p className="setPalaceAzulTxt">Tiempo mínimo de reserva: 2 hs.</p>
             <div className="setPalaceBtns">
               {booking === false ? (
                 <button
-                  onClick={() => setBooking(true)}
-                  className="startBookingBtn"
+                onClick={() => setBooking(true)}
+                className="startBookingBtn"
                 >
                   Reservar
                 </button>
               ) : (
                 <button
-                  onClick={() => clearBooking()}
-                  className="cancelBookingBtn"
+                onClick={() => clearBooking()}
+                className="cancelBookingBtn"
                 >
                   Cancelar
                 </button>
@@ -339,11 +341,11 @@ console.log(occupiedHours);
         </div>
       ) : (
         <div className="setPalaceDetails">
-          <p className="summaryTitle">SET PALACE</p>
+          <p className="summaryTitle">SET PALACE / AZUL</p>
           <p className="summaryDate">{screenDate && screenDate}</p>
           <p className="summaryDate">{hours && hours}</p>
-          <p className="summaryDate">{start && `${start}:00`}</p>
-          <p className="summaryDate">{end && `${end}:00`}</p>
+          <p className="summaryDate">{start && `${start}:00`}{end && ` - ${end}:00`}</p>
+          
           <button onClick={() => clearBooking()} className="cancelBookingBtn">
             {" "}
             Cancelar
@@ -355,6 +357,7 @@ console.log(occupiedHours);
         <Reserva />
       </div>
     </div>
+      </div>
   );
 }
 
