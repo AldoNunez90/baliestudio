@@ -29,7 +29,7 @@ export default function Home() {
               {`Un Espacio sofisticado para proyectos\nextraordinarios.\n\nSu arquitectura europea confiere al\nespacio una atmósfera sofisticada,\nideal para clientes que buscan un\nentorno distinguido para sus\nproyectos.`}
               </p> 
               <Link href={"/conocebali"}>
-                <div className="conocemasBtn">Conoce más</div>
+                <div className="btnStyle">Conoce más</div>
               </Link>
             </div>
           </div>

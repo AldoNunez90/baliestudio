@@ -4,9 +4,8 @@
     bottom: 40px; /* Ajusta este valor según sea necesario */
     transform: translateX(-50%);
     transition: opacity 0.1s ease;
-    opacity: 1;
   }
 
   .hidden {
-    opacity: 0;
+    display: none;
   }

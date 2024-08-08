@@ -4,6 +4,7 @@ import "./styles/conocebaliStyles.css"
 import "./styles/reservasStyles.css"
 import "./styles/estudioStyles.css"
 import "./styles/homeStyles.css"
+import "./styles/formContact.css"
 import NavBar from "./components/navbarHome";
 import Footer from "./components/Footer";
 

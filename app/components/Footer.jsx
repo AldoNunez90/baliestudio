@@ -6,13 +6,15 @@ export default function Footer() {
   return (
     <div className="footerContainer">
       <div className="footerLogo footerItems">
+      <Link href={"/"}>
         <Image
           src="/baliLogoWhite.png"
           alt="logo"
           className="footerLogoImg"
           width={503}
           height={142}
-        />
+          />
+          </Link>
       </div>
       <div className="footerLinks footerItems">
         <ul className="footerList footerText" >

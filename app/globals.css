@@ -21,3 +21,14 @@ p{
   text-decoration: none;
   outline: none; 
 }
+
+.btnStyle{
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  padding: 5px 30px;
+  border: none;
+}

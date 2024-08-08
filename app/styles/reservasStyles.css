@@ -13,11 +13,13 @@
 
 .reservasIntroTitle{
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: large;
 }
 
 .reservasIntroTitleBold{
-  font-weight: 700;
+  font-weight: 800;
+  font-size: large;
 }
 
 .reservasIntroTxt{
