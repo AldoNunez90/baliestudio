@@ -62,9 +62,11 @@ export default function Contacto () {
       };
     
       const getInputStyle = (field) => {
-        return isSubmitted && !formValues[field].trim() ? { backgroundColor: '#f3464a', color: "white" } : {};
+        return isSubmitted && !formValues[field].trim() ? {outlinecolor: "red !important", border: "2px solid #b24646"} : {};
       };
-
+      const getInputClass = (field) => {
+        return isSubmitted && !formValues[field].trim() ? 'error' : 'inputContact';
+      };
     return(
   <div className="contactContainer">
         <div className="reservasIntroContainer">
@@ -82,7 +84,7 @@ export default function Contacto () {
         name="name"
         id="name"
         placeholder="Nombre"
-        className="inputContact"
+        className={getInputClass('name')}
         value={formValues.name}
         onChange={handleChange}
         style={getInputStyle('name')}
@@ -94,7 +96,7 @@ export default function Contacto () {
         name="email"
         id="email"
         placeholder="Correo electrónico"
-        className="inputContact"
+        className={getInputClass('name')}
         value={formValues.email}
         onChange={handleChange}
         style={getInputStyle('email')}
@@ -106,7 +108,7 @@ export default function Contacto () {
         name="phone"
         id="phone"
         placeholder="Teléfono"
-        className="inputContact"
+        className={getInputClass('name')}
         value={formValues.phone}
         onChange={handleChange}
         style={getInputStyle('phone')}
@@ -132,7 +134,7 @@ export default function Contacto () {
         
 
         <div className="imgFormContact">
-            <Image src={"https://res.cloudinary.com/dsdzvhfhh/image/upload/v1722747155/conoceBaliImg1_aa4maq.jpg"} alt="Contacto" fill className="contactImg"/>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.3597505282964!2d-58.38017529999999!3d-34.5950635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccab652bcfe57%3A0x48b0bf0cbd252c00!2sAv.%20Sta.%20Fe%20911%2C%20C1059ABD%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1723169951804!5m2!1ses-419!2sar" className="map"></iframe>
         </div>
     </div>
 

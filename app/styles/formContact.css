@@ -100,3 +100,24 @@
     justify-content: flex-end;
     font-size: 25px;
   }
+
+  .map{
+    width: 25vw;
+    height: 20vw;
+    border: unset;
+  }
+
+  input::placeholder {
+    color: #aaadaf;
+    font-weight: 300;
+  }
+  
+  /* Estilo del placeholder cuando hay un error */
+  input.error::placeholder {
+    color: #b24646; /* Color del placeholder cuando hay un error */
+   
+  }
+
+  input.error{
+    margin-bottom: 2vw;
+  }
