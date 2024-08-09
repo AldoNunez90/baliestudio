@@ -1,5 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import env from "dotenv";
+import process from "process";
 import Calendar from "react-calendar";
 import axios from "axios";
 import Image from "next/image";
@@ -9,7 +11,7 @@ import { format } from "date-fns";
 import { es } from "date-fns/locale";
 
 function SetPalaceReserve() {
-  const [booking, setBooking] = useState(false);
+  // const [booking, setBooking] = useState(false);
   const [screenDate, setScreenDate] = useState(null);
   const [start, setStart] = useState(null);
   const [end, setEnd] = useState(null);
@@ -23,6 +25,7 @@ function SetPalaceReserve() {
   const [occupiedHours, setOccupiedHours] = useState([]);
   const [date, setDate] = useState(null)
   const [hoveredHour, setHoveredHour] = useState(null);
+  const [calendarId, setCalendarId] = useState(false)
 
 
   useEffect(() => {
@@ -35,7 +38,12 @@ function SetPalaceReserve() {
       .catch((error) => {
         console.error('Error fetching events:', error.message);
       });
+
+  
   }, []);
+
+  const idCalendarSetPalace = process.env.CALENDAR_ID_SET_PALACE
+
 
   function processEvents(events) {
     const dateInfo = {};
@@ -184,9 +192,10 @@ function SetPalaceReserve() {
     }
     return true;
   };
+console.log(calendarId);
 
   const Reserva = () => {
-    if (booking === true && selectedDate === null) {
+    if (calendarId !== false && selectedDate === null) {
       return (
         <Calendar
           locale="es"
@@ -245,7 +254,7 @@ function SetPalaceReserve() {
     } else if (eventContent) {
       return (
         <div className="booking-form">
-          <form>
+          <form onSubmit={(e)=>createReserve(e)}>
             <div className="form-group">
               <label htmlFor="name">NOMBRE Y APELLIDO:</label>
               <input type="text" id="name" name="name" required  className="inputForm"/>
@@ -280,7 +289,7 @@ function SetPalaceReserve() {
   };
 
   const clearBooking = () => {
-    setBooking(false);
+    setCalendarId(false);
     setSelectedDate(null);
     setHours("");
     setStart(null);
@@ -288,6 +297,40 @@ function SetPalaceReserve() {
     setValue("Seleccionar opción");
     setEventContent(false);
   };
+
+  const formData = {
+      calendarIdSelected: calendarId,  
+      summary: 'Reunión en Set Palace',
+      start: '2024-08-25T10:00:00-03:00',
+      end:   '2024-08-25T11:00:00-03:00',
+  }
+
+  const createReserve = async (e) => {
+    e.preventDefault()
+    try {
+      const response = await fetch('/api/createEvent', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(`Error ${response.status}: ${errorData.error || 'Desconocido'}`);
+      }
+  
+      const data = await response.json();
+      console.log('Evento creado:', data.status);
+      if(data.status === 'confirmed'){
+        clearBooking();
+      }
+    } catch (error) {
+      console.error('Error en la solicitud:', error);
+    }
+  };
+
 
   return (
     <div>
@@ -321,9 +364,9 @@ function SetPalaceReserve() {
             </p>
             <p className="setPalaceAzulTxt">Tiempo mínimo de reserva: 2 hs.</p>
             <div className="setPalaceBtns">
-              {booking === false ? (
+              {calendarId === false ? (
                 <button
-                onClick={() => setBooking(true)}
+                onClick={() => setCalendarId(idCalendarSetPalace)}
                 className="startBookingBtn"
                 >
                   Reservar
