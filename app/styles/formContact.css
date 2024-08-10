@@ -120,4 +120,13 @@
 
   input.error{
     margin-bottom: 2vw;
+    min-height: 1vw;
+    min-width: 20vw !important;
+    font-family: inherit !important;
+    font-size: large;
+    font-weight: 300 !important;
+  }
+
+  label.error{
+    color: #b24646 !important;
   }

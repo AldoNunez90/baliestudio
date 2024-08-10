@@ -1,5 +1,6 @@
 
-/* @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'); */
+
+
 
 *{
   text-decoration: none;
@@ -31,4 +32,37 @@ p{
   width: fit-content;
   padding: 5px 30px;
   border: none;
+}
+
+/* App.module.css */
+.card {
+  width: 240px;
+  height: 240px;
+  background: linear-gradient(to bottom right, violet, fuchsia);
+}
+
+.cardBody {
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0;
+}
+
+.svg {
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.indicator {
+  stroke: white;
+}
+
+.track {
+  stroke: rgba(255, 255, 255, 0.1);
+}
+
+.value {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
 }

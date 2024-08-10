@@ -9,6 +9,7 @@ import NavBar from "./components/navbarHome";
 import Footer from "./components/Footer";
 
 
+
 const raleway = Raleway({ subsets: ["latin"] });
 
 export const metadata = {

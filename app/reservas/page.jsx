@@ -1,17 +1,19 @@
 'use client'
 
-import BookingSetPalace from "../components/reservaSetPalace";
-import CalendarComponent from "../components/SendReserves";
 import SetPalaceReserve from "../components/SetPalacereserve";
 
 
 export default function Reservas () {
 
     return  (
-        <div>           
-        {/* <BookingSetPalace /> */}
+        <div>  
+             <div className="reservasIntroContainer">
+        <p className="reservasIntroTitle">{`La familia\nBali Estudio`}</p>
+        <p className="reservasIntroTitleBold">{`te espera!`}</p>
+        <p className="reservasIntroTxt">{`Bienvenidos a nuestro programador de sesiones automático.\nAquí podrás reservar el tiempo que necesites para realizar tus\nproyectos en nuestros espacios.`}</p>
+        <p className="reservasIntroSmall">{`Letra chica de la reserva: Lorem ipsum dolor sit amet consectetur adipisicing elit.\nQuam veritatis praesentium labore? Magni alias veniam pariatur ullam minus placeat voluptates officiis,\nmolestias harum dolores porro vel fugit libero fugiat facere.\nLorem ipsum dolor sit amet consectetur adipisicing elit.\nQuam veritatis praesentium labore? Magni alias veniam pariatur ullam minus placeat voluptates officiis,\nmolestias harum dolores porro vel fugit libero fugiat facere.\nLorem ipsum dolor sit amet consectetur adipisicing elit.\nQuam veritatis praesentium labore? Magni alias veniam pariatur ullam minus placeat voluptates officiis,\nmolestias harum dolores porro vel fugit libero fugiat facere.`}  </p>
+      </div>         
         <SetPalaceReserve/>
-        {/* <CalendarComponent /> */}
         </div>
     )
 }
