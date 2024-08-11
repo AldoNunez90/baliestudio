@@ -1,9 +1,13 @@
+'use client'
+import FormContact from "../components/FormContact";
 
 
 
 export default function Produccion () {
 
     return (
-        <p>Nuestras producciones</p>
+        <div>
+            <FormContact />
+        </div>
     )
 }

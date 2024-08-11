@@ -8,7 +8,7 @@ export async function GET(req) {
     // Extraer el calendarIdSelected de los parámetros de consulta
     const url = new URL(req.url);
     const calendarIdSelected = url.searchParams.get('calendarId');
-
+    
     if (!calendarIdSelected) {
       return NextResponse.json({ error: 'Calendar ID is required' }, { status: 400 });
     }

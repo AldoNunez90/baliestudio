@@ -26,6 +26,8 @@ export default function Footer() {
             <div className="footerListLine"></div>
             <li className="footerListItem"><Link href={"/contacto"} className="footerRoutes">Contacto</Link></li>
             <div className="footerListLine"></div>
+            <li className="footerListItem"><Link href={"/privacidad"} className="footerRoutes">Políticas de privacidad</Link></li>
+            <div className="footerListLine"></div>
         </ul>
         <div className="footerSocialMedia footerText">
           <p className="footerTxtFirma">Página diseñada y desarrollada por <Image src={"/logoKranding.png"} alt="Kranding" width={78} height={12} /></p>

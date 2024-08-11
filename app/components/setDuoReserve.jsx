@@ -7,7 +7,7 @@ import "react-calendar/dist/Calendar.css";
 import { format } from "date-fns";
 import { es, tr } from "date-fns/locale";
 
-function SetPalaceReserve() {
+function SetDuoReserve() {
   const [screenDate, setScreenDate] = useState(null);
   const [start, setStart] = useState(null);
   const [end, setEnd] = useState(null);
@@ -43,12 +43,14 @@ function SetPalaceReserve() {
     
   }, [calendarId]);
 
+console.log(calendarId);
 
-  const idCalendarSetPalace = process.env.CALENDAR_ID_SET_PALACE;
+  const idCalendarSetDuo = process.env.CALENDAR_ID_SET_DUO;
 
   const handleCalendarId = async () => {
-    setCalendarId(idCalendarSetPalace);
+    setCalendarId(idCalendarSetDuo);
   };
+  console.log(calendarId);
   
   // Maneja los cambios en los inputs del formulario
   const handleInputChange = (e) => {
@@ -285,7 +287,7 @@ function SetPalaceReserve() {
         <p className="dialogTitle">{`Tu reserva se ha completado\ncorrectamente`}</p>
         <p className="dialogSubTitle">Gracias por elegirnos!</p>
         </div>
-        <p className="summaryTitle">SET PALACE / AZUL</p>
+        <p className="summaryTitle">SET DUO</p>
         <p className="summaryDate">{screenDate && screenDate}</p>
         <p className="summaryDate">
         {start && `${start}:00`}
@@ -534,14 +536,14 @@ function SetPalaceReserve() {
       <div className="bookingSetPalaceContainer">
         {selectedDate === null ? (
           <div className="bookingSetPalaceContainer">
-            <div className="setPalaceDetailsContent setPalaceImg">
+            <div className="setPalaceDetailsContent setPalaceImg setDuoImgContainer">
               <Image
                 src={
-                  "https://res.cloudinary.com/dsdzvhfhh/image/upload/v1722902346/setPalaceAzul_upli64.png"
+                  "https://res.cloudinary.com/dsdzvhfhh/image/upload/v1722902346/setDuoReservas_pabd7l.png"
                 }
                 alt="setPalace"
                 fill
-                className="setPalaceAzulImg"
+                className="setDuoImg"
               />
             </div>
             <div className="setPalaceDetailsContent setPalaceText">
@@ -600,4 +602,4 @@ function SetPalaceReserve() {
 
   );
 }
-export default SetPalaceReserve;
+export default SetDuoReserve;

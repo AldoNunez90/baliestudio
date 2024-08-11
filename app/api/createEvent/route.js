@@ -3,7 +3,7 @@ import { google } from 'googleapis';
 
 export async function POST(request) {
   try {
-    const { summary, start, end, calendarIdSelected } = await request.json();
+    const { summary, location, description, start, end, calendarIdSelected, attendees, reminders } = await request.json();
 
     if (!summary || !start || !end) {
       return NextResponse.json({ error: 'Faltan datos requeridos' }, { status: 400 });
@@ -20,23 +20,30 @@ export async function POST(request) {
       refresh_token: process.env.GOOGLE_REFRESH_TOKEN,
     });
 
-    const calendar = google.calendar({ version: 'v3', auth: oAuth2Client });
+    const calendar = google.calendar({ version: 'v3', auth: oAuth2Client});
 
     const event = {
       summary,
+      location: location,
+      description: description,
       start: {
         dateTime: start,
-        timeZone: 'America/Los_Angeles',
+        timeZone: 'America/Buenos_Aires',
       },
       end: {
         dateTime: end,
-        timeZone: 'America/Los_Angeles',
+        timeZone: 'America/Buenos_Aires',
       },
+      attendees: attendees,
+      reminders: reminders,
     };
+
+
 
     const response = await calendar.events.insert({
       calendarId: calendarIdSelected,
       resource: event,
+      sendUpdates: 'all'
     });
 
     return NextResponse.json(response.data);

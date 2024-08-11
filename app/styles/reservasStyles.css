@@ -13,19 +13,16 @@
 
 .reservasIntroTitle{
   text-align: center;
-  font-weight: 700;
-  font-size: large;
+  font-weight: 800;
+  font-size: xx-large;
 }
 
-.reservasIntroTitleBold{
-  font-weight: 800;
-  font-size: large;
-}
 
 .reservasIntroTxt{
   text-align: center;
   margin: 2vw;
   font-weight: 500;
+  font-size: large;
 }
 
 .reservasIntroSmall{
@@ -53,7 +50,7 @@
 
 .summaryTitle{
   font-size: 3vw;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .summaryDate{
@@ -67,10 +64,20 @@
     margin-left: 4vw;
 }
 
+.setDuoImg{
+  width: auto !important;
+  height: 16vw !important;
+  position: relative !important;
+}
+
+.setDuoImgContainer{
+  align-self: center;
+}
+
 .setPalaceAzulImg{
   position: relative !important;
-  width: 20vw !important;
-  
+  height: 30vw !important; 
+  width: auto !important;
 }
 .setPalaceText{
     justify-content: center;
@@ -304,6 +311,8 @@
     height: -webkit-fill-available;
     background-color: black;
     color: white;
+    display: flex;
+    align-items: center;
   }
 
   .form-group{
@@ -347,3 +356,47 @@
     animation:s2 1s infinite linear;
   }
   @keyframes s2 {to{transform: rotate(1turn)}}
+
+.dialogHero{
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5vw;
+}
+
+  .dialogContainer{
+    display: flex;
+    width: 75vw;
+    height: 30vw;
+    align-self: center;
+    color: white;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+.recervedOk{
+  width: 10vw !important;
+  height: inherit !important;
+  position: relative !important;
+}
+
+.dialogReserveDetails{
+  display: flex;
+}
+
+.dialogReserveContent{
+  margin: 2vw;
+}
+
+.dialogTitle{
+  font-weight: 600;
+  font-size: 3vw;
+  margin-bottom: 0.5vw;
+}
+
+.dialogSubTitle{
+  font-weight: 500;
+  font-size: 1vw;
+  margin-bottom: 2.5vw;
+}
