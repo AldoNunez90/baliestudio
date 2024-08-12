@@ -17,7 +17,7 @@ export async function POST(request) {
     // Configura el contenido del correo
     const mailOptions = {
       from: email,
-      to: process.env.EMAIL_USER,
+      to: process.env.EMAIL_TO,
       replyTo: email,
       subject: 'Nuevo mensaje desde el formulario de contacto',
       text: `Nombre: ${name}\nCorreo: ${email}\nTeléfono: ${phone}\nMensaje: ${message}`,

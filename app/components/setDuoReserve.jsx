@@ -578,7 +578,7 @@ console.log(calendarId);
           </div>
         ) : (
           <div className="setPalaceDetails">
-            <p className="summaryTitle">SET PALACE / AZUL</p>
+            <p className="summaryTitle">SET DUO </p>
             <p className="summaryDate">{screenDate && screenDate}</p>
             <p className="summaryDate">{hours && hours}</p>
             <p className="summaryDate">
