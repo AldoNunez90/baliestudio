@@ -112,6 +112,7 @@ console.log(error);
         <p className="contactTxtBold">{`Nos encantaría saber de vos :)`}</p>
       </div>
       <div className="formContact">
+      {isOpen && <div className="overlayDialog"></div> }
       {isOpen && ( <dialog open className="dialogContactForm">
         <FormContactResponse />
         </dialog>)} 

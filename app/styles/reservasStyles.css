@@ -225,6 +225,18 @@
     border: none;
   }
   
+  .specialHourBtn{
+    padding: 5px;
+    width: 8vw;
+    border-radius: 30px;
+    color: black;
+    background-color: white;
+    font-size: small;
+    align-self: center;
+    border: none;
+    text-align: center;
+    margin-left: 1.5vw ;
+  }
   .hoursBtnContainer{
     display: flex;  
     flex-direction: column;
@@ -399,4 +411,20 @@
   font-weight: 500;
   font-size: 1vw;
   margin-bottom: 2.5vw;
+}
+.overlayDialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad aquí */
+  z-index: 999; /* Asegúrate de que esté por encima del contenido */
+}
+
+.specialHours{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 8vw;
 }

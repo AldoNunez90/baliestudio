@@ -137,7 +137,7 @@
     margin: auto;
     height: 10vw;
     width: 30vw;
-    z-index: 100; 
+    z-index: 10000; 
     animation: 1s;
     flex-direction: column;
     justify-content: space-around;
@@ -166,4 +166,11 @@
     font-size: 1.5vw !important;
     margin-bottom: 0.5vw;
     font-weight: 600;
+  }
+
+  .hoursExtraBtn{
+    display: flex;
+    margin: 1vw;
+    justify-content: center;
+    align-items: center;
   }

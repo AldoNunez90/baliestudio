@@ -169,7 +169,7 @@ function SetPalaceReserve() {
   const renderTimeButtons = () => {
     const buttons = [];
 
-    for (let hour = 8; hour < 22; hour++) {
+    for (let hour = 8; hour <= 22; hour++) {
       const isHovered = start !== null && end === null && hour === hoveredHour;
       const isSelected =
         start !== null && end !== null && hour >= start && hour <= end;
@@ -209,12 +209,17 @@ function SetPalaceReserve() {
     setScreenDate(dateToScreen);
   };
 
-  const options = Array.from({ length: 11 }, (_, i) => `${i + 2}` + ` hs`);
+  const options = Array.from({ length: 7 }, (_, i) => `${i + 2}` + ` hs`);
 
   const handleSelect = (option) => {
     setIsOpen(!isOpen);
     setHours(option);
     setValue(option);
+    if(option === 'Horarios especiales'){
+      setStart(null)
+      setEnd(null)
+      setIsDisabled(true)
+    }
   };
 
   const handleClick = (hour) => {
@@ -270,6 +275,31 @@ function SetPalaceReserve() {
 
     return true;
   };
+
+  const HoursComponent = ()=>{
+    if (parseInt(hours) > 1 && parseInt(hours) < 9 ) {
+     return( <div className="hoursBtnContainer">
+      { alertHours && <p style={{color: "red", textAlign: "center"}}>{`Deberías seleccionar ${hours} horas`}</p>}
+      <div>{renderTimeButtons()}</div>
+      <button
+        onClick={() => setEventContent(true)}
+        disabled={isDisabled}
+        style={isDisabled ? {cursor: "not-allowed", backgroundColor: "gray"} : {cursor: "pointer"}}
+        className="nextBookingBtn"
+        
+      >
+        Siguiente
+      </button>
+    </div>
+    )}else if ( hours === 'Horarios especiales') {
+      return(<div className="specialHours">
+        <p style={{color: "white", fontSize: "larger"}}>{`Si los horarios que necesitas no figuran entre las\nopciones o tienes algún requerimiento especial:`}</p>
+        <a href="https://wa.me/+5491154171668?text=Hola! Necesito acordar un horario especial para el Set Palace / Azul" style={{textDecoration: 'unset', textAlign: "center", fontSize: "inherit"}} target="_blank" className="cancelBookingBtn">Contáctanos</a>
+        </div>
+    )} else {
+     return <div></div>
+    }
+  }
 
   const Modal = ()=>{
     return(
@@ -426,31 +456,19 @@ function SetPalaceReserve() {
                     <div
                       key={index}
                       className="option"
+                      style={{zIndex: "150"}}
                       onClick={() => handleSelect(option)}
                     >
                       {option}
                     </div>
                   ))}
+                  <div className="option" onClick={() => handleSelect("Horarios especiales")} > Horarios especiales </div>
                 </div>
               )}
             </div>
           </div>
           <div>
-            {hours && (
-              <div className="hoursBtnContainer">
-                { alertHours && <p style={{color: "red", textAlign: "center"}}>{`Deberías seleccionar ${hours} horas`}</p>}
-                <div>{renderTimeButtons()}</div>
-                <button
-                  onClick={() => setEventContent(true)}
-                  disabled={isDisabled}
-                  style={isDisabled ? {cursor: "not-allowed", backgroundColor: "gray"} : {cursor: "pointer"}}
-                  className="nextBookingBtn"
-                  
-                >
-                  Siguiente
-                </button>
-              </div>
-            )}
+          <HoursComponent />
           </div>
         </div>
       );
@@ -480,6 +498,7 @@ function SetPalaceReserve() {
     setShouldAutoFocus("name");
     setFinishBooking(null);
     setResponseOk(null);
+    setIsDisabled(true)
   };
 
   const createReserve = async (e) => {
@@ -552,7 +571,7 @@ function SetPalaceReserve() {
               <p className="setPalaceAzulTxt">{`• Bajada de infinito color blanco, verde o gris.\n• Uso del espacio especificado en la reserva\n• 3 flashes con accesorios`}</p>
               <p className="setPalaceSmall setPalaceAzulTxt">
                 Otros accesorios/espacios pueden tener costo adicional, por
-                favor <Link href={"/contacto"} style={{color: 'blue', textDecoration: 'unset'}}>consúltenos</Link>
+                favor <a href="https://wa.me/+5491154171668?text=Hola! Tengo una consulta sobre el Set Palace / Azul" style={{color: 'blue', textDecoration: 'unset'}} target="_blank">consúltenos</a>
               </p>
               <p className="setPalaceAzulTxt">
                 Tiempo mínimo de reserva: 2 hs.
