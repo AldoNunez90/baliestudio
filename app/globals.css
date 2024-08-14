@@ -70,10 +70,42 @@ p{
 
 
 @media only screen and (max-width: 600px) {
-  .navList{
-  display: none !important;
+
+  .navBtnList{
+    display: block;
+    align-self: center;
+    transform: scale(2);
+    border: 1px solid;
+    border-radius: 2px;
   }
 
+  .navList{
+  flex-direction: column;
+  background-color: white;
+  padding: unset;
+  height: fit-content;
+  border-radius: 5px;
+  position: absolute;
+  left: 45%;
+  top: 70px;
+  visibility: hidden;
+  }
+
+  .visible{
+    visibility: visible;
+  }
+
+  .nav-item{
+    margin-bottom: 2vw;
+  }
+
+  .liNav{
+    margin-bottom: 2vw;
+  }
+  
+  .socialNav{
+    width: unset;
+  }
   Video {
     width: -webkit-fill-available;
   }
@@ -117,5 +149,42 @@ p{
   .baliEspaciosTxt{
     font-size: 5vw;
     min-height: unset;
+  }
+
+  .baliLogoFaqs{
+    width: 25vw;
+    height: auto;
+  }
+
+  .faqAnswer{
+    margin-bottom: 10px;
+  }
+
+  .questionList{
+    padding: 1vw;
+  }
+
+  .answerOption{
+    max-width: 40vw;
+    text-wrap: pretty;
+  }
+
+  .footerLogoImg{
+    width: 15vw;
+    height: auto; 
+  }
+  
+  .footerItems{
+    flex-basis: unset;
+  }
+
+  .footerTxtFirma{
+    font-size: 2vw;
+    text-wrap: pretty;
+    width: 15vw;
+  }
+
+  .footerRoutes{
+    font-size: 2.3vw;
   }
 }

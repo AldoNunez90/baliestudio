@@ -294,4 +294,6 @@
     margin-right: 1vw;
   }
 
-  
+  .navBtnList{
+    display: none;
+  }

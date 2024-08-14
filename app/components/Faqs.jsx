@@ -20,7 +20,7 @@ export default function Faqs() {
   const [optionSelected, setOptionSelected] = useState(0);
 
   const Answer = ({ option }) => (
-    option === 0 ? <Image src={"/baliLogoWhite.png"} alt="logo Bali" width={503} height={142} /> : <p className="answerOption">{options.map((opt) => option === opt.id && opt.answer )}</p>
+    option === 0 ? <Image src={"/baliLogoWhite.png"} alt="logo Bali" width={503} height={142} className="baliLogoFaqs" /> : <p className="answerOption">{options.map((opt) => option === opt.id && opt.answer )}</p>
   );
 
 
