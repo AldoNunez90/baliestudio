@@ -70,6 +70,15 @@ p{
 
 
 @media only screen and (max-width: 600px) {
+  
+  .navBarContainer{
+    width: unset;
+  }
+
+  .navBarLogo{
+    width: 20vw;
+    height: auto;
+  }
 
   .navBtnList{
     display: block;
@@ -77,6 +86,11 @@ p{
     transform: scale(2);
     border: 1px solid;
     border-radius: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
   }
 
   .navList{
@@ -86,7 +100,7 @@ p{
   height: fit-content;
   border-radius: 5px;
   position: absolute;
-  left: 45%;
+  left: 44%;
   top: 70px;
   visibility: hidden;
   }
@@ -97,6 +111,7 @@ p{
 
   .nav-item{
     margin-bottom: 2vw;
+    font-size: larger;
   }
 
   .liNav{
@@ -152,7 +167,7 @@ p{
   }
 
   .baliLogoFaqs{
-    width: 25vw;
+    width: 60vw;
     height: auto;
   }
 
@@ -160,13 +175,28 @@ p{
     margin-bottom: 10px;
   }
 
+  .faqContainer{
+    flex-direction: column;
+  }
+
+  .questions{
+    width: unset;
+  }
+
+  .answers{
+    width: -webkit-fill-available;
+  }
+
   .questionList{
     padding: 1vw;
+    font-size: unset;
   }
 
   .answerOption{
-    max-width: 40vw;
+    max-width: 70vw;
     text-wrap: pretty;
+    font-size: 4vw;
+    font-weight: 400;
   }
 
   .footerLogoImg{
@@ -181,7 +211,19 @@ p{
   .footerTxtFirma{
     font-size: 2vw;
     text-wrap: pretty;
-    width: 15vw;
+    width: 20vw;
+  }
+
+  .footerListLine{
+    margin-bottom: unset;
+  }
+
+  .footerListItem{
+      margin-bottom: unset;
+  }
+
+  .footerList{
+    margin-bottom: 5px;
   }
 
   .footerRoutes{
