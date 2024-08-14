@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 export default function NavBarHome() {
 
   
-  const windowSize = window.innerWidth
+  
   const NavItem = ({ href, children }) => {
     const pathname = usePathname();
     const isActive = pathname === href;
@@ -39,7 +39,6 @@ export default function NavBarHome() {
       <NavItem href="/reservas" className="liNav">Reservas</NavItem>
       <NavItem href="/produccion" className="liNav">Producción</NavItem>
       <NavItem href="/contacto" className="liNav">Contacto</NavItem>
-      <p>{windowSize}</p>
       </ul>
 
       <div className="socialNav">

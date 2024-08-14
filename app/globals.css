@@ -113,4 +113,9 @@ p{
     font-weight: 800;
     text-wrap: pretty;
   }
+
+  .baliEspaciosTxt{
+    font-size: 5vw;
+    min-height: unset;
+  }
 }
