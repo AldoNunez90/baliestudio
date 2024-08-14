@@ -556,7 +556,7 @@ console.log(calendarId);
             <div className="setPalaceDetailsContent setPalaceImg setDuoImgContainer">
               <Image
                 src={
-                  "https://res.cloudinary.com/dsdzvhfhh/image/upload/v1722902346/setDuoReservas_pabd7l.png"
+                  "https://res.cloudinary.com/dsdzvhfhh/image/upload/v1723523644/SET_DUO_RESERVAS_nnil25.png"
                 }
                 alt="setPalace"
                 fill

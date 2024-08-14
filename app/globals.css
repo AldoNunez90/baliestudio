@@ -12,6 +12,7 @@
 
 body {
   max-width: 1920px;
+  margin: auto;
 }
 
 p{
@@ -65,4 +66,51 @@ p{
   font-size: 24px;
   font-weight: 600;
   color: white;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .navList{
+  display: none !important;
+  }
+
+  Video {
+    width: -webkit-fill-available;
+  }
+
+  .MouseGif_mouseGifContainer__kyJJb {
+    display: none;
+  }
+  
+  .baliEstudioPictures, .theFirts, .theSecond, .theThird{
+    position: relative;
+  top: unset;  }
+
+  .baliEstudioText{
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2.3vw;
+    margin-left: unset;
+    padding: 2vw;
+  }
+
+  .btnStyle{
+    align-self: center;
+  }
+
+  .baliLogoWhiteContainer{
+    min-height: 300px;
+  }
+
+  .baliLogoCenter{
+    width: 40vw;
+    height: auto;
+  }
+
+  .baliTxtThird{
+    font-weight: 800;
+    text-wrap: pretty;
+  }
 }

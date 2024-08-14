@@ -12,7 +12,7 @@ export default function Estudio() {
     <div>
       <div className="imgContainer">
         <Image
-          src={"/estudios/estudiosImg4.jpg"}
+          src={"https://res.cloudinary.com/dsdzvhfhh/image/upload/t_estudiosPhoto/v1722747158/estudiosImg4_us5ieb.jpg"}
           alt="Estudio"
           fill
           className="estudioImg"

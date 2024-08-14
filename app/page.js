@@ -49,7 +49,7 @@ export default function Home() {
             </p>
           </div>
           <div className="baliEstudioPictures baliEstudioImg baliLogoWhiteContainer">
-            <Image src={"/baliLogoWhite.png"} alt="logo" width={503} height={142}/>
+            <Image src={"/baliLogoWhite.png"} alt="logo" width={503} height={142} className="baliLogoCenter"/>
           </div>
 
         {/* third */}

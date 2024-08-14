@@ -2,16 +2,17 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import classNames from 'classnames';
 import { usePathname } from "next/navigation";
 
 
 export default function NavBarHome() {
+
+  
+  const windowSize = window.innerWidth
   const NavItem = ({ href, children }) => {
     const pathname = usePathname();
     const isActive = pathname === href;
-  
     return (
       <Link href={href}>
         <p className={classNames('nav-item', { 'active': isActive })}>
@@ -20,7 +21,9 @@ export default function NavBarHome() {
       </Link>
     );
   };
-
+  
+  
+  
   return (
     <nav className="navBarHomeHero">
       <div className="navBarContainer">
@@ -36,6 +39,7 @@ export default function NavBarHome() {
       <NavItem href="/reservas" className="liNav">Reservas</NavItem>
       <NavItem href="/produccion" className="liNav">Producción</NavItem>
       <NavItem href="/contacto" className="liNav">Contacto</NavItem>
+      <p>{windowSize}</p>
       </ul>
 
       <div className="socialNav">
