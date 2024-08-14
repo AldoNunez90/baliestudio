@@ -1,8 +1,4 @@
-
-
-
-
-*{
+* {
   text-decoration: none;
   list-style: none;
   /* font-family: 'Raleway';
@@ -15,16 +11,16 @@ body {
   margin: auto;
 }
 
-p{
+p {
   white-space: pre;
 }
 
 .link {
   text-decoration: none;
-  outline: none; 
+  outline: none;
 }
 
-.btnStyle{
+.btnStyle {
   background-color: black;
   color: white;
   border-radius: 50px;
@@ -68,19 +64,17 @@ p{
   color: white;
 }
 
-
 @media only screen and (max-width: 600px) {
-  
-  .navBarContainer{
+  .navBarContainer {
     width: unset;
   }
 
-  .navBarLogo{
+  .navBarLogo {
     width: 20vw;
     height: auto;
   }
 
-  .navBtnList{
+  .navBtnList {
     display: block;
     align-self: center;
     transform: scale(2);
@@ -93,32 +87,35 @@ p{
     width: fit-content;
   }
 
-  .navList{
-  flex-direction: column;
-  background-color: white;
-  padding: unset;
-  height: fit-content;
-  border-radius: 5px;
-  position: absolute;
-  left: 44%;
-  top: 70px;
-  visibility: hidden;
+  .navList {
+    flex-direction: column;
+    background-color: white;
+    padding: unset;
+    height: fit-content;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 70px;
+    margin: auto;
+    visibility: hidden;
+    width: fit-content;
   }
 
-  .visible{
+  .visible {
     visibility: visible;
   }
 
-  .nav-item{
+  .nav-item {
     margin-bottom: 2vw;
     font-size: larger;
   }
 
-  .liNav{
+  .liNav {
     margin-bottom: 2vw;
   }
-  
-  .socialNav{
+
+  .socialNav {
     width: unset;
   }
   Video {
@@ -128,12 +125,16 @@ p{
   .MouseGif_mouseGifContainer__kyJJb {
     display: none;
   }
-  
-  .baliEstudioPictures, .theFirts, .theSecond, .theThird{
-    position: relative;
-  top: unset;  }
 
-  .baliEstudioText{
+  .baliEstudioPictures,
+  .theFirts,
+  .theSecond,
+  .theThird {
+    position: relative;
+    top: unset;
+  }
+
+  .baliEstudioText {
     background-color: rgba(255, 255, 255, 1);
     display: flex;
     flex-direction: column;
@@ -143,90 +144,180 @@ p{
     padding: 2vw;
   }
 
-  .btnStyle{
+  .btnStyle {
     align-self: center;
   }
 
-  .baliLogoWhiteContainer{
+  .baliLogoWhiteContainer {
     min-height: 300px;
   }
 
-  .baliLogoCenter{
+  .baliLogoCenter {
     width: 40vw;
     height: auto;
   }
 
-  .baliTxtThird{
+  .baliTxtThird {
     font-weight: 800;
     text-wrap: pretty;
   }
 
-  .baliEspaciosTxt{
+  .baliEspaciosTxt {
     font-size: 5vw;
     min-height: unset;
   }
 
-  .baliLogoFaqs{
+  .baliLogoFaqs {
     width: 60vw;
     height: auto;
   }
 
-  .faqAnswer{
+  .baliEstudioP{
+    font-size: 1vw;
+  }
+
+  .baliEstudioPictures{
+    top: unset;
+    min-height: unset;
+  }
+
+  .faqAnswer {
     margin-bottom: 10px;
   }
 
-  .faqContainer{
+  .faqContainer {
     flex-direction: column;
   }
 
-  .questions{
+  .questions {
     width: unset;
   }
 
-  .answers{
+  .answers {
     width: -webkit-fill-available;
   }
 
-  .questionList{
+  .questionList {
     padding: 1vw;
     font-size: unset;
   }
 
-  .answerOption{
+  .answerOption {
     max-width: 70vw;
     text-wrap: pretty;
     font-size: 4vw;
     font-weight: 400;
   }
 
-  .footerLogoImg{
+  .footerLogoImg {
     width: 15vw;
-    height: auto; 
+    height: auto;
   }
-  
-  .footerItems{
+
+  .footerItems {
     flex-basis: unset;
   }
 
-  .footerTxtFirma{
+  .footerTxtFirma {
     font-size: 2vw;
     text-wrap: pretty;
     width: 20vw;
   }
 
-  .footerListLine{
+  .footerListLine {
     margin-bottom: unset;
   }
 
-  .footerListItem{
-      margin-bottom: unset;
+  .footerListItem {
+    margin-bottom: unset;
   }
 
-  .footerList{
+  .footerList {
     margin-bottom: 5px;
   }
 
-  .footerRoutes{
+  .footerRoutes {
     font-size: 2.3vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .MouseGif_mouseGifContainer__kyJJb {
+    display: none;
+  }
+
+  Video {
+    width: -webkit-fill-available;
+  }
+  
+  .navBarLogo{
+    width: 15vw;
+    height: auto;
+  }
+
+  .navBarContainer{
+    width: unset;
+  }
+
+  .navList {
+    flex-direction: column;
+    background-color: white;
+    padding: unset;
+    height: fit-content;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 70px;
+    margin: auto;
+    visibility: hidden;
+    width: fit-content;
+  }
+
+  .visible {
+    visibility: visible;
+  }
+
+  .nav-item {
+    margin-bottom: 2vw;
+    font-size: larger;
+  }
+
+  .liNav {
+    margin-bottom: 2vw;
+  }
+
+  .navBarLogo {
+    width: 20vw;
+    height: auto;
+  }
+
+  .navBtnList {
+    display: block;
+    align-self: center;
+    transform: scale(2);
+    border: 1px solid;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+  }
+
+  .baliEstudioText{
+    margin-left: 2vw;
+  }
+  .baliLogoWhiteContainer{
+    min-height: 400px;
+  }
+
+  .baliLogoCenter{
+    width: 20vw;
+    height: auto;
+  }
+
+  .theFirts, .theSecond, .theThird{
+    font-size: medium;
   }
 }

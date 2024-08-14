@@ -95,7 +95,7 @@ export default function Home() {
           
         {/* -------------------------------------- */}
           <div className="baliEstudioPictures baliEspaciosTxt">
-            <p>
+            <p className="baliEstudioP">
               {`EN\nNUESTROS\nESPACIOS\nPODRAS\nHACER`}
             </p>
           </div>
