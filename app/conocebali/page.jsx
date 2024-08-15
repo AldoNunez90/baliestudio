@@ -21,7 +21,7 @@ export default function Conoce() {
         </div>
         <div >
             <p className="conoceBaliParagraph">
-        {`Sin embargo, Bali Estudio no es solamente un estudio; es un lugar donde invitamos\na la creatividad, la calidad y el trabajo en equipo.Concebido como un lugar versátil,\nBali Estudio está destinado a albergar proyectos audiovisuales de diversa índole.\nSu diseño meticuloso y atención al detalle aseguran que cada rincón del estudio sea\nfuncional y estéticamente atractivo, ofreciendo a los creativos un lienzo perfecto para\nmaterializar sus ideas.`}</p>
+        {`Sin embargo, Bali Estudio no es solamente un estudio; es un lugar donde invitamos\na la creatividad, la calidad y el trabajo en equipo. Concebido como un lugar versátil,\nBali Estudio está destinado a albergar proyectos audiovisuales de diversa índole.\nSu diseño meticuloso y atención al detalle aseguran que cada rincón del estudio sea\nfuncional y estéticamente atractivo, ofreciendo a los creativos un lienzo perfecto para\nmaterializar sus ideas.`}</p>
         </div>
 
         <div className="conocePhotosContainer">

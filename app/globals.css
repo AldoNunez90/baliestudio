@@ -64,39 +64,427 @@ p {
   color: white;
 }
 
-@media only screen and (max-width: 480px){
-.faqAnswer{
-  font-size: small;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1440px){
+
+
+  
+  .baliEspaciosTxt{
+    min-height: 600px;
+    font-size: 80px;
+  }
+
+  .footerItems{
+    flex-basis: unset;
+  }
+
+
 }
 
-.footerContainer{
-  flex-direction: column;
-}
-.footerLogoImg{
-  width: 35vw !important;
+
+@media only screen and (max-width: 1200px) {
+  Video{
+    width: -webkit-fill-available;
+  }
+  
+  .baliLogoWhiteContainer{
+    min-height: 600px;
+  }
+
+  .baliEstudioText{
+    margin-left: 15%;
+  }
+  .baliEspaciosTxt{
+    font-size: 50px;
+    min-height: 500px;
+  }
+
+  .answerOption{
+    font-size: large;
+  }
+
+  .footerItems{
+    flex-basis: unset;
+  }
+
+  /* Conoce Bali */
+
+  .conoceBaliParagraph{
+    width: unset;
+    font-size: unset;
+  }
+
+  .conoceBaliImgContainer{
+    width: 60vw;
+  }
+
+  .conoceBaliParagraph2{
+    margin: 7vw;
+    font-size: unset;
+  }
+
+  .studio2Container{
+    margin: 3vw;
+  }
+
+  .footerLogoImg{
+    width: 35vw;
+    height: auto;
+  }
 }
 
-.footerLinks{
-  padding: 5vw;
+
+@media only screen and (max-width: 1024px) {
+  Video{
+    width: -webkit-fill-available;
+  }
+
+  .MouseGif_mouseGifContainer__kyJJb{
+    transform: translate(-50%, -30%) !important;
+  }
+
+  .baliLogoWhiteContainer{
+    min-height: 550px;
+  }
+
+  .baliEstudioText{
+    margin-left: 10%;
+  }
+
+  .baliLogoCenter{
+    width: 40vw;
+    height: auto;
+  }
+
+  .baliEspaciosTxt{
+    font-size: 40px;
+    min-height: unset;
+  }
+
+  .questionList{
+    padding: 2vw;
+  }
+  .answerOption{
+    font-size: medium;
+  }
+
+  .footerLogoImg{
+    width: 25vw;
+    height: auto;
+  }
+
+  .footerItems{
+    flex-basis: unset;
+  }
+
+  /* Conoce Bali */
+
+  .conoceBaliParagraph{
+    width: unset;
+    font-size: unset;
+  }
+
+  .conoceBaliImgContainer{
+    width: 60vw;
+  }
+
+  .conocePhoto2Container{
+    height: 500px;
+  }
+
+  .conocePhotosContainer{
+  min-height: 500px;
 }
 
-.questionList{
-  padding: 4vw;
+.conoceBaliParagraph2{
+  margin: auto;
+  font-size: unset;
 }
 
-.baliTxtFirst{
-  font-size: medium !important;
-    margin-bottom: 5vw !important;
+.studio2Container{
+  margin: 2vw;
 }
 
-.baliEstudioPictures{
-  min-height: 60vw !important;
+
+
 }
 
-.baliEspaciosTxt{
-  padding: 8vw;
+@media only screen and (min-width:769px) and (max-width: 992px) {
+  Video{
+    width: -webkit-fill-available;
+  }
+
+  .MouseGif_mouseGifContainer__kyJJb{
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .mouseGifOnly{
+    width: 200px;
+    height: auto;
+  }
+  /* Home */
+  .theFirts, .theSecond, .theThird, .baliEstudioPictures, .theSecondTxt {
+    position: relative;
+    top: unset;
+  }
+  .baliEstudioText{
+    margin-left: 5%;
+  }
+
+  .baliEspaciosTxt{
+    min-height: 500px;
+    font-size: 7vw;
+  }
+
+  .baliLogoCenter{
+    width: 40vw;
+    height: auto;
+  }
+
+  .baliLogoWhiteContainer{
+    min-height: 500px !important;
+  }
+
+  .questionList {
+    padding: 2vw;
+  }
+
+  .baliLogoFaqs{
+    width: 40vw;
+    height: auto;
+  }
+  .answerOption{
+    font-size: medium;
+  }
+
+
+
+  /* Conoce Bali */
+  .conoceBaliParagraph{
+    width: unset;
+    font-size: unset;
+  }
+
+  .conoceBaliImgContainer{
+    width: 50vw;
+  }
+
+  .conocePhotosContainer{
+    min-height: 500px !important;
+  }
+  .conocePhoto2Container{
+    height: 500px;
+  }
+  .conoceBaliParagraph2{
+    font-size: unset;
+    margin: unset;
+  }
+
+  .footerLogoImg{
+    height: auto;
+  }
+
+  .footerItems{
+    flex-basis: unset;
+  }
 }
+
+@media only screen and (min-width:600px) and (max-width: 768px) {
+  .socialFooter{
+    display: block !important;
+    width: unset;
+    margin-right: unset;
+  }
+  .MouseGif_mouseGifContainer__kyJJb {
+    display: none;
+  }
+
+  Video {
+    width: -webkit-fill-available;
+  }
+  
+  .navBarLogo{
+    width: 15vw;
+    height: auto;
+  }
+
+  .navBarContainer{
+    width: unset;
+  }
+
+  .navList {
+    flex-direction: column;
+    background-color: white;
+    padding: unset;
+    height: fit-content;
+    border-radius: 5px;
+    position: absolute;
+    right: 0px;
+    top: 70px;
+    visibility: hidden;
+    width: fit-content;
+    align-items: end;
+  }
+
+  .visible {
+    visibility: visible;
+  }
+
+  .nav-item {
+    margin-bottom: 2vw;
+    font-size: medium;
+    margin-right: 30px;
+  }
+
+  .liNav {
+    margin-bottom: 2vw;
+  }
+
+  .navBarLogo {
+    width: 20vw;
+    height: auto;
+  }
+
+  .navBtnList {
+    display: block;
+    align-self: center;
+    transform: scale(1.5);
+    border: 1px solid;
+    border-radius: 2px;
+    position: absolute;
+    right: 30px;
+    width: fit-content;
+  }
+
+  .socialNav {
+    display: none;
+  }
+  .estudios, .servicios, .faqContainer{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .baliEstudioText{
+    margin-left: 2vw;
+  }
+  .baliLogoWhiteContainer{
+    min-height: 400px;
+  }
+
+  .baliLogoCenter{
+    width: 70vw;
+    height: auto;
+  }
+
+  .theFirts, .theSecond, .theThird{
+    font-size: medium;
+    position: unset
+  }
+
+  .baliEstudioText {
+    margin-left: unset;
+    padding: 5vw;
+    min-height: 50vw;
+  }
+  .baliEstudioImg1, .baliEstudioPictures{
+    position: unset !important;
+  }
+
+  .balitxtFirst{
+    margin: 3vw 0px;
+    
+  }
+
+  .questions, .answers{
+    width: 100%;
+  }
+
+  .footerLogoImg{
+    width: 15vw;
+    height: auto;
+  }
+
+  .footerItems{
+    flex-basis: unset;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .footerList{
+    padding: unset;
+  }
+  .footerLinks{
+    flex-direction: column;
+    align-items: unset;
+  }
+
+  .footerSocialMedia{
+    align-self: flex-start;
+  }
+
+  .footerTxtFirma{
+    margin-top: 2vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;  
+  }
+
+  .logoKranding{
+    transform: translateY(1px);
+  }
+
+  .baliImgBlock{
+    display: block;
+  }
+
+  /* Conoce Bali */
+
+  .conoceBaliParagraph{
+    width: unset;
+    font-size: unset;
+  }
+
+  .conoceBaliImgContainer{
+    width: 60vw
+  }
+
+  .ademasContainer{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5vw;
+  }
+
+  .conoceBaliParagraph2{
+    font-size: medium;
+        width: 80vw;
+        margin: auto;
+  }
+
+  .footerList{
+    margin-top:   2vw;
+  }
+ 
 }
+
+
+
+
+
 
 @media only screen and (max-width: 599px) {
   .navBarContainer {
@@ -253,11 +641,13 @@ p {
   .footerLogoImg{
     width: 20vw;
     height: auto;
-    margin-right: 3vw;
   }
 
   .footerItems{
-    flex-basis: unset;
+    /* flex-basis: unset; */
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-right: 1vw;
   }
 
   .footerList{
@@ -282,147 +672,133 @@ p {
   .logoKranding{
     transform: translateY(1px);
   }
-}
 
-@media only screen and (min-width:600px) and (max-width: 768px) {
-  .MouseGif_mouseGifContainer__kyJJb {
-    display: none;
+  .socialFooter{
+    display: block !important;
+    width: unset;
+    margin-right: unset;
   }
 
-  Video {
-    width: -webkit-fill-available;
+  /* Conoce Bali */
+
+  .conoceBaliParagraph{
+    width: unset;
+    font-size: small;
   }
   
-  .navBarLogo{
-    width: 15vw;
-    height: auto;
+  .conoceBaliImgContainer{
+    width: 80vw;
   }
 
-  .navBarContainer{
-    width: unset;
+  .conocePhotosContainer{
+    min-height: 200px;
   }
 
-  .navList {
-    flex-direction: column;
-    background-color: white;
-    padding: unset;
-    height: fit-content;
-    border-radius: 5px;
-    position: absolute;
-    right: 0px;
-    top: 70px;
-    visibility: hidden;
-    width: fit-content;
-    align-items: end;
+  .conocePhoto2Container{
+    height: 200px;
   }
 
-  .visible {
-    visibility: visible;
-  }
-
-  .nav-item {
-    margin-bottom: 2vw;
-    font-size: medium;
-    margin-right: 30px;
-  }
-
-  .liNav {
-    margin-bottom: 2vw;
-  }
-
-  .navBarLogo {
-    width: 20vw;
-    height: auto;
-  }
-
-  .navBtnList {
-    display: block;
-    align-self: center;
-    transform: scale(1.5);
-    border: 1px solid;
-    border-radius: 2px;
-    position: absolute;
-    right: 30px;
-    width: fit-content;
-  }
-
-  .socialNav {
-    display: none;
-  }
-  .estudios, .servicios, .faqContainer{
+  .ademasContainer{
     display: flex;
     flex-direction: column;
   }
 
-  .baliEstudioText{
-    margin-left: 2vw;
-  }
-  .baliLogoWhiteContainer{
-    min-height: 400px;
-  }
-
-  .baliLogoCenter{
-    width: 70vw;
-    height: auto;
+  .conoceBaliParagraph2{
+    padding: 2vw;
+  font-size: small; 
+  text-wrap: pretty;
   }
 
-  .theFirts, .theSecond, .theThird{
-    font-size: medium;
-    position: unset
+  .conoceBaliParagraph{
+    width: 80VW;
+    font-size: larger;
+    text-wrap: pretty;
   }
 
-  .baliEstudioText {
-    margin-left: unset;
-    padding: 5vw;
-    min-height: 50vw;
-  }
-  .baliEstudioImg1, .baliEstudioPictures{
-    position: unset !important;
+  .footerListItem{
+    margin-top: 5px;
   }
 
-  .balitxtFirst{
-    margin: 3vw 0px;
-    
-  }
+  /* Estudios */
 
-  .questions, .answers{
-    width: 100%;
-  }
-
-  .footerLogoImg{
-    width: 15vw;
-    height: auto;
-  }
-
-  .footerItems{
-    flex-basis: unset;
-  }
-
-  .footerList{
-    padding: unset;
-  }
-  .footerLinks{
-    flex-direction: column;
-    align-items: unset;
-  }
-
-  .footerSocialMedia{
-    align-self: flex-start;
-  }
-
-  .footerTxtFirma{
-    margin-top: 2vw;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;  
-  }
-
-  .logoKranding{
-    transform: translateY(1px);
-  }
-
-  .baliImgBlock{
-    display: block;
-  }
- 
+  .studioPalaceTxt{
+    font-size: 4vw;
+  } 
 }
+
+@media only screen and (max-width: 480px){
+  .faqAnswer{
+    font-size: small;
+  }
+  
+  .footerContainer{
+    flex-direction: column;
+  }
+  .footerLogoImg{
+    width: 35vw !important;
+  }
+  
+  .footerLinks{
+    padding: 5vw;
+  }
+  
+  .questionList{
+    padding: 4vw;
+  }
+  
+  .baliTxtFirst{
+    font-size: medium !important;
+      margin-bottom: 5vw !important;
+  }
+  
+  .baliEstudioPictures{
+    min-height: 60vw !important;
+  }
+  
+  .baliEspaciosTxt{
+    padding: 8vw;
+  }
+  
+  /* Conoce Bali */
+  
+  .conoceBaliParagraph{
+    width: 80vw;
+    text-wrap: pretty;
+    font-size: large;
+  }
+  
+  .conoceBaliImgContainer{
+    width: 80vw;
+  }
+  
+  .conocePhoto2Container{
+    height: 200px;
+  }
+  
+  .conocePhotosContainer{
+    min-height: unset;
+  }
+  
+  .ademasContainer{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .conoceBaliParagraph2{
+    margin: unset;
+    font-size: small;
+    padding: 2vw
+  }
+  
+  /* Estudio */
+
+  .cameraImg{
+    padding: 10px;
+  }
+
+  .studioPalaceTxt{
+    font-size: 3vw;
+  }
+  
+  }
+  

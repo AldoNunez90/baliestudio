@@ -26,7 +26,7 @@ export default function MouseGif() {
 
     return(
         <div className={`${styles.mouseGifContainer} ${hidden ? styles.hidden : ''}`}>
-        <Image src="/mouse.gif" alt="Mouse GIF" className={styles.mouseGif} width={250} height={250} unoptimized/>
+        <Image src="/mouse.gif" alt="Mouse GIF" className='mouseGifOnly' width={250} height={250} unoptimized/>
       </div>
     )
 }
