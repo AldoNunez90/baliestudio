@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Calendar from "react-calendar";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
 import "react-calendar/dist/Calendar.css";
 import { format } from "date-fns";
 import { es, tr } from "date-fns/locale";
@@ -33,8 +33,11 @@ function SetDuoReserve() {
   const [isDisabled, setIsDisabled] = useState(true)
   const [alertHours, setAlertHours] = useState(false)
 
-  
-  
+  const router = useRouter();
+  const query = new URLSearchParams(window.location.search);
+  const authStatus = query.get('auth');
+    console.log(authStatus);
+    
 
   useEffect(() => {
     if (calendarId) {
@@ -43,14 +46,26 @@ function SetDuoReserve() {
     
   }, [calendarId]);
 
-console.log(calendarId);
+  useEffect(() => {
+    if (authStatus === 'success') {
+      // Ejecuta setCalendarId o cualquier otra lógica
+      setCalendarId(idCalendarSetDuo)
+        } else if (authStatus === 'error') {
+      // Muestra un mensaje de error
+      alert('Hubo un error durante la autenticación.');
+    }
+  }, [authStatus]);
+
 
   const idCalendarSetDuo = process.env.CALENDAR_ID_SET_DUO;
 
-  const handleCalendarId = async () => {
-    setCalendarId(idCalendarSetDuo);
+  const handleLogin = () => {
+    window.location.href = '/api/auth/google';
   };
-  console.log(calendarId);
+
+  // const handleCalendarId = async () => {
+  //   setCalendarId(idCalendarSetDuo);
+  // };
   
   // Maneja los cambios en los inputs del formulario
   const handleInputChange = (e) => {
@@ -579,7 +594,7 @@ console.log(calendarId);
               <div className="setPalaceBtns">
                 {calendarId === false ? (
                   <button
-                    onClick={() => handleCalendarId()}
+                    onClick={() => handleLogin()}
                     className="startBookingBtn"
                     >
                     Reservar
