@@ -34,9 +34,9 @@ function SetDuoReserve() {
   const [alertHours, setAlertHours] = useState(false)
 
   const router = useRouter();
-  const query = new URLSearchParams(window.location.search);
-  const authStatus = query.get('auth');
-    console.log(authStatus);
+  const [authStatus, setAuthStatus] = useState(null);
+
+ 
     
 
   useEffect(() => {
@@ -47,6 +47,8 @@ function SetDuoReserve() {
   }, [calendarId]);
 
   useEffect(() => {
+    const query = new URLSearchParams(window.location.search);
+    const authStatus = query.get('auth');
     if (authStatus === 'success') {
       // Ejecuta setCalendarId o cualquier otra lógica
       setCalendarId(idCalendarSetDuo)
