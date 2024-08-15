@@ -64,7 +64,24 @@ p {
   color: white;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px){
+.faqAnswer{
+  font-size: small;
+}
+
+.footerContainer{
+  flex-direction: column;
+}
+.footerLogoImg{
+  width: 30vw !important;
+}
+
+.footerLinks{
+  padding: 5vw;
+}
+}
+
+@media only screen and (max-width: 599px) {
   .navBarContainer {
     width: unset;
   }
@@ -77,13 +94,11 @@ p {
   .navBtnList {
     display: block;
     align-self: center;
-    transform: scale(2);
+    transform: scale(1.5);
     border: 1px solid;
     border-radius: 2px;
     position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
+    right: 30px;
     width: fit-content;
   }
 
@@ -94,12 +109,11 @@ p {
     height: fit-content;
     border-radius: 5px;
     position: absolute;
-    left: 0;
-    right: 0;
+    right: 0px;
     top: 70px;
-    margin: auto;
     visibility: hidden;
     width: fit-content;
+    align-items: end;
   }
 
   .visible {
@@ -108,15 +122,16 @@ p {
 
   .nav-item {
     margin-bottom: 2vw;
-    font-size: larger;
+    font-size: medium;
+    margin-right: 30px;
   }
 
   .liNav {
     margin-bottom: 2vw;
   }
-
+ 
   .socialNav {
-    width: unset;
+    display: none;
   }
   Video {
     width: -webkit-fill-available;
@@ -124,6 +139,11 @@ p {
 
   .MouseGif_mouseGifContainer__kyJJb {
     display: none;
+  }
+
+  .estudios, .servicios, .footerLinks{
+    display: flex;
+    flex-direction: column;
   }
 
   .baliEstudioPictures,
@@ -139,9 +159,9 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 2.3vw;
     margin-left: unset;
-    padding: 2vw;
+    padding: 5vw;
+    min-height: 50vw;
   }
 
   .btnStyle {
@@ -153,8 +173,12 @@ p {
   }
 
   .baliLogoCenter {
-    width: 40vw;
+    width: 70vw;
     height: auto;
+  }
+
+  .baliTxt{
+    margin: 2vw 0px;
   }
 
   .baliTxtThird {
@@ -163,7 +187,7 @@ p {
   }
 
   .baliEspaciosTxt {
-    font-size: 5vw;
+    /* font-size: 5vw; */
     min-height: unset;
   }
 
@@ -173,12 +197,16 @@ p {
   }
 
   .baliEstudioP{
-    font-size: 1vw;
+    font-size: 10vw;
   }
 
   .baliEstudioPictures{
     top: unset;
-    min-height: unset;
+    min-height: 50vw;
+  }
+
+  .baliImgBlock{
+    display: block;
   }
 
   .faqAnswer {
@@ -197,11 +225,6 @@ p {
     width: -webkit-fill-available;
   }
 
-  .questionList {
-    padding: 1vw;
-    font-size: unset;
-  }
-
   .answerOption {
     max-width: 70vw;
     text-wrap: pretty;
@@ -209,35 +232,38 @@ p {
     font-weight: 400;
   }
 
-  .footerLogoImg {
-    width: 15vw;
+
+  .footerLogoImg{
+    width: 20vw;
     height: auto;
+    margin-right: 3vw;
   }
 
-  .footerItems {
+  .footerItems{
     flex-basis: unset;
   }
 
-  .footerTxtFirma {
-    font-size: 2vw;
-    text-wrap: pretty;
-    width: 20vw;
+  .footerList{
+    padding: unset;
+  }
+  .footerLinks{
+    flex-direction: column;
+    align-items: unset;
   }
 
-  .footerListLine {
-    margin-bottom: unset;
+  .footerSocialMedia{
+    align-self: flex-start;
   }
 
-  .footerListItem {
-    margin-bottom: unset;
+  .footerTxtFirma{
+    margin-top: 2vw;
+    display: flex;
+    justify-content: end;
+    align-items: center;  
   }
 
-  .footerList {
-    margin-bottom: 5px;
-  }
-
-  .footerRoutes {
-    font-size: 2.3vw;
+  .logoKranding{
+    transform: translateY(1px);
   }
 }
 
@@ -257,7 +283,6 @@ p {
 
   .navBarContainer{
     width: unset;
-    background-color: red;
   }
 
   .navList {
@@ -267,12 +292,11 @@ p {
     height: fit-content;
     border-radius: 5px;
     position: absolute;
-    left: 0;
-    right: 0;
+    right: 0px;
     top: 70px;
-    margin: auto;
     visibility: hidden;
     width: fit-content;
+    align-items: end;
   }
 
   .visible {
@@ -281,7 +305,8 @@ p {
 
   .nav-item {
     margin-bottom: 2vw;
-    font-size: larger;
+    font-size: medium;
+    margin-right: 30px;
   }
 
   .liNav {
@@ -296,14 +321,20 @@ p {
   .navBtnList {
     display: block;
     align-self: center;
-    transform: scale(2);
+    transform: scale(1.5);
     border: 1px solid;
     border-radius: 2px;
     position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
+    right: 30px;
     width: fit-content;
+  }
+
+  .socialNav {
+    display: none;
+  }
+  .estudios, .servicios, .faqContainer{
+    display: flex;
+    flex-direction: column;
   }
 
   .baliEstudioText{
@@ -314,11 +345,66 @@ p {
   }
 
   .baliLogoCenter{
-    width: 20vw;
+    width: 70vw;
     height: auto;
   }
 
   .theFirts, .theSecond, .theThird{
     font-size: medium;
+    position: unset
   }
+
+  .baliEstudioText {
+    margin-left: unset;
+    padding: 5vw;
+    min-height: 50vw;
+  }
+  .baliEstudioImg1, .baliEstudioPictures{
+    position: unset !important;
+  }
+
+  .balitxtFirst{
+    margin: 3vw 0px;
+  }
+
+  .questions, .answers{
+    width: 100%;
+  }
+
+  .footerLogoImg{
+    width: 15vw;
+    height: auto;
+  }
+
+  .footerItems{
+    flex-basis: unset;
+  }
+
+  .footerList{
+    padding: unset;
+  }
+  .footerLinks{
+    flex-direction: column;
+    align-items: unset;
+  }
+
+  .footerSocialMedia{
+    align-self: flex-start;
+  }
+
+  .footerTxtFirma{
+    margin-top: 2vw;
+    display: flex;
+    justify-content: end;
+    align-items: center;  
+  }
+
+  .logoKranding{
+    transform: translateY(1px);
+  }
+
+  .baliImgBlock{
+    display: block;
+  }
+ 
 }

@@ -66,7 +66,7 @@ export default function Home() {
               src={`https://res.cloudinary.com/dsdzvhfhh/image/upload/v1722747163/imgHome2_sl0y3r.jpg`}
               alt="Nuestro Estudio"
               fill
-              className="baliEstudioImg1"
+              className="baliEstudioImg1 baliImgBlock"
             />
           </div>
       </section>
