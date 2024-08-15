@@ -73,11 +73,28 @@ p {
   flex-direction: column;
 }
 .footerLogoImg{
-  width: 30vw !important;
+  width: 35vw !important;
 }
 
 .footerLinks{
   padding: 5vw;
+}
+
+.questionList{
+  padding: 4vw;
+}
+
+.baliTxtFirst{
+  font-size: medium !important;
+    margin-bottom: 5vw !important;
+}
+
+.baliEstudioPictures{
+  min-height: 60vw !important;
+}
+
+.baliEspaciosTxt{
+  padding: 8vw;
 }
 }
 
@@ -258,7 +275,7 @@ p {
   .footerTxtFirma{
     margin-top: 2vw;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;  
   }
 
@@ -365,6 +382,7 @@ p {
 
   .balitxtFirst{
     margin: 3vw 0px;
+    
   }
 
   .questions, .answers{
@@ -395,7 +413,7 @@ p {
   .footerTxtFirma{
     margin-top: 2vw;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;  
   }
 
