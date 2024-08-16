@@ -29,7 +29,7 @@ function SetDuoReserve() {
   const [eventType, setEventType] = useState("");
   const [shouldAutoFocus, setShouldAutoFocus] = useState("name");
   const [finishBooking, setFinishBooking] = useState(null)
-  const [responseOk, setResponseOk] = useState(true)
+  const [responseOk, setResponseOk] = useState(null)
   const [isDisabled, setIsDisabled] = useState(true)
   const [alertHours, setAlertHours] = useState(false)
 
@@ -50,10 +50,8 @@ function SetDuoReserve() {
     const query = new URLSearchParams(window.location.search);
     const authStatus = query.get('auth');
     if (authStatus === 'success') {
-      // Ejecuta setCalendarId o cualquier otra lógica
       setCalendarId(idCalendarSetDuo)
         } else if (authStatus === 'error') {
-      // Muestra un mensaje de error
       alert('Hubo un error durante la autenticación.');
     }
   }, [authStatus]);
@@ -65,10 +63,7 @@ function SetDuoReserve() {
     window.location.href = '/api/auth/google';
   };
 
-  // const handleCalendarId = async () => {
-  //   setCalendarId(idCalendarSetDuo);
-  // };
-  
+ 
   // Maneja los cambios en los inputs del formulario
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -320,12 +315,12 @@ function SetDuoReserve() {
   }
 
   const Modal = ()=>{
-    return(
-      
-        <div className="dialogHero">
-          <div className="dialogContainer">
-      { responseOk ? ( 
-        <>
+
+    const ResponseRender = ()=>{
+      if (responseOk === 'success') {
+        return(
+
+          <>
         <div className="dialogReserveDetails">
         <div className="dialogReserveContent"><Image src={'https://res.cloudinary.com/dsdzvhfhh/image/upload/v1722902344/logoOk_wxvkgt.png'} alt="ok" fill className="recervedOk"/></div>
         <div className="dialogReserveContent">
@@ -342,12 +337,54 @@ function SetDuoReserve() {
         </div>
         </div>
         <p className="finePrint"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, beatae et aspernatur autem nisi commodi soluta quia ab voluptates, labore omnis quod ut at eaque dolore dicta earum! Fugiat, quam!</small> </p>
-        <button onClick={()=>clearBooking()} className="confirmBtn" style={{alignSelf: "center"}}>Genial!</button>
+        <button 
+  onClick={() => {
+    // Borra los parámetros de la URL y recarga la página
+    const url = new URL(window.location.href);
+    url.search = '';
+    window.location.href = url.toString();
+  }} 
+  className="confirmBtn" 
+  style={{ alignSelf: "center" }}
+>
+  Genial!
+</button>
         </>
-      ) : (
-        <div className="custom-loader" style={{alignSelf: "center"}}></div>
+)
+
+    } else if(responseOk === 'error') {
+      return(
+
+        <>
+        <div className="dialogReserveDetails">
+        <div className="dialogReserveContent"><Image src={'https://res.cloudinary.com/dsdzvhfhh/image/upload/v1722902345/logoError_r0lo1t.png'} alt="Error" fill className="recervedOk"/></div>
+        <div className="dialogReserveContent" style={{alignSelf: 'center'}}>
+        <div>
+        <p className="dialogTitle">{`lo sentimos, este horario\nya ha sido tomado`}</p>
+        </div>
+        </div>
+        </div>
+        <p className="finePrint"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, beatae et aspernatur autem nisi commodi soluta quia ab voluptates, labore omnis quod ut at eaque dolore dicta earum! Fugiat, quam!</small> </p>
+        <button onClick={()=>{
+          // Borra los parámetros de la URL y recarga la página
+          const url = new URL(window.location.href);
+          url.search = '';
+          window.location.href = url.toString();
+        }}  className="confirmBtn" style={{alignSelf: "center"}}>Volver</button>
+        </>
       )
+    } else if(responseOk === 'loading'){
+      return <div className="custom-loader" style={{alignSelf: 'center'}}></div>
+      
     }
+  }
+  console.log(responseOk);
+  
+  return(
+    
+    <div className="dialogHero">
+          <div className="dialogContainer">
+      <ResponseRender />
       </div> 
     </div>  
     
@@ -521,7 +558,7 @@ function SetDuoReserve() {
   const createReserve = async (e) => {
     e.preventDefault();
     setFinishBooking(true)
-    setResponseOk(false);
+    setResponseOk('loading');
     const formData = {
       calendarIdSelected: calendarId,
       summary: `${eventType} - ${name}`,
@@ -555,11 +592,13 @@ function SetDuoReserve() {
       }
 
       const data = await response.json();
-      console.log("Evento creado:", data.status);
       if (data.status === "confirmed") {
-        setResponseOk(true)
+        setResponseOk('success')
+      } else {
+        setResponseOk('error')
       }
-    } catch (error) {
+    } 
+    catch (error) {
       console.error("Error en la solicitud:", error);
     } 
   };

@@ -20,8 +20,30 @@ export async function POST(request) {
       refresh_token: process.env.GOOGLE_REFRESH_TOKEN,
     });
 
-    const calendar = google.calendar({ version: 'v3', auth: oAuth2Client});
+    const calendar = google.calendar({ version: 'v3', auth: oAuth2Client });
 
+    // Consulta los eventos existentes en el rango de tiempo del nuevo evento
+    const events = await calendar.events.list({
+      calendarId: calendarIdSelected,
+      timeMin: new Date(start),
+      timeMax: new Date(end),
+      singleEvents: true,
+      orderBy: 'startTime',
+    });
+
+    // Verifica si el nuevo evento se superpone con algún evento existente
+    const isOverlapping = events.data.items.some(event => {
+      const eventStart = new Date(event.start.dateTime);
+      const eventEnd = new Date(event.end.dateTime);
+
+      return (new Date(start) < eventEnd && new Date(end) > eventStart);
+    });
+
+    if (isOverlapping) {
+      return NextResponse.json({ error: 'Lo sentimos, este horario ya ha sido tomado ' }, { status: 400 });
+    }
+
+    // Si no hay superposiciones, crea el nuevo evento
     const event = {
       summary,
       location: location,
@@ -37,8 +59,6 @@ export async function POST(request) {
       attendees: attendees,
       reminders: reminders,
     };
-
-
 
     const response = await calendar.events.insert({
       calendarId: calendarIdSelected,
