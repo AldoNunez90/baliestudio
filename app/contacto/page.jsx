@@ -29,7 +29,6 @@ export default function Contacto() {
       [name]: value,
     });
   };
-console.log(error);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

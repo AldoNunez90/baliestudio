@@ -18,15 +18,31 @@ export default function Faqs() {
     { id: 10, answer:"Es un SI total y te ayudamos a que te quede genial"}
   ];
   const [optionSelected, setOptionSelected] = useState(0);
-  const answerRef = useRef({});
+  const [isMobile, setIsMobile] = useState(false);
+  const answerRef = useRef(null);
+
+  useEffect(() => {
+    // Función para actualizar el estado de si es móvil
+    const checkIsMobile = () => {
+      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+    };
+       // Verificar si es móvil al montar el componente
+       checkIsMobile();
+
+       // Escuchar cambios en el tamaño de la ventana
+       window.addEventListener("resize", checkIsMobile);
+       return () => window.removeEventListener("resize", checkIsMobile);
+     }, []);
+
+
   
   useEffect(()=>{
-    if (answerRef.current) {
+    if (answerRef.current && optionSelected != 0 && isMobile ) {
       answerRef.current.scrollIntoView({ behavior: 'smooth' });
     }
     
       
-      }, [optionSelected]);
+      }, [optionSelected, isMobile]);
       
 
 
