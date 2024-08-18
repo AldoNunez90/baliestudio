@@ -47,7 +47,7 @@ export default function Conoce() {
 
         <div className="ademasContainer">
           <div className="studio2Container">
-            <Image src={"https://res.cloudinary.com/dsdzvhfhh/image/upload/v1724002967/conoceBaliFootImg_lxjran.jpg"} alt="Studio 2" fill className="imgConoceBali"/>
+            <Image src={"https://res.cloudinary.com/dsdzvhfhh/image/upload/v1724005260/conoceBaliFootImg_lxjran.jpg"} alt="Studio 2" fill className="imgConoceBali"/>
           </div>
           <div>
             <p className="conoceBaliParagraph2">

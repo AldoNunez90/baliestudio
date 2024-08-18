@@ -1,0 +1,393 @@
+@media only screen and (max-width: 599px) {
+    .navBarContainer {
+      width: unset;
+    }
+  
+    .navBarLogo {
+      width: 20vw;
+      height: auto;
+    }
+  
+    .navBtnList {
+      display: block;
+      align-self: center;
+      transform: scale(1.5);
+      border: 1px solid;
+      border-radius: 2px;
+      position: absolute;
+      right: 30px;
+      width: fit-content;
+    }
+  
+    .navList {
+      flex-direction: column;
+      background-color: white;
+      padding: unset;
+      height: fit-content;
+      border-radius: 5px;
+      position: absolute;
+      right: 0px;
+      top: 70px;
+      visibility: hidden;
+      width: fit-content;
+      align-items: end;
+    }
+  
+    .visible {
+      visibility: visible;
+    }
+  
+    .nav-item {
+      margin-bottom: 2vw;
+      font-size: medium;
+      margin-right: 30px;
+    }
+  
+    .liNav {
+      margin-bottom: 2vw;
+    }
+   
+    .socialNav {
+      display: none;
+    }
+    Video {
+      width: -webkit-fill-available;
+    }
+  
+    .MouseGif_mouseGifContainer__kyJJb {
+      display: none;
+    }
+  
+    .estudios, .servicios, .footerLinks{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .baliEstudioPictures,
+    .theFirts,
+    .theSecond,
+    .theThird {
+      position: relative;
+      top: unset;
+    }
+  
+    .baliEstudioText {
+      background-color: rgba(255, 255, 255, 1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: unset;
+      padding: 5vw;
+      min-height: 50vw;
+    }
+  
+    .btnStyle {
+      align-self: center;
+    }
+  
+    .baliLogoWhiteContainer {
+      min-height: 300px;
+    }
+  
+    .baliLogoCenter {
+      width: 70vw;
+      height: auto;
+    }
+  
+    .baliTxt{
+      margin: 2vw 0px;
+      white-space: pre-wrap;
+    }
+  
+    .baliTxtThird {
+      font-weight: 800;
+      text-wrap: pretty;
+    }
+  
+    .baliEspaciosTxt {
+      min-height: unset;
+    }
+  
+    .baliLogoFaqs {
+      width: 60vw;
+      height: auto;
+    }
+  
+    .baliEstudioP{
+      font-size: 10vw;
+      white-space: pre-wrap;
+    }
+  
+    .baliEstudioPictures{
+      top: unset;
+      min-height: 50vw;
+    }
+  
+    .baliImgBlock{
+      display: block;
+    }
+  
+    .faqAnswer {
+      margin-bottom: 10px;
+    }
+  
+    .faqContainer {
+      flex-direction: column;
+    }
+  
+    .questions {
+      width: unset;
+    }
+
+    .questionList{
+      padding: 2.3vw;
+    }
+  
+    .answers {
+      width: -webkit-fill-available;
+      white-space: break-spaces;
+    }
+  
+    .answerOption {
+      max-width: 70vw;
+      font-size: 4vw;
+      font-weight: 400;
+    }
+  
+  
+    .footerLogoImg{
+      width: 20vw;
+      height: auto;
+    }
+  
+    .footerItems{
+      /* flex-basis: unset; */
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-right: 1vw;
+    }
+  
+    .footerList{
+      padding: unset;
+    }
+    .footerLinks{
+      flex-direction: column;
+      align-items: unset;
+      margin-top: unset;
+    }
+  
+    .footerSocialMedia{
+      align-self: flex-start;
+    }
+  
+    .footerTxtFirma{
+      margin-top: 2vw;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;  
+    }
+  
+    .logoKranding{
+      transform: translateY(1px);
+      margin-left: 5px;
+    }
+  
+    .socialFooter{
+      display: block !important;
+      width: unset;
+      margin-right: unset;
+      margin-top: 15px;
+    }
+  
+    /* Conoce Bali */
+  
+    .conoceBaliParagraph{
+      width: unset;
+      font-size: small;
+    }
+    
+    .conoceBaliImgContainer{
+      width: 80vw;
+    }
+  
+    .conocePhotosContainer{
+      min-height: 200px;
+    }
+  
+    .conocePhoto2Container{
+      height: 200px;
+    }
+  
+    .ademasContainer{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .conoceBaliParagraph2{
+      padding: 2vw;
+    font-size: small; 
+    text-wrap: pretty;
+    }
+  
+    .conoceBaliParagraph{
+      width: 80VW;
+      font-size: larger;
+      text-wrap: pretty;
+    }
+  
+    .footerListItem{
+      margin-top: 5px;
+    }
+  
+    /* Estudios */
+  
+    .studioPalaceTxt{
+      font-size: 4vw;
+    } 
+  
+    .iluminacionContainer, .fondosContainer, .utileriaContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+          align-items: center;
+    }
+  
+    .modificadoresContainer, .complementariosContainer{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  
+    .iluminacionVideoContainer, .modificadoresVideoContainer, .complementariosVideoContainer{
+      width: 90%;
+    }
+  
+    .equipoTitle{
+      font-size: 8vw;
+    }
+    
+    .equipoTxt{
+      font-size: smaller;
+    }
+    .equipoTxtModificadores{
+      font-size: 2.2vw;
+    }
+    .cameraImg{
+      height: 5vw;
+      width: auto;
+    }
+  }
+  
+  @media only screen and (max-width: 480px){
+    .faqAnswer{
+      font-size: small;
+    }
+    
+    .footerContainer{
+      flex-direction: column;
+    }
+    .footerLogoImg{
+      width: 35vw !important;
+    }
+    
+    .footerLinks{
+      padding: 0 5vw;
+      margin-top: 2vw;
+    }
+    
+    .questionList{
+      padding: 4vw;
+    }
+    
+    .baliTxtFirst{
+      font-size: medium !important;
+        margin-bottom: 5vw !important;
+      
+    }
+    
+    .baliEstudioPictures{
+      min-height: 60vw !important;
+    }
+    
+    .baliEspaciosTxt{
+      padding: 8vw;
+    }
+    
+    /* Conoce Bali */
+    
+    .conoceBaliParagraph{
+      width: 80vw;
+      text-wrap: pretty;
+      font-size: large;
+    }
+    
+    .conoceBaliImgContainer{
+      width: 80vw;
+    }
+    
+    .conocePhoto2Container{
+      height: 200px;
+    }
+    
+    .conocePhotosContainer{
+      min-height: unset;
+    }
+    
+    .ademasContainer{
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .conoceBaliParagraph2{
+      margin: unset;
+      font-size: small;
+      padding: 2vw
+    }
+    
+    /* Estudio */
+  
+    .cameraImg{
+      padding: 10px;
+    }
+  
+    .studioPalaceTxt{
+      font-size: 3vw;
+    }
+  
+    /* Reservas */
+  
+    .reservasIntroTxt{
+      font-size: small;
+    }
+  
+    .reservasIntroSmall{
+      width: 80vw !important;
+      text-wrap: wrap;
+    }
+  
+    .bookingSetPalaceContainer{
+      flex-direction: column;
+    }
+    
+    .setPalaceImg{
+      margin-left: unset;
+    }
+  
+    .setPalaceAzulImg, .setDuoImg{
+      height: unset !important;
+    }
+  
+    .setPalaceText{
+      padding: 5vw;
+    }
+    .setPalaceSmall{
+      font-size: x-small;
+    }
+    .startBookingBtn, .cancelBookingBtn, .nextBookingBtn, .confirmBtn{
+      width: unset;
+    }
+    .inputForm{
+      height: unset;
+      width: 50vw;
+    }
+    }
+    

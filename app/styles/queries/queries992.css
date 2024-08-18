@@ -1,0 +1,113 @@
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+    Video{
+      width: -webkit-fill-available;
+    }
+  
+    p {
+      white-space: pre;
+    }
+  
+    .MouseGif_mouseGifContainer__kyJJb{
+      transform: translate(-50%, -30%) !important;
+    }
+  
+    .baliLogoWhiteContainer{
+      min-height: 550px;
+    }
+  
+    .baliEstudioText{
+      margin-left: 10%;
+    }
+  
+    .baliLogoCenter{
+      width: 40vw;
+      height: auto;
+    }
+  
+    .baliEspaciosTxt{
+      font-size: 40px;
+      min-height: unset;
+    }
+  
+    .questionList{
+      padding: 2vw;
+    }
+    .answerOption{
+      font-size: medium;
+    }
+  
+    .footerLogoImg{
+      width: 25vw;
+      height: auto;
+    }
+  
+    .footerItems{
+      flex-basis: unset;
+    }
+  
+    /* Conoce Bali */
+  
+    .conoceBaliParagraph{
+      width: unset;
+      font-size: unset;
+    }
+  
+    .conoceBaliImgContainer{
+      width: 60vw;
+    }
+  
+    .conocePhoto2Container{
+      height: 500px;
+    }
+  
+    .conocePhotosContainer{
+    min-height: 500px;
+  }
+  
+  .conoceBaliParagraph2{
+    margin: auto;
+    font-size: unset;
+  }
+  
+  .studio2Container{
+    margin: 2vw;
+  }
+  
+  /* Equipos */
+  
+  .iluminacionContainer, .fondosContainer, .utileriaContainer {
+    display: flex;
+    justify-content: center;
+        align-items: center;
+  }
+  
+  .modificadoresContainer, .complementariosContainer{
+    display: flex;
+  }
+  
+  .iluminacionVideoContainer, .modificadoresVideoContainer, .complementariosVideoContainer{
+    width: 90%;
+  }
+  
+  .iluminacionTxtContainer{
+    flex-grow: 1;
+    flex-basis: 0;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .iluminacionVideoContainer{
+    flex-grow: 1;
+    flex-basis: 0;
+    width: unset;
+  }
+  
+  /* Video{
+    width: 100%;
+  } */
+  
+  .iluminacionContainer, .modificadoresContainer, .fondosContainer, .complementariosContainer, .utileriaContainer {
+    display: grid;
+    grid-template-columns: 45% 45%;
+  }
+  }

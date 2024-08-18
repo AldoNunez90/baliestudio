@@ -1,0 +1,74 @@
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+    Video{
+      width: -webkit-fill-available;
+    }
+    
+    p {
+      white-space: pre;
+    }
+  
+    .baliLogoWhiteContainer{
+      min-height: 600px;
+    }
+  
+    .baliEstudioText{
+      margin-left: 15%;
+    }
+    .baliEspaciosTxt{
+      font-size: 50px;
+      min-height: 500px;
+    }
+  
+    .answerOption{
+      font-size: large;
+    }
+  
+    .footerItems{
+      flex-basis: unset;
+    }
+  
+    /* Conoce Bali */
+  
+    .conoceBaliParagraph{
+      width: unset;
+      font-size: unset;
+    }
+  
+    .conoceBaliImgContainer{
+      width: 60vw;
+    }
+  
+    .conoceBaliParagraph2{
+      margin: 7vw;
+      font-size: unset;
+    }
+  
+    .studio2Container{
+      margin: 3vw;
+    }
+  
+    .footerLogoImg{
+      width: 35vw;
+      height: auto;
+    }
+  
+    /* Equipos */
+  
+    .iluminacionContainer, .modificadoresContainer, .fondosContainer, .complementariosContainer, .utileriaContainer {
+      display: grid;
+      grid-template-columns: 45% 45%;
+    }
+  
+    .iluminacionVideoContainer{
+      width: unset;
+    }
+  
+    .fondosTxtContainer, .utileriaTxtContainer{
+      display: flex;
+      justify-content: center;
+    }
+  
+    .equipoTxtModificadores{
+      font-size: small;
+    }
+  }

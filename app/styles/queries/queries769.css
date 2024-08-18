@@ -1,0 +1,120 @@
+@media only screen and (min-width:769px) and (max-width: 992px) {
+    Video{
+      width: -webkit-fill-available;
+    }
+  
+    .MouseGif_mouseGifContainer__kyJJb{
+      transform: translate(-50%, -50%) !important;
+    }
+  
+    .mouseGifOnly{
+      width: 200px;
+      height: auto;
+    }
+    /* Home */
+    .theFirts, .theSecond, .theThird, .baliEstudioPictures, .theSecondTxt {
+      position: relative;
+      top: unset;
+    }
+    .baliEstudioText{
+      margin-left: 5%;
+    }
+  
+    .baliEspaciosTxt{
+      min-height: 500px;
+      font-size: 7vw;
+    }
+  
+    .baliLogoCenter{
+      width: 40vw;
+      height: auto;
+    }
+  
+    .baliLogoWhiteContainer{
+      min-height: 500px !important;
+    }
+  
+    .questionList {
+      padding: 2vw;
+    }
+  
+    .baliLogoFaqs{
+      width: 40vw;
+      height: auto;
+    }
+    .answerOption{
+      font-size: medium;
+    }
+  
+  
+  
+    /* Conoce Bali */
+    .conoceBaliParagraph{
+      width: unset;
+      font-size: unset;
+    }
+  
+    .conoceBaliImgContainer{
+      width: 50vw;
+    }
+  
+    .conocePhotosContainer{
+      min-height: 500px !important;
+    }
+    .conocePhoto2Container{
+      height: 500px;
+    }
+    .conoceBaliParagraph2{
+      font-size: unset;
+      margin: unset;
+    }
+  
+    .footerLogoImg{
+      width: 15vw;
+      height: auto;
+    }
+  
+    .footerItems{
+      flex-basis: unset;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  
+    .footerList{
+      padding: unset;
+    }
+    .footerLinks{
+      flex-direction: column;
+      align-items: unset;
+    }
+  
+    .footerSocialMedia{
+      align-self: flex-start;
+    }
+  
+    .footerTxtFirma{
+      margin-top: 2vw;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;  
+    }
+  
+  
+    /* Equipos */
+  
+    .iluminacionContainer, .fondosContainer, .utileriaContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+          align-items: center;
+    }
+  
+    .modificadoresContainer, .complementariosContainer{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  
+    .iluminacionVideoContainer, .modificadoresVideoContainer, .complementariosVideoContainer{
+      width: 90%;
+    }
+  }

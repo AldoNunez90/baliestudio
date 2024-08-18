@@ -96,29 +96,13 @@ align-content: center;}
     border: none;
     color: white;
     margin: 20px 0 ;
-}
-/* .modificadoresContainer, .fondosContainer, .iluminacionContainer, .complementariosContainer, .utileriaContainer{
-    display: flex;
-    margin-top: 10vw;
-    align-items: center;
-} */
-
-/* .iluminacionContainer{
-    justify-content: center;
+    cursor: pointer;   
 }
 
-.utileriaContainer{
-    margin-bottom: 10vw;
+.downloadBtn:active{
+    background-color: white;
+    color: black;
 }
-
-.modificadoresTxtContainer , .complementariosTxtContainer, .utileriaTxtContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-} */
-
 .setsContainer{
     display: grid;
     grid-template-columns: 50% 50%;

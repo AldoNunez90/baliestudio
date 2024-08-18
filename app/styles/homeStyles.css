@@ -158,7 +158,8 @@
   .baliTxtFirst{
     margin: 1vw 0px;
     line-height: 1.2;
-    font-weight: 600
+    font-weight: 600;
+    white-space: pre-wrap;
   }
 
   .baliTxtThird{
@@ -235,6 +236,14 @@
   
   .faqAnswer.selected{
     color: gray ;
+  }
+
+  .visible{
+    display: block;
+  }
+
+  .hidden{
+    display: none;
   }
   
   /* Footer */

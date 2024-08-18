@@ -1,0 +1,37 @@
+@media only screen and (min-width: 1200px) and (max-width: 1440px){
+
+    p {
+      white-space: pre;
+    }
+    
+    .baliEspaciosTxt{
+      min-height: 600px;
+      font-size: 80px;
+    }
+  
+    .footerItems{
+      flex-basis: unset;
+    }
+  
+    .fondosContainer, .utileriaContainer, .modificadoresContainer{
+      justify-content: space-evenly;
+    }
+  
+    .modificadoresTxtContainer, .modificadoresVideoContainer, .complementariosVideoContainer, .complementariosTxtContainer{
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+  
+    .complementariosVideoContainer{
+      max-width: 700px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .equipoTxtModificadores{
+      font-size: small;
+    }
+  
+  
+  }
