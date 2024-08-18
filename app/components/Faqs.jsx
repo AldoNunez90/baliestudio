@@ -21,8 +21,8 @@ export default function Faqs() {
   const answerRef = useRef({});
   
   useEffect(()=>{
-    if (answersRef.current) {
-      answersRef.current.scrollIntoView({ behavior: 'smooth' });
+    if (answerRef.current) {
+      answerRef.current.scrollIntoView({ behavior: 'smooth' });
     }
     
       

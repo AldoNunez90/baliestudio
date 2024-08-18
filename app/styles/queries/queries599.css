@@ -224,15 +224,16 @@
     }
   
     .conoceBaliParagraph2{
-      padding: 2vw;
-    font-size: small; 
-    text-wrap: pretty;
+    padding: 2vw;
+    font-size: unset; 
+    margin: auto;
+    margin-bottom: 5vw;
+    width: 80vw;
     }
   
     .conoceBaliParagraph{
       width: 80VW;
       font-size: larger;
-      text-wrap: pretty;
     }
   
     .footerListItem{
@@ -316,7 +317,6 @@
     
     .conoceBaliParagraph{
       width: 80vw;
-      text-wrap: pretty;
       font-size: large;
     }
     
@@ -337,12 +337,7 @@
       flex-direction: column;
     }
     
-    .conoceBaliParagraph2{
-      margin: unset;
-      font-size: small;
-      padding: 2vw
-    }
-    
+       
     /* Estudio */
   
     .cameraImg{
