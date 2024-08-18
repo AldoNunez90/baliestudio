@@ -18,11 +18,11 @@ export default function Faqs() {
     { id: 10, answer:"Es un SI total y te ayudamos a que te quede genial"}
   ];
   const [optionSelected, setOptionSelected] = useState(0);
-  const answerRefs = useRef({});
+  const answerRef = useRef({});
   
   useEffect(()=>{
-    if (optionSelected && answerRefs.current[optionSelected]) {
-      answerRefs.current[optionSelected].scrollIntoView({ behavior: 'smooth' });
+    if (answersRef.current) {
+      answersRef.current.scrollIntoView({ behavior: 'smooth' });
     }
     
       
@@ -36,7 +36,7 @@ export default function Faqs() {
   }
 
   const Answer = ({ option }) => (
-    option === 0 ? <Image src={"/baliLogoWhite.png"} alt="logo Bali" width={503} height={142} className="baliLogoFaqs" /> : <p className="answerOption" ref={el => answerRefs.current[option] = el}>{options.map((opt) => option === opt.id && opt.answer )}</p>
+    option === 0 ? <Image src={"/baliLogoWhite.png"} alt="logo Bali" width={503} height={142} className="baliLogoFaqs" /> : <p className="answerOption">{options.map((opt) => option === opt.id && opt.answer )}</p>
   );
 
 
@@ -68,7 +68,7 @@ export default function Faqs() {
           </h3>
         </div>
       </div>
-      <div className="answers">
+      <div className="answers" ref={answerRef}>
           <Answer option={optionSelected} />
       </div>
     </div>

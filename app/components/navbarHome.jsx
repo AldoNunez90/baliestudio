@@ -14,13 +14,13 @@ export default function NavBarHome() {
     const isActive = pathname === href;
     return (
       <Link href={href}>
-        <p className={classNames("nav-item", { active: isActive })}>
+        <p className={classNames("nav-item", { active: isActive })} onClick={()=>setOpenMenu(false)}>
           {children}
         </p>
       </Link>
     );
   };
-  console.log(openMenu)
+  console.log(openMenu);
 
   return (
     <nav className="navBarHomeHero">
@@ -54,22 +54,22 @@ export default function NavBarHome() {
 
 
       <ul className={`navList ${openMenu ? 'visible' : ''}`}>
-        <NavItem href="/" className="liNav">
+        <NavItem href="/" className="liNav" >
           Home
         </NavItem>
-        <NavItem href="/conocebali" className="liNav">
+        <NavItem href="/conocebali" className="liNav" >
           Conoce Bali
         </NavItem>
-        <NavItem href="/estudio" className="liNav">
+        <NavItem href="/estudio" className="liNav" >
           Estudio
         </NavItem>
-        <NavItem href="/reservas" className="liNav">
+        <NavItem href="/reservas" className="liNav" >
           Reservas
         </NavItem>
-        <NavItem href="/produccion" className="liNav">
+        <NavItem href="/produccion" className="liNav" >
           Producción
         </NavItem>
-        <NavItem href="/contacto" className="liNav">
+        <NavItem href="/contacto" className="liNav" >
           Contacto
         </NavItem>
       </ul>
