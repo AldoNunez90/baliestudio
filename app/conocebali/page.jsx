@@ -17,7 +17,7 @@ export default function Conoce() {
         <div > <p className="conoceBaliParagraph">
         {`Bali Estudio, situado en el corazón de Buenos Aires, en la icónica intersección de la\nAvenida Santa Fe y 9 de Julio, se erige como un símbolo de glamour y elegancia. Su\narquitectura europea confiere al espacio una atmósfera sofisticada, ideal para clientes\nque buscan un entorno distinguido para sus proyectos`}</p></div>
         <div className="conoceBaliImgContainer">
-        <Image src={"/conocebali/conoceBaliImg1.jpg"} alt="Studio" fill className="imgConoceBali"/>
+        <Image src={"https://res.cloudinary.com/dsdzvhfhh/image/upload/v1722747155/conoceBaliImg1_aa4maq.jpg"} alt="Studio" fill className="imgConoceBali"/>
         </div>
         <div >
             <p className="conoceBaliParagraph">
@@ -34,7 +34,7 @@ export default function Conoce() {
         </video>
             </div>
             <div className="imgContainerModel">
-            <Image src={"/conocebali/conoceBaliImg3.jpg"} alt="photo" fill className="conocePhoto2"/>
+            <Image src={"https://res.cloudinary.com/dsdzvhfhh/image/upload/v1722747155/conoceBaliImg3_ifkvhf.jpg"} alt="photo" fill className="conocePhoto2"/>
             <div className="overlay">
               <p className="conocePhotoTxt">CHEERY BOMB <a href="https://www.instagram.com/bfstoreok/" target="_blanck" className="creditsPhoto">@bfstoreok</a> - Modelo: <a href="https://www.instagram.com/barbieeferrari/" target="_blanck" className="creditsPhoto" >@barbieeferrari</a></p>
               <p className="conocePhotoTxt">Make up & Peinado: <a href="https://www.instagram.com/soficosta.makeup/" target="_blanck" className="creditsPhoto">@soficosta.makeup</a> / <a href="https://www.instagram.com/emmabarrioshair/" target="_blanck"  className="creditsPhoto">@emmabarrioshair</a></p>
@@ -47,7 +47,7 @@ export default function Conoce() {
 
         <div className="ademasContainer">
           <div className="studio2Container">
-            <Image src={"/conocebali/conoceBaliImg2.jpg"} alt="Studio 2" fill className="imgConoceBali"/>
+            <Image src={"https://res.cloudinary.com/dsdzvhfhh/image/upload/v1724002967/conoceBaliFootImg_lxjran.jpg"} alt="Studio 2" fill className="imgConoceBali"/>
           </div>
           <div>
             <p className="conoceBaliParagraph2">

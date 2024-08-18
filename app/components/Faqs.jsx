@@ -38,11 +38,11 @@ export default function Faqs() {
             ¿PUEDO UTILIZAR LOS ESPACIOS DE OTROS SETS?
           </h3>
           <h3 onClick={() => setOptionSelected(10)} className={`faqAnswer ${optionSelected === 10 ? 'selected' : ''}`}>¿PUEDO REALIZAR CONTENIDO CON MI TELÉFONO?</h3>
-          <h3 onClick={() => setOptionSelected(5)} className={`faqAnswer ${optionSelected === 5 ? 'selected' : ''}`}>
-          ¿PUEDEN ENCARGARSE DE LA PRODUCCION DE MIS FOTOS?
-          </h3>
           <h3 onClick={() => setOptionSelected(1)} className={`faqAnswer ${optionSelected === 1 ? 'selected' : ''}`}>
             ¿CUÁL ES EL TIEMPO MÍNIMO PARA ALQUILAR EL ESTUDIO?
+          </h3>
+          <h3 onClick={() => setOptionSelected(5)} className={`faqAnswer ${optionSelected === 5 ? 'selected' : ''}`}>
+          ¿PUEDEN ENCARGARSE DE LA PRODUCCION DE MIS FOTOS?
           </h3>
           <h3 onClick={() => setOptionSelected(2)} className={`faqAnswer ${optionSelected === 2 ? 'selected' : ''}`} >
             ¿CUÁL ES EL PROCEDIMIENTO PARA REALIZAR UNA RESERVA?
