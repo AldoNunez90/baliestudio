@@ -29,7 +29,7 @@ function SetDuoReserve() {
   const [eventType, setEventType] = useState("");
   const [shouldAutoFocus, setShouldAutoFocus] = useState("name");
   const [finishBooking, setFinishBooking] = useState(null)
-  const [responseOk, setResponseOk] = useState(null)
+  const [responseOk, setResponseOk] = useState(true)
   const [isDisabled, setIsDisabled] = useState(true)
   const [alertHours, setAlertHours] = useState(false)
 
@@ -293,7 +293,7 @@ function SetDuoReserve() {
     if (parseInt(hours) > 1 && parseInt(hours) < 9 ) {
      return( <div className="hoursBtnContainer">
       { alertHours && <p style={{color: "red", textAlign: "center"}}>{`Deberías seleccionar ${hours} horas`}</p>}
-      <div>{renderTimeButtons()}</div>
+      <div className="renderBtn">{renderTimeButtons()}</div>
       <button
         onClick={() => setEventContent(true)}
         disabled={isDisabled}
@@ -606,7 +606,7 @@ function SetDuoReserve() {
   return (
     <div>
       {finishBooking ? <Modal /> : 
-      <div className="bookingSetPalaceContainer">
+      <div className="bookingSetPalaceHero">
         {selectedDate === null ? (
           <div className="bookingSetPalaceContainer">
             <div className="setPalaceDetailsContent setPalaceImg setDuoImgContainer">

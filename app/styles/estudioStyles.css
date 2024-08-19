@@ -63,7 +63,7 @@ align-content: center;}
     
 }
 
-.iluminacionVideoContainer{
+.iluminacionVideoContainer, .modificadoresVideoContainer{
     width: 33%;
     overflow: hidden;
     display: flex;
@@ -88,6 +88,14 @@ align-content: center;}
     font-size: 3vw;
     font-weight: 700;
     margin: 40px 0;
+}
+
+.equipoTxt, .equipoTxtModificadores, .equipoFondo, .equipoComplementario, .equipoUtileria{
+    white-space: break-spaces;
+}
+
+.utileriaTxt, .modificadoresTxtContainer, .iluminacionTxtContainer{
+    margin: 0 5vw;
 }
 .downloadBtn{
     background-color: black;

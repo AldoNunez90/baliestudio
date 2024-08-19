@@ -3,8 +3,11 @@
 
 .videoContainer{
     width: 100%;
-    overflow: hidden;
     display: flex;
+  }
+
+  .videoIntro{
+    width: inherit;
   }
 
 /* Pictures Home */

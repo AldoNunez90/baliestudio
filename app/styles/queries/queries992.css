@@ -8,8 +8,9 @@
     }
   
     .MouseGif_mouseGifContainer__kyJJb{
-      transform: translate(-50%, -30%) !important;
+      display: none;
     }
+  
   
     .baliLogoWhiteContainer{
       min-height: 550px;
@@ -109,5 +110,10 @@
   .iluminacionContainer, .modificadoresContainer, .fondosContainer, .complementariosContainer, .utileriaContainer {
     display: grid;
     grid-template-columns: 45% 45%;
+  }
+
+  .googleMap{
+    width: 50vw;
+    height: 40vw;
   }
   }

@@ -4,13 +4,68 @@
     }
   
     .MouseGif_mouseGifContainer__kyJJb{
-      transform: translate(-50%, -50%) !important;
+      display: none;
     }
   
-    .mouseGifOnly{
-      width: 200px;
+  
+
+    .socialNav{
+      display: none;
+    }
+
+    .navBarLogo{
+      width: 15vw;
       height: auto;
     }
+  
+    .navBarContainer{
+      width: unset;
+    }
+  
+    .navList {
+      flex-direction: column;
+      background-color: white;
+      padding: unset;
+      height: fit-content;
+      border-radius: 5px;
+      position: absolute;
+      right: 0px;
+      top: 70px;
+      visibility: hidden;
+      width: fit-content;
+      align-items: end;
+    }
+  
+    .visible {
+      visibility: visible;
+    }
+  
+    .nav-item {
+      margin-bottom: 2vw;
+      font-size: medium;
+      margin-right: 30px;
+    }
+  
+    .liNav {
+      margin-bottom: 2vw;
+    }
+  
+    .navBarLogo {
+      width: 20vw;
+      height: auto;
+    }
+  
+    .navBtnList {
+      display: block;
+      align-self: center;
+      transform: scale(1.5);
+      border: 1px solid;
+      border-radius: 2px;
+      position: absolute;
+      right: 30px;
+      width: fit-content;
+    }
+  
     /* Home */
     .theFirts, .theSecond, .theThird, .baliEstudioPictures, .theSecondTxt {
       position: relative;
@@ -46,12 +101,13 @@
       font-size: medium;
     }
   
+    
   
   
     /* Conoce Bali */
     .conoceBaliParagraph{
-      width: unset;
-      font-size: unset;
+      width: 60vw;
+      font-size: larger;
     }
   
     .conoceBaliImgContainer{
@@ -65,8 +121,13 @@
       height: 500px;
     }
     .conoceBaliParagraph2{
-      font-size: unset;
-      margin: unset;
+      font-size: large;
+    }
+
+    .ademasContainer{
+      width: 80%;
+      display: flex !important;
+      flex-direction: column;
     }
   
     .footerLogoImg{
@@ -82,6 +143,7 @@
   
     .footerList{
       padding: unset;
+      margin-top: 10px;
     }
     .footerLinks{
       flex-direction: column;
@@ -116,5 +178,16 @@
   
     .iluminacionVideoContainer, .modificadoresVideoContainer, .complementariosVideoContainer{
       width: 90%;
+    }
+
+    .googleMap{
+      width: 60vw;
+      height: 50vw;
+    }
+
+    /* Resevas */
+
+    .reservasIntroTxt{
+      max-width: 50vw;
     }
   }

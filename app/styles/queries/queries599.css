@@ -1,4 +1,11 @@
 @media only screen and (max-width: 599px) {
+
+  .googleMap{
+    width: 60vw;
+    height: 50vw;
+  }
+
+
     .navBarContainer {
       width: unset;
     }
@@ -198,6 +205,18 @@
       margin-right: unset;
       margin-top: 15px;
     }
+
+    .footerContainer{
+      flex-direction: column;
+    }
+    .footerLogoImg{
+      width: 35vw !important;
+    }
+    
+    .footerLinks{
+      padding: 0 5vw;
+      margin-top: 2vw;
+    }
   
     /* Conoce Bali */
   
@@ -253,6 +272,12 @@
           align-items: center;
     }
   
+    .utileriaContainer{
+      width: 80%;
+      margin: auto;
+  }
+    
+
     .modificadoresContainer, .complementariosContainer{
       display: flex;
       flex-direction: column-reverse;
@@ -269,31 +294,46 @@
     .equipoTxt{
       font-size: smaller;
     }
-    .equipoTxtModificadores{
-      font-size: 2.2vw;
-    }
+    
     .cameraImg{
       height: 5vw;
       width: auto;
     }
+
+    /* Reservas */
+    .reservasIntroTxt{
+      max-width: 80vw;
+    }
+
+    .dialogTitle{
+      font-weight: 600;
+      font-size: 4vw;
+      margin-bottom: 0.5vw;
+    }
+
+    .dialogContainer{
+      height: 60vw;
+    }
+
+    .dialogSubTitle{
+      font-size: 3vw;
+    }
+
+    .dialogHero{
+      margin-bottom: unset;
+    }
   }
   
   @media only screen and (max-width: 480px){
+    .googleMap{
+      width: 70vw;
+      height: 60vw;
+    }
     .faqAnswer{
       font-size: small;
     }
     
-    .footerContainer{
-      flex-direction: column;
-    }
-    .footerLogoImg{
-      width: 35vw !important;
-    }
     
-    .footerLinks{
-      padding: 0 5vw;
-      margin-top: 2vw;
-    }
     
     .questionList{
       padding: 4vw;
@@ -351,38 +391,69 @@
     /* Reservas */
   
     .reservasIntroTxt{
-      font-size: small;
+      font-size: unset;
     }
   
     .reservasIntroSmall{
       width: 80vw !important;
       text-wrap: wrap;
     }
+
+    .bookingSetPalaceHero{
+      display: flex;
+      flex-direction: column;
+      min-height: 300px;    }
   
     .bookingSetPalaceContainer{
-      flex-direction: column;
+      flex-direction: row;
+    }
+    .selectHours{
+      margin-bottom: 15px;
+    }
+
+    .renderBtn{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nextBookingBtn{
+      margin-bottom: 15px;
     }
     
     .setPalaceImg{
       margin-left: unset;
+      justify-content: center;
     }
   
     .setPalaceAzulImg, .setDuoImg{
-      height: unset !important;
+      height: auto !important;
+      width: 30vw !important;
     }
   
     .setPalaceText{
       padding: 5vw;
     }
     .setPalaceSmall{
-      font-size: x-small;
+      font-size: smaller;
+    }
+    .setPalaceAzulTxt{
+      white-space: break-spaces;
     }
     .startBookingBtn, .cancelBookingBtn, .nextBookingBtn, .confirmBtn{
-      width: unset;
+      width: 20vw;
     }
     .inputForm{
       height: unset;
       width: 50vw;
+    }
+
+    label{
+      margin: 5px 0;
+    }
+    .confirmBtn{
+      width: 40vw;
     }
     }
     

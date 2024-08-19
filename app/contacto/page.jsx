@@ -184,7 +184,7 @@ export default function Contacto() {
       <div className="imgFormContact">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.3597505282964!2d-58.38017529999999!3d-34.5950635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccab652bcfe57%3A0x48b0bf0cbd252c00!2sAv.%20Sta.%20Fe%20911%2C%20C1059ABD%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1723169951804!5m2!1ses-419!2sar"
-          className="map"
+          className="googleMap"
         ></iframe>
       </div>
     </div>

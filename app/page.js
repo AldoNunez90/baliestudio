@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div>
       <div className="videoContainer">
-        <Video url="https://res.cloudinary.com/dsdzvhfhh/video/upload/v1722747174/estudio_cw6x13.mp4" />
+        <Video url="https://res.cloudinary.com/dsdzvhfhh/video/upload/v1722747174/estudio_cw6x13.mp4" className="videoIntro"/>
       </div>
       <MouseGif />
       <div className="marqueeContainer">

@@ -2,6 +2,11 @@
     Video{
       width: -webkit-fill-available;
     }
+
+    .MouseGif_mouseGifContainer__kyJJb{
+      display: none;
+    }
+  
     
     p {
       white-space: pre;
@@ -70,5 +75,10 @@
   
     .equipoTxtModificadores{
       font-size: small;
+    }
+
+    .googleMap{
+      width: 50vw;
+      height: 40vw;
     }
   }

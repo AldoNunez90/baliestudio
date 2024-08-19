@@ -59,7 +59,7 @@ export default function Equipos() {
         <div className="fondosTxtContainer">
           <div className="fondosTxt">
             <p className="equipoTitle">FONDOS INFINITOS</p>
-            <p>{`•  BLANCO\n•  NEGRO\n•  GRIS \n•  VERDE / CHROMA KEY`} </p>
+            <p className="equipoFondo">{`•  BLANCO\n•  NEGRO\n•  GRIS \n•  VERDE / CHROMA KEY`} </p>
           </div>
         </div>
         <div className="iluminacionVideoContainer">
@@ -73,7 +73,7 @@ export default function Equipos() {
         <div className="complementariosTxtContainer">
           <div className="complementariosTxt">
             <p className="equipoTitle">COMPLEMENTARIOS</p>     
-            <p>{`•  BASE 360 DE 70 CM DE DIÁMETRO\n•  PROYECTOR LED 7000 L FULL HD 4K\n•  MONITOR DE 32" SOPORTE FIJO \n•  MONITOR DE 32" SOPORTE MÓVIL`} </p>
+            <p className="equipoComplementario">{`•  BASE 360 DE 70 CM DE DIÁMETRO\n•  PROYECTOR LED 7000 L FULL HD 4K\n•  MONITOR DE 32" SOPORTE FIJO \n•  MONITOR DE 32" SOPORTE MÓVIL`} </p>
             <a href="/complementarios.pdf" download="complementarios.pdf">
               <button onClick={downloadPdf} className="downloadBtn">
                 DESCARGAR LISTADO
@@ -86,7 +86,7 @@ export default function Equipos() {
         <div className="utileriaTxtContainer">
           <div className="utileriaTxt">
             <p className="equipoTitle">{`UTILERÍA\n& ESCENOGRAFÍA`}</p>
-            <p>{`•  ARCADA 3D\n•  VENTILADOR\n•  PAPEL MYLAR\n•  TELGOPOR BLANCO 2 MTS X 1 MTS\n•  TELA BLACK OUT\n•  SILLAS\n•  SILLONES\n•  FLOREROS\n•  ENREDADERAS ARTIFICIALES\n•  CUADROS\n•  LUCES`}</p>
+            <p className="equipoUtileria">{`•  ARCADA 3D\n•  VENTILADOR\n•  PAPEL MYLAR\n•  TELGOPOR BLANCO 2 MTS X 1 MTS\n•  TELA BLACK OUT\n•  SILLAS\n•  SILLONES\n•  FLOREROS\n•  ENREDADERAS ARTIFICIALES\n•  CUADROS\n•  LUCES`}</p>
             <a href="/utileria.pdf" download="utileria.pdf">
               <button onClick={downloadPdf} className="downloadBtn">
                 DESCARGAR LISTADO

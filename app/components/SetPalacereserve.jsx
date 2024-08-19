@@ -295,7 +295,7 @@ function SetPalaceReserve() {
     if (parseInt(hours) > 1 && parseInt(hours) < 9 ) {
      return( <div className="hoursBtnContainer">
       { alertHours && <p style={{color: "red", textAlign: "center"}}>{`Deberías seleccionar ${hours} horas`}</p>}
-      <div>{renderTimeButtons()}</div>
+      <div className="renderBtn">{renderTimeButtons()}</div>
       <button
         onClick={() => setEventContent(true)}
         disabled={isDisabled}
@@ -330,7 +330,7 @@ function SetPalaceReserve() {
         <p className="dialogTitle">{`Tu reserva se ha completado\ncorrectamente`}</p>
         <p className="dialogSubTitle">Gracias por elegirnos!</p>
         </div>
-        <p className="summaryTitle">SET DUO</p>
+        <p className="summaryTitle">SET PALACE / AZUL</p>
         <p className="summaryDate">{screenDate && screenDate}</p>
         <p className="summaryDate">
         {start && `${start}:00`}
@@ -405,7 +405,6 @@ function SetPalaceReserve() {
                   name="name"
                   value={name}
                   onChange={handleInputChange}
-                  placeholder="Nombre"
                   required
                   className="inputForm"
                   onFocus={()=>setShouldAutoFocus('name')}
@@ -419,7 +418,6 @@ function SetPalaceReserve() {
                   name="email"
                   value={email}
                   onChange={handleInputChange}
-                  placeholder="Email"
                   className="inputForm"
                   autoFocus={shouldAutoFocus === 'email' ? true : undefined} 
                   onFocus={()=>setShouldAutoFocus('email')}
@@ -608,7 +606,7 @@ function SetPalaceReserve() {
   return (
     <div>
       {finishBooking ? <Modal /> : 
-      <div className="bookingSetPalaceContainer">
+      <div className="bookingSetPalaceHero">
         {selectedDate === null ? (
           <div className="bookingSetPalaceContainer">
             <div className="setPalaceDetailsContent setPalaceImg">

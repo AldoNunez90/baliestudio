@@ -98,7 +98,10 @@
     .baliEstudioImg1, .baliEstudioPictures{
       position: unset !important;
     }
-  
+    .baliEstudioP{
+      font-size: 6rem;
+    }
+
     .balitxtFirst{
       margin: 3vw 0px;
       
@@ -109,7 +112,7 @@
     }
   
     .footerLogoImg{
-      width: 15vw;
+      width: 20vw;
       height: auto;
     }
   
@@ -149,8 +152,8 @@
     /* Conoce Bali */
   
     .conoceBaliParagraph{
-      width: unset;
-      font-size: unset;
+      width: 60vw;
+      font-size: larger;
     }
   
     .conoceBaliImgContainer{
@@ -189,6 +192,21 @@
   
     .iluminacionVideoContainer, .modificadoresVideoContainer, .complementariosVideoContainer{
       width: 90%;
+    }
+
+    .modificadoresContainer{
+      width: 80%;
+    }
+
+    .googleMap{
+      width: 60vw;
+      height: 50vw;
+    }
+
+    /* Reservas */
+
+    .reservasIntroTxt{
+      max-width: 70vw;
     }
    
   }
